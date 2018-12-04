@@ -1,0 +1,22 @@
+
+section{
+	.section-slim {
+		max-width: 920px;
+		margin: auto;
+
+		&:first-child {
+			margin-top: 0px;
+		}
+
+		@include desktop-only{
+			max-width: 600px !important;
+		}
+		@include touch {
+			max-width: 600px !important;
+		}
+	}
+}
+
+.clearfix {
+	clear: both;
+}

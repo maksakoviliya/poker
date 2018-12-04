@@ -1,24 +1,18 @@
-.clearfix {
-    clear: both;
-}
-
-.header.fixed.start {
+.header.fixed {
+  &.start {
     transform: translateY(0%);
 }
-
-.header.fixed + main {
++ main {
     padding-top: 60px;
 }
-
-.section-full {}
-
-.section-medium {
-    max-width: 840px;
-    margin-left: 100px;
 }
 
-.section-medium > *:first-child {
+.section-medium {
+  max-width: 840px;
+  margin-left: 100px;
+  > *:first-child {
     margin-top: 0px;
+}
 }
 
 .read-more-right i {
@@ -37,43 +31,35 @@
 }
 
 .poker-room-header {
-    background: radial-gradient(at bottom, #332b28, #1d1917);
-    text-align: center;
-    padding: 50px 0px;
-}
-
-.poker-room-header .name-room {
+  background: radial-gradient(at bottom, #332b28, #1d1917);
+  text-align: center;
+  padding: 50px 0px;
+  .name-room {
     font-size: 20px;
     line-height: 28px;
     color: #fff;
     display: flex;
     justify-content: center;
+    .room-word {}
+    .room-ico {
+      width: 28px;
+      height: 28px;
+      margin: 0px 15px;
+      img {
+        width: 100%;
+    }
 }
-
-.poker-room-header .name-room .room-word {}
-
-.poker-room-header .name-room .room-ico {
-    width: 28px;
-    height: 28px;
-    margin: 0px 15px;
+.room-link a {
+  border-bottom: 1px solid #fff;
+  color: #fff !important;
+  font-weight: bold;
+  text-decoration: none !important;
+  &:hover {
+    border-bottom: 1px solid $second-color;
 }
-
-.poker-room-header .name-room .room-ico img {
-    width: 100%;
 }
-
-.poker-room-header .name-room .room-link a {
-    border-bottom: 1px solid #fff;
-    color: #fff !important;
-    font-weight: bold;
-    text-decoration: none !important;
 }
-
-.poker-room-header .name-room .room-link a:hover {
-    border-bottom: 1px solid $text-black-color;
-}
-
-.poker-room-header .title-room {
+.title-room {
     color: #FFFFFF;
     font-family: "IBM Plex Serif";
     font-size: 50px;
@@ -81,10 +67,7 @@
     max-width: 960px;
     margin: 20px auto 0px auto;
 }
-
-.poker-room-header .go-to-room-div {}
-
-.poker-room-header .go-to-room-div .go-ro-room {
+.go-to-room-div .go-ro-room {
     font-size: 16px;
     line-height: 47px;
     padding: 0px 40px;
@@ -92,152 +75,131 @@
     color: #fff;
     margin-top: 30px;
     box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.45);
+    i {
+      margin-left: 4px;
+      margin-top: -3px;
+      vertical-align: middle;
+      height: 15px;
+      width: 17px;
+      background-image: url(/src/inline-icons/arrow.svg) !important;
+      display: inline-block;
+      background: no-repeat center / contain;
+  }
 }
-
-.poker-room-header .go-to-room-div .go-ro-room i {
-    margin-left: 4px;
-    margin-top: -3px;
-    vertical-align: middle;
-    height: 15px;
-    width: 17px;
-    background-image: url(/src/inline-icons/arrow.svg) !important;
-    display: inline-block;
-    background: no-repeat center / contain;
 }
 
 .room-advances {
-    clear: both;
-    margin-bottom: 40px;
-}
-
-.room-advances .left {
+  clear: both;
+  margin-bottom: 40px;
+  .left {
     width: 50%;
     float: left;
     padding-right: 80px;
+    ul {
+      margin-left: 25px;
+      list-style-image: url(images/my/check.svg);
+      li {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 12.5px;
+        padding-left: 5px;
+    }
 }
-
-.room-advances .left ul {
-    margin-left: 25px;
-    list-style-image: url(images/my/check.svg);
 }
-
-.room-advances .left ul li {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 12.5px;
-    padding-left: 5px;
-}
-
-.room-advances .right {
+.right {
     width: 50%;
     float: right;
+    .room-manager {
+      width: 550px;
+      border: 1px solid #EBEBEB;
+      box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
+      margin-top: -50px;
+      display: flex;
+      .profile {
+        background: #fff;
+        min-width: 250px;
+        padding: 25px 0px;
+        border-right: 1px solid #EBEBEB;
+        .avatar {
+          margin: 0px 0px 25px 0px;
+          text-align: center;
+          img {
+            border-radius: 100%;
+        }
+    }
+    .name {
+      color: $second-color;
+      font-family: "IBM Plex Serif";
+      font-size: 22px;
+      line-height: 22px;
+      text-align: center;
+  }
+  .line {
+      background: #EBEBEB;
+      height: 1px;
+      width: 30px;
+      margin: 20px auto;
+  }
+  .about {
+      text-align: center;
+      font-size: 14px;
+      line-height: 20px;
+  }
 }
-
-.room-advances .right .room-manager {
-    width: 550px;
-    border: 1px solid #EBEBEB;
-    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-    margin-top: -50px;
-    display: flex;
-}
-
-.room-advances .right .room-manager .profile {
-    background: #fff;
-    min-width: 250px;
-    padding: 25px 0px;
-    border-right: 1px solid #EBEBEB;
-}
-
-.room-advances .right .room-manager .profile .avatar {
-    margin: 0px 0px 25px 0px;
-    text-align: center;
-}
-
-.room-advances .right .room-manager .profile .avatar img {
-    border-radius: 100%;
-}
-
-.room-advances .right .room-manager .profile .name {
-    color: #000000;
-    font-family: "IBM Plex Serif";
-    font-size: 22px;
-    line-height: 22px;
-    text-align: center;
-}
-
-.room-advances .right .room-manager .profile .line {
-    background: #EBEBEB;
-    height: 1px;
-    width: 30px;
-    margin: 20px auto;
-}
-
-.room-advances .right .room-manager .profile .about {
-    text-align: center;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.room-advances .right .room-manager .links {
+.links {
     background: #f9f9f9;
     min-width: 300px;
     border-right: 1px solid #EBEBEB;
+    .one-link {
+      border-bottom: 1px solid #EBEBEB;
+      display: block;
+      height: 25%;
+      padding: 0px 30px;
+      color: #333;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 75px;
+      &:hover {
+        opacity: .6;
+        text-decoration: none;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+    i {
+        margin-right: 4px;
+        margin-top: -3px;
+        vertical-align: middle;
+        height: 24px;
+        width: 24px;
+        display: inline-block;
+        background: no-repeat center / contain;
+    }
+    &.link-sk i {
+        background-image: url(/src/inline-icons/soc-skype.svg) !important;
+    }
+    &.link-tg i {
+        background-image: url(/src/inline-icons/soc-telegram.svg) !important;
+    }
+    &.link-wa i {
+        background-image: url(/src/inline-icons/soc-whatsapp.svg) !important;
+    }
+    &.link-em i {
+        background-image: url(/src/inline-icons/soc-email.svg) !important;
+    }
 }
-
-.room-advances .right .room-manager .links .one-link {
-    border-bottom: 1px solid #EBEBEB;
-    display: block;
-    height: 25%;
-    padding: 0px 30px;
-    color: #333;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 75px;
 }
-
-.room-advances .right .room-manager .links .one-link:hover {
-    opacity: .6;
-    text-decoration: none;
 }
-
-.room-advances .right .room-manager .links .one-link:last-child {
-    border-bottom: none;
 }
-
-.room-advances .right .room-manager .links .one-link i {
-    margin-right: 4px;
-    margin-top: -3px;
-    vertical-align: middle;
-    height: 24px;
-    width: 24px;
-    display: inline-block;
-    background: no-repeat center / contain;
-}
-
-.room-advances .right .room-manager .links .one-link.link-sk i {
-    background-image: url(/src/inline-icons/soc-skype.svg) !important;
-}
-
-.room-advances .right .room-manager .links .one-link.link-tg i {
-    background-image: url(/src/inline-icons/soc-telegram.svg) !important;
-}
-
-.room-advances .right .room-manager .links .one-link.link-wa i {
-    background-image: url(/src/inline-icons/soc-whatsapp.svg) !important;
-}
-
-.room-advances .right .room-manager .links .one-link.link-em i {
-    background-image: url(/src/inline-icons/soc-email.svg) !important;
 }
 
 .enter-image {
-    margin-bottom: 40px;
-}
-
-.enter-image img {
+  margin-bottom: 40px;
+  img {
     max-width: 100%;
+}
 }
 
 .poker-room-title {
@@ -255,15 +217,14 @@
 }
 
 .poker-room-ul {
-    list-style-type: square;
-    margin-left: 35px;
-    margin-top: 15px;
-}
-
-.poker-room-ul li {
+  list-style-type: square;
+  margin-left: 35px;
+  margin-top: 15px;
+  li {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 12.5px;
+}
 }
 
 .poker-room-img {
@@ -274,13 +235,12 @@
 }
 
 .video {
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-
-.video iframe {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  iframe {
     width: 100%;
     height: 500px;
+}
 }
 
 .faq-quest {
@@ -304,259 +264,212 @@
 }
 
 .user-quest {
-    background: #f9f9f9;
-    padding: 30px 0px;
-    margin-top: 100px;
-}
-
-.user-quest .user-quest-title {
+  background: #f9f9f9;
+  padding: 30px 0px;
+  margin-top: 100px;
+  .user-quest-title {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
+    &.no-quest {
+      color: #2a67b9;
+  }
+  &.yes-quest {
+      color: #2a67b9;
+      span:last-child {
+        color: #f3bf00;
+    }
 }
-
-.user-quest .user-quest-title.no-quest {
-    color: #000000;
 }
-
-.user-quest .user-quest-title.yes-quest {
-    color: #2151AA;
-}
-
-.user-quest .user-quest-title.yes-quest span:last-child {
-    color: $accent-color;
-}
-
-.user-quest .make-quest-div {
+.make-quest-div {
     text-align: center;
     margin-top: 20px;
+    .make-quest {
+      font-size: 18px;
+      line-height: 44px;
+      padding: 0px 40px;
+      background: #2a67b9;
+      color: #fff;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+  }
 }
-
-.user-quest .make-quest-div .make-quest {
-    font-size: 18px;
-    line-height: 44px;
-    padding: 0px 40px;
-    background: $second-color;
-    color: #fff;
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: 400;
 }
-
-.user-quest-block {}
 
 .user-quest-block .one-user-quest {
-    padding: 25px 30px 25px 30px;
-    border-bottom: 1px solid #EBEBEB;
-    display: block;
-    color: $second-color;
-    font-size: 22px;
-    line-height: 30px;
-}
-
-.user-quest-block .one-user-quest:hover {
+  padding: 25px 30px 25px 30px;
+  border-bottom: 1px solid #EBEBEB;
+  display: block;
+  color: #2a67b9;
+  font-size: 22px;
+  line-height: 30px;
+  &:hover {
     opacity: .6;
     text-decoration: none !important;
 }
-
-.user-quest-block .one-user-quest .text-link {
+.text-link {
     padding-right: 30px;
 }
-
-.user-quest-block .one-user-quest .user-quest-comments {
+.user-quest-comments {
     font-size: 18px;
     white-space: nowrap;
+    i {
+      margin-right: 4px;
+      margin-top: -3px;
+      vertical-align: middle;
+      height: 18px;
+      width: 20px;
+      display: inline-block;
+      background: no-repeat center / contain;
+      background-image: url(/src/inline-icons/comment.svg) !important;
+  }
 }
-
-.user-quest-block .one-user-quest .user-quest-comments i {
-    margin-right: 4px;
-    margin-top: -3px;
-    vertical-align: middle;
-    height: 18px;
-    width: 20px;
-    display: inline-block;
-    background: no-repeat center / contain;
-    background-image: url(/src/inline-icons/comment.svg) !important;
 }
 
 .user-reviews {
-    background: #f9f9f9;
-    padding: 30px 0px;
-    margin-top: 100px;
-}
-
-.user-reviews.no-rewiew {
+  background: #f9f9f9;
+  padding: 30px 0px;
+  margin-top: 100px;
+  &.no-rewiew {
     margin-bottom: 100px;
 }
-
-.user-reviews.yes-rewiew {
+&.yes-rewiew {
     margin-bottom: 120px;
     position: relative;
 }
-
-.user-reviews .user-reviews-title {
+.user-reviews-title {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
 }
-
-.user-reviews.no-rewiew .user-reviews-title {
-    color: #000000;
+&.no-rewiew .user-reviews-title {
+    color: #2a67b9;
 }
-
-.user-reviews.yes-rewiew .user-reviews-title {
-    color: #2151AA;
+&.yes-rewiew .user-reviews-title {
+    color: #2a67b9;
+    span {
+      color: #f3bf00;
+  }
 }
-
-.user-reviews.yes-rewiew .user-reviews-title span {
-    color: $accent-color;
-}
-
-.user-reviews .make-review-div {
+.make-review-div {
     text-align: center;
     margin-top: 20px;
+    .make-review {
+      font-size: 18px;
+      line-height: 44px;
+      padding: 0px 40px;
+      background: #2a67b9;
+      color: #fff;
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 400;
+  }
 }
-
-.user-reviews .make-review-div .make-review {
-    font-size: 18px;
-    line-height: 44px;
-    padding: 0px 40px;
-    background: $second-color;
-    color: #fff;
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: 400;
+&.yes-rewiew {
+    .user-reviews-title, .make-review-div {
+      width: 380px;
+  }
 }
-
-.user-reviews.yes-rewiew .user-reviews-title {
-    width: 380px;
-}
-
-.user-reviews.yes-rewiew .make-review-div {
-    width: 380px;
 }
 
 .one-rewiew {
-    position: absolute;
-    right: 25px;
-    bottom: -20px;
-    background: #fff;
-    width: 740px;
-    height: 120px;
-    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-    background: url(images/my/quote.png) no-repeat right bottom, #fff;
-}
-
-.one-rewiew .room-ico {
+  position: absolute;
+  right: 25px;
+  bottom: -20px;
+  background: #fff;
+  width: 740px;
+  height: 120px;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
+  background: url(images/my/quote.png) no-repeat right bottom, #fff;
+  .room-ico {
     width: 50px;
     height: 50px;
     float: left;
     margin: 20px;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+    img {
+      max-width: 100%;
+      max-height: 100%;
+  }
 }
-
-.one-rewiew .room-ico img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.one-rewiew .rewiew-text {}
-
-.one-rewiew .rewiew-text p {
-    padding-top: 20px;
-    margin-right: 80px;
-    font-size: 16px;
-    line-height: 20px;
-}
-
-.one-rewiew .rewiew-text .bottom {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-}
-
-.one-rewiew .rewiew-text .bottom .review-b-user {
-    margin-right: 30px;
-    line-height: 30px;
-    display: flex;
-    align-items: center;
-}
-
-.one-rewiew .rewiew-text .bottom .review-b-user img {
-    width: 30px;
-    height: 30px;
-    margin-right: 5px;
-}
-
-.one-rewiew .rewiew-text .bottom .review-stars {
+.rewiew-text {
+    p {
+      padding-top: 20px;
+      margin-right: 80px;
+      font-size: 16px;
+      line-height: 20px;
+  }
+  .bottom {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      .review-b-user {
+        margin-right: 30px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-right: 5px;
+      }
+  }
+  .review-stars {
     margin-right: 30px;
     margin-top: -3px;
+    .one-star {
+      padding-right: 2.5px;
+      i {
+        background: linear-gradient(180deg, #ffffff 0%, #357f1e 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .star-yes, .star-no {}
 }
-
-.one-rewiew .rewiew-text .bottom .review-stars .one-star {
-    padding-right: 2.5px;
 }
-
-.one-rewiew .rewiew-text .bottom .review-stars .one-star i {
-    background: linear-gradient(180deg, #ffffff 0%, #357f1e 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.one-rewiew .rewiew-text .bottom .review-stars .one-star .star-yes {}
-
-.one-rewiew .rewiew-text .bottom .review-stars .one-star .star-no {}
-
-.one-rewiew .rewiew-text .bottom .read-more {
+.read-more {
     line-height: 28px;
     font-size: 14px;
     padding: 0px 20px;
 }
+}
+}
+}
 
 .poker-room-platforms {
-    display: flex;
-}
-
-.poker-room-platforms > div {
+  display: flex;
+  > div {
     min-width: 50%;
 }
-
-.poker-room-platforms .title {
+.title {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
-
-.poker-room-platforms .left {}
-
-.poker-room-platforms .right {}
-
-.poker-room-platforms .row-links {
+.left, .right {}
+.row-links {
     line-height: 24px;
+    .one-link {
+      padding-right: 15px;
+      a {
+        color: #000;
+        &:hover {}
+    }
 }
-
-.poker-room-platforms .row-links .one-link {
-    padding-right: 15px;
 }
-
-.poker-room-platforms .row-links .one-link a {
-    color: #000;
 }
-
-.poker-room-platforms .row-links .one-link a:hover {}
 
 .accepted-method-pay {
-    margin-top: 30px;
-    display: flex;
-}
-
-.accepted-method-pay .one-accept {
+  margin-top: 30px;
+  display: flex;
+  .one-accept {
     border: 1px solid #EBEBEB;
     height: 50px;
     flex-basis: 75px;
@@ -565,110 +478,93 @@
     align-items: center;
     justify-content: center;
     margin-right: 25px;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+  }
 }
-
-.accepted-method-pay .one-accept img {
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .poker-room-contacts {
-    margin-top: 30px;
-    display: flex;
-}
-
-.poker-room-contacts > div {
+  margin-top: 30px;
+  display: flex;
+  > div {
     min-width: 50%;
 }
-
-.poker-room-contacts .left {}
-
-.poker-room-contacts .right {}
-
-.poker-room-contacts .title {
+.left, .right {}
+.title {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
-
-.poker-room-contacts p {
+p {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 10px;
 }
-
-.poker-room-contacts .one-contact {
+.one-contact {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 10px;
+    > span {
+      &:first-child {
+        width: 120px;
+        font-weight: 300;
+        display: inline-block;
+    }
+    &:last-child {
+        font-weight: 400;
+    }
 }
-
-.poker-room-contacts .one-contact > span:first-child {
-    width: 120px;
-    font-weight: 300;
-    display: inline-block;
-}
-
-.poker-room-contacts .one-contact > span:last-child {
-    font-weight: 400;
-}
-
-.poker-room-contacts .one-contact a {
-    border-bottom: 1px solid $link-color;
-}
-
-.poker-room-contacts .one-contact a:hover {
+a {
+  border-bottom: 1px solid #2a67b9;
+  &:hover {
     text-decoration: none !important;
-    border-bottom: 1px solid $text-black-color;
+    border-bottom: 1px solid #000000;
+}
+}
+}
 }
 
 .poker-room-additional-links {
-    padding: 50px 0px 50px 0px;
-    margin-top: 100px;
-    background: #f9f9f9;
-}
-
-.poker-room-additional-links .container {
+  padding: 50px 0px 50px 0px;
+  margin-top: 100px;
+  background: #f9f9f9;
+  .container {
     padding-left: 100px;
 }
-
-.poker-room-additional-links .title {
+.title {
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
-
-.poker-room-additional-links .block-links {}
-
-.poker-room-additional-links .left {
+.block-links {}
+.left {
     width: 50%;
     float: left;
     padding-right: 25px;
 }
-
-.poker-room-additional-links .right {
+.right {
     width: 50%;
     float: left;
     padding-left: 25px;
 }
-
-.poker-room-additional-links .block-links ul {
+.block-links ul {
     line-height: 24px;
     font-size: 18px;
     list-style-type: square;
     margin-left: 35px;
+    li {
+      margin-bottom: 12.5px;
+      a {}
+  }
 }
-
-.poker-room-additional-links .block-links ul li {
-    margin-bottom: 12.5px;
 }
-
-.poker-room-additional-links .block-links ul li a {}
 
 .visible-xs {
     display: none;
@@ -690,118 +586,125 @@
         line-height: 50px;
         max-width: 660px;
     }
-    .room-advances .left {
+    .room-advances {
+      .left {
         padding-right: 30px;
-    }
-    .room-advances .left ul li {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 10px;
-    }
-    .room-advances .right {}
-    .room-advances .right .room-manager {
-        width: 360px;
-    }
-    .room-advances .right .room-manager .links {
-        min-width: 110px;
-    }
-    .room-advances .right .room-manager .links .one-link {
+        ul li {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 10px;
+      }
+  }
+  .right .room-manager {
+    width: 360px;
+    .links {
+      min-width: 110px;
+      .one-link {
         padding: 0px 40px;
-    }
-    .room-advances .right .room-manager .links .one-link span {
+        span {
+          display: none;
+      }
+      i {
+          width: 30px;
+          height: 30px;
+      }
+  }
+}
+}
+}
+.video iframe {
+    width: 100%;
+    height: 330px;
+}
+.user-quest-block .one-user-quest {
+    font-size: 18px;
+    line-height: 26px;
+}
+.user-reviews {
+  &.yes-rewiew {
+    .user-reviews-title {
+      width: 260px;
+      > .hidden-xs {
         display: none;
     }
-    .room-advances .right .room-manager .links .one-link i {
-        width: 30px;
-        height: 30px;
-    }
-    .video iframe {
-        width: 100%;
-        height: 330px;
-    }
-    .user-quest-block .one-user-quest {
-        font-size: 18px;
-        line-height: 26px;
-    }
-    .user-reviews.yes-rewiew .user-reviews-title {
-        width: 260px;
-    }
-    .user-reviews.yes-rewiew .user-reviews-title > .hidden-xs {
-        display: none;
-    }
-    .user-reviews.yes-rewiew .make-review-div {
-        width: 260px;
-    }
-    .one-rewiew {
-        width: 440px;
-        height: initial;
-        position: static;
-        float: right;
-        margin-right: 25px;
-        margin-top: -46px;
-    }
-    .user-reviews .make-review-div .make-review {
-        padding: 0px 25px;
-    }
-    .one-rewiew .rewiew-text p {
-        font-size: 16px;
-        line-height: 24px;
-        margin-left: 90px;
-        margin-right: 30px;
-    }
-    .one-rewiew .rewiew-text .bottom {
-        padding-left: 90px;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .one-rewiew .rewiew-text .bottom .read-more {
+}
+.make-review-div {
+  width: 260px;
+}
+}
+.make-review-div .make-review {
+    padding: 0px 25px;
+}
+&.yes-rewiew + .clearfix {
+    margin-bottom: 100px;
+}
+}
+.one-rewiew {
+  width: 440px;
+  height: initial;
+  position: static;
+  float: right;
+  margin-right: 25px;
+  margin-top: -46px;
+  .rewiew-text {
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-left: 90px;
+      margin-right: 30px;
+  }
+  .bottom {
+      padding-left: 90px;
+      width: 100%;
+      flex-wrap: wrap;
+      .read-more {
         line-height: 28px;
         font-size: 14px;
         padding: 0px 20px;
         display: block;
         margin: 20px 0px 25px 0px;
     }
-    .one-rewiew .rewiew-text .bottom .review-stars {
+    .review-stars {
         min-width: 95px;
     }
-    .user-reviews.yes-rewiew + .clearfix {
-        margin-bottom: 100px;
-    }
-    .accepted-method-pay {
-        flex-wrap: wrap;
-    }
-    .accepted-method-pay .one-accept {
-        margin-bottom: 20px;
-    }
-    .poker-room-contacts .one-contact > span:first-child {
-        width: 100%;
-        display: block;
-    }
-    .poker-room-contacts {
-        margin-top: 10px;
-    }
-    .poker-room-additional-links .container {
-        width: 600px;
-        margin-left: 75px;
-        padding-left: 0px;
-    }
-    .poker-room-additional-links .block-links ul {
-        line-height: 24px;
-        font-size: 16px;
-    }
-    .poker-room-additional-links {
-        padding: 40px 0px;
-    }
+}
+}
+}
+.accepted-method-pay {
+  flex-wrap: wrap;
+  .one-accept {
+    margin-bottom: 20px;
+}
+}
+.poker-room-contacts {
+  .one-contact > span:first-child {
+    width: 100%;
+    display: block;
+}
+margin-top: 10px;
+}
+.poker-room-additional-links {
+  .container {
+    width: 600px;
+    margin-left: 75px;
+    padding-left: 0px;
+}
+.block-links ul {
+    line-height: 24px;
+    font-size: 16px;
+}
+padding: 40px 0px;
+}
 
 }
 
 @media (max-width: 720px) {
 
     .poker-room-header {
-        padding-top: 35px;
-    }
-    .poker-room-header .name-room {
+      padding-top: 35px;
+      .name-room {
         font-size: 14px;
+      }
     }
 
     .visible-xs {
@@ -830,41 +733,43 @@
         max-width: 100%;
         padding: 0px 20px;
     }
-    .room-advances .left {
+    .room-advances {
+      .left {
         width: 100%;
         float: none;
         padding-right: 0px;
         margin-top: 30px;
-    }
-    .room-advances .left ul li {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 10px;
-    }
-    .room-advances .right .room-manager .profile {
-        min-width: 220px;
-    }
-    .room-advances .right {
+        ul li {
+          font-size: 16px;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+      }
+      .right {
+        .room-manager {
+          .profile {
+            min-width: 220px;
+          }
+          width: 300px;
+          margin: -50px auto 0px auto;
+          .links {
+            min-width: 80px;
+            .one-link {
+              padding: 0px 25px;
+              span {
+                display: none;
+              }
+              i {
+                width: 30px;
+                height: 30px;
+                margin-right: 0px;
+              }
+            }
+          }
+        }
         width: 100%;
         float: none;
-    }
-    .room-advances .right .room-manager {
-        width: 300px;
-        margin: -50px auto 0px auto;
-    }
-    .room-advances .right .room-manager .links {
-        min-width: 80px;
-    }
-    .room-advances .right .room-manager .links .one-link {
-        padding: 0px 25px;
-    }
-    .room-advances .right .room-manager .links .one-link span {
-        display: none;
-    }
-    .room-advances .right .room-manager .links .one-link i {
-        width: 30px;
-        height: 30px;
-        margin-right: 0px;
+      }
     }
     .video iframe {
         width: 100%;
@@ -874,90 +779,96 @@
         font-size: 18px;
         line-height: 26px;
     }
-    .user-reviews.yes-rewiew .user-reviews-title {
-        width: 100%;
-    }
-    .user-reviews.yes-rewiew .user-reviews-title > .hidden-xs {
+    .user-reviews {
+      &.yes-rewiew {
+        .user-reviews-title {
+          width: 100%;
+          > .hidden-xs {
+            display: none;
+          }
+        }
+        .make-review-div {
+          width: 100%;
+        }
+      }
+      .make-review-div .make-review {
+        padding: 0px 25px;
+      }
+      &.yes-rewiew + .clearfix {
         display: none;
-    }
-    .user-reviews.yes-rewiew .make-review-div {
-        width: 100%;
+      }
     }
     .one-rewiew {
-        width: 100%;
-        height: initial;
-        position: static;
-        float: none;
-        margin-right: 0px;
-        margin-top: 30px;
-    }
-    .user-reviews .make-review-div .make-review {
-        padding: 0px 25px;
-    }
-    .one-rewiew .rewiew-text p {
-        font-size: 16px;
-        line-height: 24px;
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-top: 0px;
-    }
-    .one-rewiew .rewiew-text .bottom {
-        padding-left: 20px;
-        padding-right: 0px;
-        width: 100%;
-        flex-wrap: wrap;
-    }
-    .one-rewiew .rewiew-text .bottom .read-more {
-        line-height: 28px;
-        font-size: 14px;
-        padding: 0px 20px;
-        display: block;
-        margin: 20px 0px;
-        width: 150px;
-    }
-    .one-rewiew .rewiew-text .bottom .review-stars {
-        min-width: 95px;
-    }
-    .user-reviews.yes-rewiew + .clearfix {
-        display: none;
+      width: 100%;
+      height: initial;
+      position: static;
+      float: none;
+      margin-right: 0px;
+      margin-top: 30px;
+      .rewiew-text {
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-top: 0px;
+        }
+        .bottom {
+          padding-left: 20px;
+          padding-right: 0px;
+          width: 100%;
+          flex-wrap: wrap;
+          .read-more {
+            line-height: 28px;
+            font-size: 14px;
+            padding: 0px 20px;
+            display: block;
+            margin: 20px 0px;
+            width: 150px;
+          }
+          .review-stars {
+            min-width: 95px;
+          }
+        }
+      }
     }
     .accepted-method-pay {
-        flex-wrap: wrap;
-    }
-    .accepted-method-pay .one-accept {
+      flex-wrap: wrap;
+      .one-accept {
         margin-bottom: 20px;
-    }
-    .poker-room-contacts .one-contact > span:first-child {
-        width: 100%;
-        display: block;
+      }
     }
     .poker-room-contacts {
-        margin-top: 10px;
+      .one-contact > span:first-child {
+        width: 100%;
+        display: block;
+      }
+      margin-top: 10px;
     }
-    .poker-room-additional-links .container {
+    .poker-room-additional-links {
+      .container {
         width: 100%;
         margin-left: 0px;
         padding-left: 20px;
         padding-right: 20px;
-    }
-    .poker-room-additional-links .left {
+      }
+      .left {
         width: 100%;
         float: none;
         padding-right: 0px;
-    }
-    .poker-room-additional-links .right {
+      }
+      .right {
         width: 100%;
         float: none;
         padding-left: 0px;
-    }
-    .poker-room-additional-links .block-links ul {
+      }
+      .block-links ul {
         line-height: 22px;
         font-size: 14px;
         margin-left: 25px;
-    }
-    .poker-room-additional-links {
-        padding: 40px 0px;
-        margin-top: 50px;
+      }
+      padding: 40px 0px;
+      margin-top: 50px;
     }
     .poker-room-title {
         font-size: 22px;
@@ -968,24 +879,19 @@
         line-height: 20px;
     }
 
-    .poker-room-platforms {
-        display: block;
+    .poker-room-platforms, .poker-room-contacts {
+      display: block;
     }
-    .poker-room-contacts {
-        display: block;
-    }
-    .poker-room-platforms > div {
+
+    .poker-room-platforms, .poker-room-contacts {
+      > div {
         min-width: 100%;
-    }
-    .poker-room-platforms .right {
+      }
+      .right {
         margin-top: 25px;
+      }
     }
-    .poker-room-contacts > div {
-        min-width: 100%;
-    }
-    .poker-room-contacts .right {
-        margin-top: 25px;
-    }
+    
     .user-quest-block .one-user-quest {
         font-size: 16px;
         line-height: 22px;
@@ -997,46 +903,46 @@
         margin-right: -10px;
     }
     .user-reviews {
-        padding: 30px 20px;
-        margin-left: -10px;
-        margin-right: -10px;
-    }
-    .user-reviews.no-rewiew {
+      padding: 30px 20px;
+      margin-left: -10px;
+      margin-right: -10px;
+      &.no-rewiew {
         margin-bottom: 50px;
-    }
-    .user-reviews.yes-rewiew {
+      }
+      &.yes-rewiew {
         margin-bottom: 50px;
         background: none;
         padding-bottom: 0px;
-    }
-    .user-reviews.yes-rewiew:before {
-        content: "";
-        position: absolute;
-        background: #f9f9f9;
-        height: 215px;
-        width: 100%;
-        z-index: 0;
-        left: 0px;
-        top: 0px;
-    }
-    .user-reviews.yes-rewiew > * {
-        position: relative;
-        z-index: 10;
+        &:before {
+          content: "";
+          position: absolute;
+          background: #f9f9f9;
+          height: 215px;
+          width: 100%;
+          z-index: 0;
+          left: 0px;
+          top: 0px;
+        }
+        > * {
+          position: relative;
+          z-index: 10;
+        }
+      }
     }
     .one-rewiew {
-        background: #fff;
-        padding-top: 20px;
-        top: initial;
-        left: initial;
-        bottom: initial;
-        right: initial;
-        margin-left: -10px;
-        margin-right: -10px;
-        width: initial;
-    }
-    .one-rewiew .room-ico {
+      background: #fff;
+      padding-top: 20px;
+      top: initial;
+      left: initial;
+      bottom: initial;
+      right: initial;
+      margin-left: -10px;
+      margin-right: -10px;
+      width: initial;
+      .room-ico {
         float: none;
         margin-top: 0px;
+      }
     }
 
     .all-user-quest-block {
