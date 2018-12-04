@@ -1,0 +1,27 @@
+.best-rooms {
+    background: $footer-rooms-bg-color;
+    padding: 0 u() u();
+
+    .best-rooms-title {
+        color: $text-white-color;
+    }
+
+    .best-rooms-list {
+        @extend %row;
+
+        .room-link {
+            color: $text-white-color;
+            display: inline-block;
+            line-height: 36px;
+        }
+
+        .room-icon {
+            display: inline-block;
+            height: 26px;
+            width: 26px;
+            margin-top: -4px;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    }
+}

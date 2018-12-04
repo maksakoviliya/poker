@@ -1,0 +1,32 @@
+{% macro list(rooms) %}
+
+    {% for room in rooms %}
+        <a href="{{ room.link }}" class="game-post">
+            <div class="game-header">
+                <div class="ico">
+                    <img src="{{ assets(room.logo) }}">
+                </div>
+                <div class="title">{{ room.title }}</div>
+                <div class="brand">{{ room.brand }}</div>
+                <div class="stars">
+                    {% for i in 1..5 %}
+                        {% if i <= room.stars %}
+                            <span class="one-star star-yes"></span>
+                        {% elseif i > room.stars %}
+                            <span class="one-star star-no"></span>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="game-body">
+                <ul>
+                    {% for option in room.options %}
+                        <li>{{ option }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="game-footer">{{ room.bonus }}</div>
+        </a>
+    {% endfor %}
+
+{% endmacro %}

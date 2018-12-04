@@ -1,0 +1,29 @@
+a[href] {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover:not(.btn) {
+        text-decoration: underline;
+    }
+}
+
+%underline {
+    position: relative;
+
+    &:after {
+        content: ' ';
+        position: absolute;
+        bottom: 1px;
+        left: 0;
+        right: 0;
+        border-bottom: 1px solid $accent-color;
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        &:after {
+            border: none;
+        }
+    }
+}

@@ -1,0 +1,634 @@
+.clearfix {
+    clear: both;
+}
+
+.header.fixed.start {
+    transform: translateY(0%);
+}
+
+.header.fixed + main {
+    padding-top: 60px;
+}
+
+.section-full {}
+
+.section-slim {
+    max-width: 920px;
+    margin: auto;
+}
+
+.section-slim > *:first-child {
+    margin-top: 0px;
+}
+
+.section-medium {
+    max-width: 840px;
+    margin-left: 100px;
+}
+
+.post-content > *:first-child {
+    margin-top: 45px;
+}
+
+.post-content > *:last-child {
+    margin-bottom: 45px;
+}
+
+.post-header {}
+
+.post-header .breadcrumbs {
+    margin-bottom: 10px;
+}
+
+.post-header .breadcrumbs li {
+    font-size: 14px;
+    line-height: 14px;
+    display: inline;
+}
+
+.post-header .breadcrumbs li a {
+    color: #227118;
+}
+
+.post-header .breadcrumbs li span {
+    color: #227118;
+    padding: 0px 5px;
+}
+
+.post-header .post-title {
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 15px;
+}
+
+.post-header .author-div {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.post-header .author-div > span {
+    padding-right: 30px;
+}
+
+.post-header .author-div .author {}
+
+.post-header .author-div .author a {}
+
+.post-header .author-div .date {}
+
+.post-header .author-div .comments {}
+
+.post-header .author-div .comments i {
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background: no-repeat center / contain;
+    background-image: url(/src/inline-icons/comment-black.svg) !important;
+}
+
+.post-header .author-div .comments span {
+    color: #227118;
+}
+
+.post-header .author-div .views {}
+
+.post-header .author-div .views i {
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    height: 18px;
+    width: 20px;
+    display: inline-block;
+    background: no-repeat center / contain;
+    background-image: url(/src/inline-icons/eye.svg) !important;
+}
+
+.post-content > img:first-child {
+    margin-bottom: 0px;
+}
+
+.post-content p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 45px;
+}
+
+.post-content p.big-text {
+    color: #000000;
+    font-family: "IBM Plex Serif";
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 45px;
+    margin-top: 25px;
+}
+
+.post-content blockquote {
+    width: 360px;
+    max-width: 100%;
+    border-top: 10px solid #303030;
+    background: #f3f3f3;
+    padding: 30px 35px 70px 45px;
+    margin: 0px;
+    font-family: "IBM Plex Serif";
+    font-size: 22px;
+    line-height: 34px;
+    font-style: italic;
+    position: relative;
+}
+
+.post-content blockquote:after {
+    content: "";
+    background: url(images/my/quote.png) no-repeat;
+    width: 110px;
+    height: 120px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.post-content blockquote.quote-1 {
+    width: 360px;
+    float: right;
+    margin-right: -100px;
+    margin-left: 25px;
+}
+
+.post-content blockquote.quote-1 + *:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.post-content blockquote.quote-2 {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 45px;
+}
+
+.post-content blockquote.quote-3 {
+    width: 100%;
+    margin-top: 70px;
+    margin-bottom: 45px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.post-content blockquote.quote-3 {
+    padding-bottom: 90px;
+}
+
+.post-content blockquote.quote-3 .author {
+    line-height: 40px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    float: right;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+.post-content blockquote.quote-3 .author img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.post-content blockquote.quote-3 .author a {
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: normal;
+}
+
+.post-content h1 {
+    font-family: "Open Sans";
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 600;
+    margin-top: 65px;
+    margin-bottom: 15px;
+}
+
+.post-content h2 {
+    font-family: "Open Sans";
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 400;
+    margin-top: 45px;
+    letter-spacing: normal;
+    text-transform: none;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-content h3 {
+    font-family: "Open Sans";
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+    margin-top: 45px;
+    letter-spacing: normal;
+    text-transform: none;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.post-content .fire {
+    border: 1px solid $accent-color;
+    font-size: 18px;
+    padding: 15px 0px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.post-content .fire i {
+    margin-right: 4px;
+    margin-top: -3px;
+    vertical-align: middle;
+    height: 31px;
+    width: 25px;
+    display: inline-block;
+    background: no-repeat center / contain;
+    background-image: url(/src/inline-icons/fire.svg) !important;
+}
+
+.post-content .fire span {
+    border-bottom: 1px solid $second-color;
+}
+
+.post-content .fire:hover {
+    text-decoration: none !important;
+}
+
+.post-content .fire:hover span {
+    border-bottom: $text-black-color;
+}
+
+.post-content ul {
+    list-style-type: square;
+    margin-left: 35px;
+    margin-top: 0px;
+    margin-bottom: 45px;
+    margin-top: 25px;
+}
+
+.post-content ul li {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.post-content > img {
+    max-width: 100%;
+    margin-bottom: 45px;
+}
+
+.post-content > img + span {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 18px;
+    color: #646464;
+    margin-bottom: 45px;
+    display: block;
+    margin-top: -40px;
+}
+
+.post-content iframe {
+    margin-bottom: 45px;
+    max-width: 100%;
+    height: 500px;
+    width: 100%;
+}
+
+.post-content .twitter-tweet {
+    margin-bottom: 45px !important;
+}
+
+.post-bottom {
+    padding-bottom: 75px;
+}
+
+.post-bottom .buttons {}
+
+.post-bottom .buttons .btn {
+    width: 49.5%;
+}
+
+.post-bottom .buttons .btn:first-child {
+    margin-right: 1%;
+}
+
+.post-bottom .comments-title {
+    font-size: 22px;
+    border-bottom: 2px solid #f3f3f3;
+    padding-bottom: 15px;
+    margin-top: 45px;
+}
+
+.post-bottom .comments {}
+
+.post-bottom .comments .one-comment {}
+
+.post-bottom .comments .one-comment .comment {
+    border-top: 2px solid #f3f3f3;
+}
+
+.post-bottom .comments .one-comment .this-comment {
+    padding: 20px 0px;
+}
+
+.post-bottom .comments .one-comment .reply-comment {
+    background: #f8f8f8;
+    padding: 20px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-header {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: flex;
+    line-height: 30px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-header .author {
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-header .author img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-header .date {
+    color: #646464;
+}
+
+.post-bottom .comments .one-comment .comment .comment-content {
+    margin-bottom: 10px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-content img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-content p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-content > *:last-child {
+    margin-bottom: 0px;
+}
+
+.post-bottom .comments .one-comment .comment .comment-bottom {}
+
+.post-bottom .comments .one-comment .comment .comment-bottom .reply {
+    font-size: 14px;
+    border-bottom: 1px solid $second-color;
+}
+
+.post-bottom .comments .one-comment .comment .comment-bottom .reply:hover {
+    font-size: 14px;
+    border-bottom: 1px solid $text-black-color;
+    text-decoration: none;
+}
+
+@media (max-width: 1159px) and (min-width: 960px) {
+
+    .section-medium {
+        max-width: 920px;
+        margin: auto;
+    }
+
+    .post-content blockquote.quote-1 {
+        margin-right: 0px;
+    }
+
+}
+
+@media (max-width: 959px) and (min-width: 720px) {
+
+    .post-header {
+        max-width: 640px !important;
+        margin-left: 55px !important;
+    }
+    .post-header .post-title {
+        font-size: 42px;
+        line-height: 50px;
+    }
+
+    .post-content {
+        max-width: 540px !important;
+        margin-left: 55px !important;
+    }
+    .post-content p.big-text {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .post-content p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 35px;
+    }
+    .post-content blockquote {
+        font-size: 20px;
+        line-height: 30px;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 30px 30px 70px 30px;
+    }
+    .post-content blockquote.quote-1 {
+        width: 230px;
+    }
+    .post-content h1 {
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .post-content h2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .post-content blockquote.quote-2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .post-content blockquote.quote-3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+    .post-content .fire {
+        font-size: 16px;
+    }
+    .post-content h3 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 35px;
+    }
+    .post-content ul {
+        margin-bottom: 35px;
+    }
+    .post-content ul li {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 10px;
+    }
+    .post-content > img {
+        margin-bottom: 35px;
+    }
+    .post-content > img + span {
+        margin-top: -30px;
+        margin-bottom: 35px;
+    }
+    .post-content iframe {
+        height: 300px;
+    }
+    .post-content .twitter-tweet {
+        margin-bottom: 35px !important;
+    }
+
+    .post-bottom {
+        max-width: 540px !important;
+        margin-left: 55px !important;
+    }
+
+}
+
+@media (max-width: 720px) {
+
+    .header.fixed + main {
+        padding-top: 143px;
+    }
+
+    .post-header {
+        max-width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .post-header .post-title {
+        font-size: 26px;
+        line-height: 30px;
+    }
+    .post-header .author-div {
+        line-height: 30px;
+    }
+
+    .post-content > *:first-child {
+        margin-top: 30px;
+    }
+    .post-content > *:last-child {
+        margin-bottom: 30px;
+    }
+
+    .post-content {
+        max-width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .post-content p.big-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+    .post-content p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 30px;
+    }
+    .post-content blockquote {
+        font-size: 20px;
+        line-height: 30px;
+        font-size: 18px;
+        line-height: 28px;
+        padding: 30px 30px 70px 30px;
+    }
+    .post-content blockquote.quote-1 {
+        float: none;
+        margin: 0px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .post-content h1 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-top: 45px;
+    }
+    .post-content h2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .post-content blockquote.quote-2 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .post-content blockquote.quote-3 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .post-content .fire {
+        font-size: 16px;
+    }
+    .post-content h3 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 30px;
+    }
+    .post-content ul {
+        margin-bottom: 30px;
+    }
+    .post-content ul li {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+    .post-content > img {
+        margin-bottom: 30px;
+    }
+    .post-content > img + span {
+        margin-top: -25px;
+        margin-bottom: 30px;
+    }
+    .post-content iframe {
+        height: 200px;
+    }
+    .post-content .twitter-tweet {
+        margin-bottom: 30px !important;
+    }
+
+    .post-bottom {
+        max-width: 100% !important;
+        margin-left: 0px !important;
+    }
+    .post-bottom .buttons .btn {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    .post-bottom .buttons .btn:last-child {
+        margin-bottom: 0px;
+    }
+
+    .post-bottom .comments .one-comment .comment .comment-content p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .post-bottom {
+        padding-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {}

@@ -1,0 +1,67 @@
+@include r-with('footer') {
+
+    .footer {
+        @extend %i-pattern;
+
+        background-color: $header-bg-color;
+        background-position: 0 40px;
+        border-top: u() solid #27221e;
+        font-weight: $font-light;
+
+        .footer-body {
+            @include r-row();
+
+            align-items: flex-start;
+            padding: u(1.5) 0;
+        }
+
+        .logo {
+            @include r-each-if('logo') {
+                height: r-get('logo/height');
+                width: r-get('logo/width');
+            }
+        }
+
+        .social {
+            margin-top: u(1.3);
+        }
+
+        .copyright {
+            @include r-col('info/col');
+            @include r-offset('info/offset');
+
+            .copyright-description {
+                color: $text-white-color;
+                margin-top: 15px;
+                padding-right: u();
+            }
+        }
+
+        .site-map {
+            @include r-col('site-map/col');
+            @include r-offset('site-map/offset');
+
+            .site-map-list {
+
+                li {
+                    @include r-each-if('site-map/item-width') {
+                        flex: 0 0 r-get();
+                    }
+                }
+            }
+        }
+
+        .best-rooms {
+            @include r-col('rooms/col', false);
+
+            .best-rooms-list {
+
+                li {
+                    @include r-each-if('rooms/item-width') {
+                        flex: 0 0 r-get();
+                    }
+                }
+            }
+        }
+    }
+}

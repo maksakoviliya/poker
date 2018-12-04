@@ -1,0 +1,153 @@
+@include r-with('collection/offers-list') {
+
+    .offers-list {
+        padding-bottom: u(1.1);
+
+        .slider-container {
+            @include r-row(m);
+
+            margin: 0;
+        }
+
+        .offer,
+        .offer-more {
+            @include r-col('col', p);
+
+            .offer-container {
+                background: $body-grey-bg-color;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                transition: box-shadow $ui-animation-duration;
+            }
+
+            .offer-footer {
+                line-height: 80px;
+                text-align: center;
+            }
+
+            &:hover {
+
+                .offer-container {
+                    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+
+        .offer {
+
+            .offer-cover {
+                border-top: 10px solid $offer-bg-color;
+                background: #fff;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                transition: border-color $ui-animation-duration;
+            }
+
+            .room-logo {
+                max-width: 90%;
+            }
+
+            .offer-options {
+                background: $offer-bg-color;
+                color: $text-white-color;
+                flex-grow: 1;
+                padding: u() u(1.5);
+                transition: background-color $ui-animation-duration, color $ui-animation-duration;
+
+                li {
+                    padding: 6px 0 6px 15px;
+                    position: relative;
+
+                    &:before {
+                        content: ' ';
+                        border: 2.5px solid $accent-color;
+                        position: absolute;
+                        left: 0;
+                        top: 14px;
+                        transition: border-color $ui-animation-duration;
+                    }
+                }
+            }
+
+            &:hover {
+
+                .offer-cover {
+                    border-color: $offer-accent-bg-color;
+                }
+
+                .offer-options {
+                    background: $offer-accent-bg-color;
+                    color: $text-black-color;
+
+                    li:before {
+                        border-color: $text-black-color;
+                    }
+                }
+            }
+        }
+
+        .offer-more {
+
+            .offer-region {
+                flex-grow: 1;
+                background: $body-bg-color;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .offer-description {
+                @include r-font('more');
+
+                padding: 0 u();
+            }
+
+            .top-regions {
+                margin-top: u();
+
+                li {
+                    display: inline-block;
+                    margin: 8px;
+                }
+
+                .region-link {
+                    color: $text-default-color;
+                    display: inline-block;
+                }
+
+                .region-flag {
+                    display: block;
+                    height: 40px;
+                    margin-bottom: 2px;
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    @include r-each-if('has-slider') {
+
+        .slider {
+
+            .offers-list {
+                display: block;
+                max-width: 100%;
+
+                .slider-container {
+                    flex-wrap: nowrap;
+                }
+            }
+
+            .slider-progress {
+                display: block;
+            }
+        }
+    }
+}

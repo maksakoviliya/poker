@@ -1,0 +1,9 @@
+@include r-with('components/offer-slogan') {
+
+    .offer-slogan {
+        @include r-font('font');
+        text-align: center;
+        margin-bottom: u(-.5);
+    }
+}
+

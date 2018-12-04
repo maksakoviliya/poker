@@ -1,0 +1,122 @@
+@include r-with('navigation/main-nav') {
+
+    $width: r-get('width');
+
+    .main-nav-open,
+    .main-nav-close {
+        @include r-each-if('control/size') {
+            height: r-get();
+            width: r-get();
+        }
+
+        @include r-each-if('control/pos') {
+            right: r-get();
+        }
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 41%;
+
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+        position: fixed;
+        top: 0;
+        z-index: 1010;
+    }
+
+    .main-nav-open {
+        @extend %i-burger;
+        background-color: $main-menu-open-bg-color;
+        opacity: 1;
+    }
+
+    .main-nav-close {
+        @extend %i-close;
+        background-color: $main-menu-close-bg-color;
+        opacity: 0;
+        top: u(-5);
+    }
+
+    .main-nav {
+        background: $main-nav-bg-color;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        top: 0;
+        right: -$width;
+        height: 100vh;
+        width: $width;
+        z-index: 1000;
+        transition: transform $ui-animation-duration;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        div {
+            @include r-offset('padding');
+            position: relative;
+            min-height: 100vh;
+
+            &:after {
+                @extend %i-logo-sign-c;
+                @extend %icon-contain;
+                content: ' ';
+                height: u(10);
+                width: u(12.5);
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        ul {
+            @include r-offset('offset');
+        }
+
+        li {
+            padding: 7px 0;
+            position: relative;
+
+            &.is-active {
+
+                &:before {
+                    background: $main-nav-selected-color;
+                    border-radius: 50%;
+                    content: ' ';
+                    position: absolute;
+                    top: u(.7);
+                    left: u(-.8);
+                    height: 6px;
+                    width: 6px;
+                }
+
+                a {
+                    color: $main-nav-selected-color;
+                }
+            }
+        }
+
+        h3 {
+            @include r-font('title/font');
+        }
+
+        a {
+            @include r-font('item/font');
+        }
+    }
+
+    .main-nav-opened {
+
+        .main-nav {
+            transform: translate3d(-$width, 0, 0);
+        }
+
+        .main-nav-open {
+            opacity: 0;
+        }
+
+        .main-nav-close {
+            opacity: 1;
+            top: 0;
+        }
+    }
+}

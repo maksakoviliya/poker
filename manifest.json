@@ -1,0 +1,45 @@
+{
+    "src": {
+        "app.css": {
+            "files": [
+                "src/scss/app.scss"
+            ]
+        },
+        "app.js": {
+            "files": [
+                "src/scripts/**/*.js"
+            ]
+        },
+        "vendor.js": {
+            "files": [
+                "node_modules/jquery/dist/jquery.js",
+                "node_modules/jquery-touchswipe/jquery.touchSwipe.js"
+            ]
+        },
+        "images": {
+            "files": [
+                "src/images/**/*"
+            ]
+        },
+        "fonts": {
+            "files": []
+        },
+        "icons": {
+            "path": "../../src/inline-icons"
+        },
+        "views":{
+            "path": "src/views",
+            "default": "*.twig",
+            "data": "src/views/data.json"
+        }
+    },
+    "dist": "build",
+    "watch": {
+        "fonts": "src/fonts/**/*",
+        "images": "src/images/**/*",
+        "scripts": "src/scripts/**/*",
+        "styles": ["src/scss/**/*", "src/inline-icons/**/*"],
+        "twig": "src/views/**/*",
+        "html": "build/*.html"
+    }
+}

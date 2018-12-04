@@ -1,0 +1,44 @@
+{% import 'collections/rooms.twig' as rooms %}
+
+{% extends 'layout/layout.twig' %}
+
+{% block page %}
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="section-slim">
+                <div class="select-room-category">
+                    <div>Показать:</div>
+                    <div>
+                        <select>
+                            {% for option in data.cataloguePage.categories %}
+                                <option>{{ option }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                {{ data.cataloguePage.contentTop }}
+            </div>
+            
+            <div class="games-list">
+                {{ rooms.list(data.rooms) }}
+            </div>
+              
+            <div class="games-list-more">
+                <a class="btn read-more" href="javascript:void(0)">
+                    <span class="full">Показать больше комнат</span>
+                    <span class="compact">Больше комнат</span>
+                    <i></i>
+                </a>
+            </div>
+            
+            <div class="section-slim catalogue-footer">
+                {{ data.cataloguePage.contentBottom }}
+            </div>
+        
+        </div>
+    </section>
+
+{% endblock %}
+

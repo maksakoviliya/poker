@@ -1,0 +1,28 @@
+{% import 'collections/posts.twig' as posts %}
+
+{% extends 'layout/layout.twig' %}
+
+{% block page %}
+
+    <section class="section">
+        <div class="container">
+            <div class="section-slim">
+                <h1 class="tag-title">#{{ data.tagPage.tag }}</h1>
+                {{ data.tagPage.contentTop }}
+            </div>
+            <div class="posts-list-title">Посты по тэгу #{{ data.tagPage.tag }}</div>
+            <div class="posts-list">
+                {{ posts.list(data.posts|slice(0,8)) }}
+            </div>                    
+            <div class="section-list-more">
+                <a class="btn read-more" href="javascript:void(0)">
+                    <span class="full">Показать больше постов</span>
+                    <span class="compact">Больше постов</span>
+                    <i></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

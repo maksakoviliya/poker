@@ -1,0 +1,141 @@
+@include r-config(xs, (
+    media-query: (max-width: sm),
+    layout: (
+        math: fluid,
+        container: auto,
+        container-position: center,
+        columns: 12,
+        gutters: 0.5,
+        outer-padding: .5,
+    ),
+
+    typography: (
+        default: (
+            font: text 14px $font-regular $text-default-color 20px,
+        ),
+        h1: (
+            font: 42px 48px,
+        ),
+        h2: (
+            font: 14px 48px,
+        ),
+        h3: (
+            font: 16px 20px,
+        ),
+    ),
+
+    grid: (
+        gutter: .5,
+    ),
+
+    header: (
+        content-padding: 1 0 19 0 p,
+        short: true,
+        vip-short: true,
+        compact: (
+            height: u(5),
+            logo: (
+                width: 150px,
+                height: 40px,
+            ),
+        ),
+        sign: (
+            font: 16px,
+        ),
+        h1: (
+            offset: 2.2 0 0 0 m,
+        ),
+        sub-title: (
+            font: 16px,
+        ),
+        options: (
+            col-width: 100%,
+        ),
+    ),
+
+    footer: (
+        info: (
+            col: 12,
+            offset: 1 ph,
+        ),
+        site-map: (
+            col: 12,
+            item-width: 100%,
+            offset: .5 1 1.5 p,
+        ),
+        rooms: (
+            col: 12,
+            item-width: 100%,
+        ),
+        social-icons: (
+            width: 9,
+            size: 1.9,
+            offset: 0 1.1 1.1 0 m,
+        ),
+    ),
+
+    sections: (
+
+        two-col: (
+            col: 12,
+        ),
+
+        section-grey: (
+            vertical-offset: 0 2,
+        ),
+
+        footer: (
+            offset: .4 2,
+        )
+    ),
+
+    collection: (
+        offers-list: (
+            col: 12,
+            font: 14px 18px,
+            has-slider: true,
+        ),
+        posts-list: (
+            col: 12,
+            two-col: 12,
+            section-grey: (
+                col: 6,
+                title-font: 14px 20px,
+            ),
+        ),
+        posts-recommended: (
+            offset: -.5 mt,
+            title: (
+                font: 16px 20px,
+            ),
+            description: (
+                font: 14px,
+            ),
+        ),
+    ),
+
+    components: (
+
+        offer-slogan: (
+            font: 26px 30px
+        ),
+
+        vip-chat: (
+            width: 100%,
+        ),
+    ),
+
+    navigation: (
+        main-nav: (
+            padding: 3 11 pv,
+            control: (
+                size: 48px,
+                pos: 10px,
+            ),
+        ),
+        read-more: (
+            font: 18px,
+            compact: true,
+        )
+    ),
+));

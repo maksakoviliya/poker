@@ -1,0 +1,26 @@
+@mixin r-css($key) {
+    @include r-each-if($key) {
+        $props: r-get($key);
+        @if (map-has-key($props, font)) {
+            @include font(map-get($props, font));
+            $props: map-remove($props, font);
+        }
+        @if (map-has-key($props, offset)) {
+            @include offset(map-get($props, offset));
+            $props: map-remove($props, offset);
+        }
+        @each $name, $value in $props {
+            #{$name}: $value;
+        }
+    }
+}
+
+@for $level from 1 through 6 {
+    h#{$level} {
+        @include r-css('typography/h#{$level}');
+    }
+}
+
+body {
+    @include r-font('typography/default/font');
+}

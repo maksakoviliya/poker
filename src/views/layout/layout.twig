@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>{{ data.title }}</title>
+
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="{{ assets('styles/app.css') }}">
+
+</head>
+<body>
+    <div class="wrapper">
+        {% include 'nav.twig' %}
+        {% include 'header.twig' %}
+        <main>{% block page %}{% endblock %}</main>
+        {% include 'footer.twig' %}
+    </div>
+
+    <script src="{{ assets('scripts/vendor.js') }}"></script>
+    <script src="{{ assets('scripts/app.js') }}"></script>
+</body>
+</html>

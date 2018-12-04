@@ -1,0 +1,27 @@
+.social {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include r-each-if('footer/social-icons/width') {
+        width: u(r-get());
+    }
+
+    .social-link {
+        @include r-offset('footer/social-icons/offset');
+        @include r-each-if('footer/social-icons/size') {
+            height: u(r-get());
+            width: u(r-get());
+        }
+
+        @extend %icon-contain;
+        display: inline-block;
+        text-indent: -9999px;
+
+
+        @each $type in (facebook, vkontakte, twitter, telegram, youtube, rss) {
+            &.#{$type} {
+                @extend %i-#{$type};
+            }
+        }
+    }
+}

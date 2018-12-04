@@ -1,0 +1,48 @@
+{% macro list(offers) %}
+
+    {% for offer in offers %}
+        <div class="offer">
+            <div class="offer-container">
+                <div class="offer-cover">
+                    <img class="room-logo" src="{{ assets(offer.logo) }}">
+                </div>
+                <ul class="offer-options">
+                    {% for option in offer.options %}
+                        <li>{{ option }}</li>
+                    {% endfor %}
+                </ul>
+                <div class="offer-footer">
+                    <a class="btn offer-link" href="#">Сделка</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    <div class="offer-more">
+        <div class="offer-container">
+            <div class="offer-region">
+                <p class="offer-description">
+                    Еще <a href="#">28 сделок</a> из разных регионов
+                </p>
+                <ul class="top-regions">
+                    {% for region in [
+                        {title: 'США', flag: assets('images/flags/flag-usa.svg')},
+                        {title: 'Азия', flag: assets('images/flags/flag-china.svg')},
+                        {title: 'Европа', flag: assets('images/flags/flag-eu.svg')}
+                    ] %}
+                        <li>
+                            <a class="region-link" href="#">
+                                <img class="region-flag" src="{{ region.flag }}" alt="{{ region.title }}" />
+                                {{ region.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="offer-footer">
+                <a class="btn offer-link" href="#">Все сделки</a>
+            </div>
+        </div>
+    </div>
+
+{% endmacro %}

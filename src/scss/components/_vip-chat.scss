@@ -1,0 +1,120 @@
+@include r-with('components/vip-chat') {
+
+    .vip-chat {
+        @include r-each-if('width') {
+            width: r-get();
+        }
+
+        height: 350px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 8px 8px 0;
+        border: 1px solid $vip-chat-bg-color;
+        border-bottom: 0;
+
+        &.is-active {
+            display: block;
+        }
+
+        .vip-chat-close {
+            @extend %icon;
+            @extend %i-close;
+
+            width: 18px;
+            height: 18px;
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background-color: transparent;
+            margin: 0;
+            text-indent: -9999px;
+        }
+
+        .vip-chat-container {
+            background: $vip-chat-bg-color;
+            height: 100%;
+            text-align: center;
+            padding-top: u(.6);
+        }
+
+        .vip-chat-title {
+            @include r-font('title/font');
+
+        }
+
+        .vip-chat-body {
+            @include r-font('body/font');
+
+            margin-top: 19px;
+            position: relative;
+
+            &:before {
+                content: ' ';
+                width: 30px;
+                position: absolute;
+                top: -16px;
+                left: 50%;
+                border-bottom: 1px solid #fff;
+                transform: translateX(-50%);
+            }
+        }
+
+        .vip-chat-avatar {
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            margin: 17px 0 16px;
+        }
+
+        .btn {
+            border-color: $btn-white-border-color;
+            color: $text-black-color;
+        }
+
+        &.select-method {
+            border-color: $vip-chat-select-bg-color;
+
+            .vip-chat-container {
+                background: $vip-chat-select-bg-color;
+            }
+
+            .vip-chat-body {
+                color: $text-white-color;
+                margin-top: 17px;
+            }
+
+            .vip-chat-avatar {
+                width: 90px;
+                height: 90px;
+                margin-top: 8px;
+            }
+
+            .btn {
+                width: 158px;
+                margin: 15px 0 5px;
+                background: $white-bg-color;
+
+                span {
+                    display: inline-block;
+                    padding-left: 34px;
+                    line-height: 24px;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    background-size: 26px 24px;
+                }
+
+                &.skype span {
+                    @extend %i-skype;
+
+                }
+
+                &.telegram span {
+                    @extend %i-telegram;
+                }
+            }
+        }
+    }
+}

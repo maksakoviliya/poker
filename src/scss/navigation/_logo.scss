@@ -1,0 +1,27 @@
+@include r-with('navigation/logo') {
+
+    .logo {
+        @extend %icon;
+        @extend %i-logo-full;
+
+        @include r-each-if('full') {
+            width: r-get('full/width');
+            height: r-get('full/height');
+        }
+
+        text-indent: -9999px;
+    }
+
+    .logo-compact {
+        @extend %icon;
+        @extend %i-logo-sign;
+
+        @include r-each-if('compact') {
+            width: r-get('compact/width');
+            height: r-get('compact/height');
+        }
+
+        text-indent: -9999px;
+    }
+}
+

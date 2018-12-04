@@ -1,0 +1,34 @@
+@include r-with('collection/posts-recommended') {
+
+    .posts-recommended {
+        @include r-each-if('offset') {
+            @include offset(r-get())
+        }
+
+        .recommended-label {
+            @include r-font('label/font');
+
+            background: $posts-label-bg-color;
+            display: inline-block;
+            padding: 0 5px;
+        }
+
+        .post {
+
+            .post-cover {
+                margin-bottom: u(.4);
+            }
+
+            .post-title {
+                @include r-font('title/font');
+            }
+
+            .post-description {
+                @include r-font('description/font');
+
+                margin-top: u(.45);
+            }
+        }
+    }
+}
+

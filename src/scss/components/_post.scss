@@ -1,0 +1,20 @@
+.post {
+    margin-bottom: $v-gutter* 3.8;
+
+    .post-title {
+        letter-spacing: 0;
+    }
+
+    .post-link {
+        display: block;
+    }
+
+    .post-cover {
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .post-description {
+        margin-top: 7px;
+    }
+}

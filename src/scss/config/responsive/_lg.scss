@@ -1,0 +1,20 @@
+@include r-config(lg, (
+    media-query: lg desktop,
+    media-query-container: 48,
+    layout: (
+        math: fluid,
+        container: auto,
+        container-position: center,
+        columns: 12,
+        gutters: 0.55,
+    ),
+
+    navigation: (
+
+        main-nav: (
+            control: (
+                pos: 20px,
+            ),
+        ),
+    ),
+));

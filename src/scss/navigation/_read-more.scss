@@ -1,0 +1,50 @@
+@include r-with('navigation/read-more') {
+
+    .btn.read-more {
+        @include r-font('font');
+        letter-spacing: 0;
+        text-transform: none;
+
+        border: 1px solid $nav-border-color;
+        border-radius: 8px;
+        display: inline-block;
+        padding: 0 u(1.5);
+        line-height: 46px;
+
+        .compact {
+            display: none;
+        }
+
+        .full {
+            display: inline;
+        }
+
+        @include r-each-if('compact') {
+            width: 100%;
+
+            .compact {
+                display: inline;
+            }
+
+            .full {
+                display: none;
+            }
+        }
+
+        i {
+            @extend %icon;
+            @extend %i-right-arrow;
+            margin-left: 4px;
+            margin-top: -2px;
+            vertical-align: middle;
+            height: 14px;
+            width: 16px;
+            transform: rotate(90deg);
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+

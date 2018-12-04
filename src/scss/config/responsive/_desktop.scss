@@ -1,0 +1,175 @@
+@include r-config(desktop, (
+    media-query: desktop,
+    layout: (
+        math: static,
+        container-position: center,
+        columns: 12,
+        column-width: 3.75,
+        gutters: u(),
+        global-box-sizing: border-box,
+        outer-padding: 1,
+    ),
+
+    typography: (
+        default: (
+            font: text 14px $font-regular $text-default-color 20px,
+        ),
+        h1: (
+            font: header 64px $font-regular 72px,
+        ),
+        h2: (
+            font: text 14px $font-bold $title-color 48px uppercase .12em,
+        ),
+        h3: (
+            font: header 18px $font-regular $title-color 22px .12em,
+        ),
+        btn: (
+            font: text 14px $font-bold $link-color 35px uppercase .12em,
+        ),
+    ),
+
+    grid: (
+        gutter: 1,
+    ),
+
+    header: (
+        content-padding: .2 13.4 3.4 0 p,
+        compact: (
+            height: u(3),
+        ),
+        sign: (
+            font: header 18px,
+        ),
+        sub-title: (
+            font: 26px $font-light 1.5,
+        ),
+        h3: (
+            font: text 14px $font-bold $text-white-color 19px uppercase,
+        ),
+        options: (
+            col-width: 32%,
+        ),
+        vip-chat-label: (
+            font: text 14px $font-bold $text-white-color uppercase 26px .08em,
+            offset: 3.5 ml,
+        ),
+        vip-chat-btn: (
+            font: text 12px $font-bold $text-black-color uppercase 28px .12em,
+            offset: .5 ml,
+        ),
+    ),
+
+    footer: (
+        logo: (
+            height: 35px,
+            width: 140px,
+        ),
+        info: (
+            col: 3.5,
+            offset: 1.5 pr,
+        ),
+        site-map: (
+            col: 4.5,
+            item-width: 42%,
+        ),
+        rooms: (
+            col: 4,
+            item-width: 50%,
+        ),
+        social-icons: (
+            size: 1.3,
+            offset: .6 mr
+        ),
+    ),
+
+    sections: (
+
+        two-col: (
+            col: 6,
+        ),
+
+        section-grey: (
+            vertical-offset: 0 3,
+        ),
+
+        footer: (
+            offset: .4 3,
+        )
+    ),
+
+    collection: (
+        offers-list: (
+            col: 3,
+            font: 16px $font-light 22px,
+            btn: 14px $font-bold uppercase,
+            more: header 26px 32px,
+        ),
+        posts-list: (
+            col: 3,
+            two-col: 6,
+        ),
+        posts-recommended: (
+            offset: -1.05 mt,
+            label: (
+                font: 12px $posts-label-color italic 21px,
+            ),
+            title: (
+                font: 28px 36px,
+            ),
+            description: (
+                font: 16px,
+            ),
+        ),
+    ),
+
+    components: (
+        offer-slogan: (
+            font: header 48px #232323 56px
+        ),
+
+        vip-chat: (
+            width: u(13.3),
+
+            title: (
+                font: text 16px $font-bold $text-black-color 48px uppercase .08em,
+            ),
+            body: (
+                font: header 18px $text-black-color 22px,
+            ),
+            text-select: (
+                font: header 18px $text-white-color $font-regular 22px,
+            ),
+        ),
+    ),
+
+    navigation: (
+        logo: (
+            full: (
+                width: 196px,
+                height: 50px,
+            ),
+            compact: (
+                width: 40px,
+                height: 32px,
+            ),
+        ),
+        main-nav: (
+            title: (
+                font: text 14px $font-bold $main-nav-title-color 20px uppercase .12em,
+            ),
+            item: (
+                font: text 18px $font-light $main-nav-item-color 20px,
+            ),
+            control: (
+                size: 60px,
+                pos: 40px,
+            ),
+            padding: 5 1.5 12 p,
+            offset: 1.7 mb,
+            width: u(15.25),
+        ),
+        read-more: (
+            font: 18px $font-regular,
+        ),
+    ),
+));

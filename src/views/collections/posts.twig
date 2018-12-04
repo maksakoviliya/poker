@@ -1,0 +1,33 @@
+{% macro list(posts, has_description = true) %}
+
+    {% for post in posts %}
+        <div class="post">
+            <a class="post-link" href="#">
+                <img class="post-cover" src="{{ assets(post.cover) }}" alt="{{ post.title }}" />
+                <h3 class="post-title">{{ post.title }}</h3>
+            </a>
+            {% if has_description %}
+                <div class="post-description">{{ post.description }}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+{% endmacro %}
+
+
+
+{% macro recommended(posts, has_description = true) %}
+
+    {% for post in posts %}
+        <div class="post">
+            <a class="post-link" href="#">
+                <img class="post-cover" src="{{ assets(post.cover) }}" alt="{{ post.title }}" />
+                <h3 class="post-title">{{ post.title }}</h3>
+            </a>
+            {% if has_description %}
+                <div class="post-description">{{ post.description }}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+{% endmacro %}

@@ -1,0 +1,16 @@
+%icon {
+    display: inline-block;
+    background: no-repeat center / contain;
+}
+
+%icon-contain {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+@each $class, $icon in $icons {
+    %i-#{$class} {
+        background-image: inline(#{$icon});
+    }
+}

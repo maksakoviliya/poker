@@ -1,0 +1,23 @@
+.site-map {
+
+    .site-map-list {
+        @extend %row;
+
+        li {
+            line-height: 28px;
+        }
+    }
+
+    .site-map-link {
+        color: $accent-color;
+
+        &.support {
+            @extend %i-help;
+
+            background-size: 18px 18px;
+            background-position: right;
+            background-repeat: no-repeat;
+            padding-right: 24px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@include r-with('collection/posts-list') {
+
+    .posts-list {
+        @include r-row();
+
+        .post {
+            @include r-col('col');
+        }
+    }
+
+    .section-two-col .posts-list {
+
+        .post {
+            @include r-col('two-col', false);
+        }
+    }
+
+    .section-grey .posts-list {
+
+        .post {
+            @include r-col('section-grey/col');
+
+            .post-title {
+                @include r-font('section-grey/title-font');
+            }
+
+            &:last-child {
+                display: none;
+
+                @include r-each-if('section-grey/show-last') {
+                    display: block;
+                }
+            }
+        }
+    }
+}

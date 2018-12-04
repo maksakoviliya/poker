@@ -1,0 +1,13 @@
+a.more-rooms {
+    color: $accent-color;
+    display: inline-block;
+    margin-top: u(.5);
+
+    i {
+        @extend %icon;
+        @extend %i-right-arrow;
+        margin-left: u(.2);
+        height: 10px;
+        width: 12px;
+    }
+}

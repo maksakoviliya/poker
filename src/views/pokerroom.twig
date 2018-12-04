@@ -1,0 +1,216 @@
+{% extends 'layout/layout.twig' %}
+
+{% block page %}
+
+    <section class="poker-room-header">
+        <div class="container">
+            <div class="name-room">
+                <div class="room-word">Покер рум</div>
+                <div class="room-ico">
+                    <img src="{{ assets(data.pokerroomPage.contentTop.roomIco) }}">
+                </div>
+                <div class="room-link">
+                    <a href="{{ data.pokerroomPage.contentTop.roomLink }}">{{ data.pokerroomPage.contentTop.roomName }}</a>
+                </div>
+            </div>
+            <div class="title-room">{{ data.pokerroomPage.contentTop.titleRoom }}</div>
+            <div class="go-to-room-div">
+                <a class="btn go-ro-room" href="{{ data.pokerroomPage.contentTop.roomLink }}">Перейти <i></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section poker-room-body">
+        <div class="container">
+
+            <div class="section-full">
+
+                <div class="room-advances">
+                    <div class="right">
+                        <div class="room-manager">
+                            <div class="profile">
+                                <div class="avatar">
+                                    <img class="vip-chat-avatar" src="{{ assets('images/chat-avatar.png') }}" />
+                                </div>
+                                <div class="name">Алексей</div>
+                                <div class="line"></div>
+                                <div class="about">VIP-менеджер для игроков<br><b>с рейком от $500</b></div>
+                            </div>
+                            <div class="links">
+                                <a href="#" class="one-link"><i class="icon i-skype"></i> <span>alexey.pokeroff</span></a>
+                                <a href="#" class="one-link"><i class="icon i-telegram"></i> <span>@pokeroffvip</span></a>
+                                <a href="#" class="one-link"><i class="icon i-whatsapp"></i> <span>+371 27 167 915</span></a>
+                                <a href="#" class="one-link"><i class="icon i-email"></i> <span>vip@pokeroff.ru</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left">
+                        <ul>
+                            {% for advance in data.pokerroomPage.contentTop.advances %}
+                            <li>{{ advance }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+
+                <div class="enter-image">
+                    <img src="{{ assets(data.pokerroomPage.contentTop.welcomeImg) }}">
+                </div>
+
+            </div>
+
+            <div class="section-medium">
+                {{ data.pokerroomPage.content }}
+            </div>
+            
+            <div class="section-full">
+                
+                {% if data.pokerroomPage.contentBottom.has_quest %}
+                    <div class="user-quest">
+                        <div class="user-quest-title yes-quest">Вопросы пользователей <span>| {{ data.pokerroomPage.contentBottom.has_quest }}</span></div>
+                        <div class="make-quest-div">
+                            <a href="#" class="btn btn-blue make-quest">Задать вопрос</a>
+                        </div>
+                    </div>
+                    <div class="user-quest-block">
+                        {% for question in data.pokerroomPage.contentBottom.questions %}
+                            <a href="{{ question.link }}" class="one-user-quest">
+                                <span class="text-link">{{ question.text }}</span>
+                                <span class="user-quest-comments"><i class="icon i-comment"></i> {{ question.col }}</span>
+                            </a>
+                        {% endfor %}
+                    </div>
+                    <div class="all-user-quest-block">
+                        <a class="btn read-more read-more-right" href="javascript:void(0)">
+                            <span class="full">Все вопросы</span>
+                            <span class="compact">Все вопросы</span>
+                            <i></i>
+                        </a>
+                    </div>
+                {% else %}
+                    <div class="user-quest">
+                        <div class="user-quest-title no-quest">У пользователей вопросов пока нет</div>
+                        <div class="make-quest-div">
+                            <a href="#" class="btn btn-blue make-quest">Задать вопрос</a>
+                        </div>
+                    </div>
+                {% endif %}
+                        
+                {% if data.pokerroomPage.contentBottom.has_reviews %}
+                    <div class="user-reviews yes-rewiew">
+                        <div class="user-reviews-title">Отзывы <span class="hidden-xs">пользователей </span><span>| {{ data.pokerroomPage.contentBottom.has_reviews }}</span></div>
+                        <div class="make-review-div">
+                            <a href="#" class="btn btn-blue make-review">Оставить отзыв</a>
+                        </div>
+                        <div class="one-rewiew">
+                            <div class="room-ico">
+                                <img src="{{ assets(data.pokerroomPage.contentTop.roomIco) }}">
+                            </div>
+                            <div class="rewiew-text">
+                                <p>{{ data.pokerroomPage.contentBottom.review.text }}</p>
+                                <div class="bottom">
+                                    <a href="{{ data.pokerroomPage.contentBottom.review.authorLink }}" class="review-b-user"><img src="{{ assets(data.pokerroomPage.contentBottom.review.authorImg) }}"><span>{{ data.pokerroomPage.contentBottom.review.authorName }}</span></a>
+                                    <div class="review-stars">
+                                        {% for i in 1..5 %}
+                                            {% if i <= room.stars %}
+                                                <span class="one-star star-yes"></span>
+                                            {% elseif i > room.stars %}
+                                                <span class="one-star star-no"></span>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    <a class="btn btn-xs read-more read-more-right" href="javascript:void(0)">
+                                        <span class="full">Все отзывы</span>
+                                        <span class="compact">Все отзывы</span>
+                                        <i></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="user-reviews no-rewiew">
+                        <div class="user-reviews-title">Отзывов пользователей пока нет</div>
+                        <div class="make-review-div">
+                            <a href="#" class="btn btn-blue make-review">Оставить отзыв</a>
+                        </div>
+                    </div>
+                {% endif %}
+            
+                <div class="clearfix"></div>
+            
+            </div>
+
+            <div class="section-medium">
+
+                <div class="poker-room-platforms">
+                    <div class="left">
+                        <div class="title">Игра</div>
+                        <div class="row-links">
+                            {% for link in data.pokerroomPage.contacts.platformsLeft %}
+                                <span class="one-link"><a href="{{ link.link }}">{{ link.text }}</a></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="title">Платформы</div>
+                        <div class="row-links">
+                            {% for link in data.pokerroomPage.contacts.platformsRight %}
+                                <span class="one-link"><a href="{{ link.link }}">{{ link.text }}</a></span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accepted-method-pay">
+                    {% for method in data.pokerroomPage.contacts.methods %}
+                        <div class="one-accept"><i class="i-{{ method }}"></i></div>
+                    {% endfor %}
+                </div>
+
+                <div class="poker-room-contacts">
+                    <div class="left">
+                        <div class="title">Служба поддержки</div>
+                        {% for contact in data.pokerroomPage.contacts.contactsLeft %}
+                            <div class="one-contact"><span>{{ contact.left }}</span><span>{{ contact.right }}</span></div>
+                        {% endfor %}
+                    </div>
+                    <div class="right">
+                        <div class="title">О компании</div>
+                        <p>{{ data.pokerroomPage.contacts.companyName }}</p>
+                        {% for contact in data.pokerroomPage.contacts.contactsRight %}
+                            <div class="one-contact"><span>{{ contact.left }}</span><span>{{ contact.right }}</span></div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="poker-room-additional-links">
+        <div class="container">
+            <div class="title">Дополнительная информация</div>
+            <div class="block-links">
+                <div class="left">
+                    <ul>
+                        {% for link in data.pokerroomPage.additionalLinksLeft %}
+                            <li><a href="{{ link.link }}">{{ link.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        {% for link in data.pokerroomPage.additionalLinksRight %}
+                            <li><a href="{{ link.link }}">{{ link.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </section>
+
+{% endblock %}

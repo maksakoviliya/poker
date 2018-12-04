@@ -1,0 +1,68 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer-body">
+            <div class="copyright">
+                <a class="logo" href="#">Pokeroff</a>
+                <p class="copyright-description">© 2006—2018 Pokeroff</p>
+                <p class="copyright-description">Pokeroff.ru не проводит игры на деньги.<br />Сайт носит исключительно информационный характер.</p>
+
+                <div class="social">
+                    {% for social in [
+                        {class: 'facebook', title: 'Facebook'},
+                        {class: 'vkontakte', title: 'Vkontake'},
+                        {class: 'twitter', title: 'Twitter'},
+                        {class: 'telegram', title: 'Telegram'},
+                        {class: 'youtube', title: 'Youtube'},
+                        {class: 'rss', title: 'Rss'},
+                    ] %}
+                        <a class="social-link {{ social.class }}" href="#">{{ social.title }}</a>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="site-map">
+                <ul class="site-map-list">
+                    {% for link in [
+                        {label: 'Учиться'},
+                        {label: 'О сайте'},
+                        {label: 'Статьи о покере'},
+                        {label: 'Правила сайта'},
+                        {label: 'Покер видео'},
+                        {label: 'Конфиденциальность'},
+                        {label: 'Новости покера'},
+                        {label: 'Реклама'},
+                        {label: 'Карта сайта'},
+                    ] %}
+                        <li>
+                            <a class="site-map-link" href="#">{{ link.label }}</a>
+                        </li>
+                    {% endfor %}
+                    <li>
+                        <a class="site-map-link support" href="#">Поддержка</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="best-rooms">
+                <h2 class="best-rooms-title">ЛУЧШИЕ ПОКЕР-РУМЫ</h2>
+                <ul class="best-rooms-list">
+                    {% for room in [
+                        {name: 'Full Tilt Poker', logo: '/images/room-icons/fulltiltpoker.png'},
+                        {name: 'PokerStars', logo: '/images/room-icons/pokerstars.png'},
+                        {name: 'Party Poker', logo: '/images/room-icons/partypoker.png'},
+                        {name: 'Lotes Poker', logo: '/images/room-icons/lotospoker.png'}
+                    ] %}
+                        <li>
+                            <a class="room-link" href="#">
+                                <img class="room-icon" src="{{ assets(room.logo) }}" alt="{{ room.name }}" />
+                                {{ room.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <a class="more-rooms" href="#">Все комнаты<i></i></a>
+            </div>
+        </div>
+    </div>
+</footer>

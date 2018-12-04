@@ -1,0 +1,96 @@
+{% extends 'layout/layout.twig' %} 
+
+{% block page %}
+
+    <section class="section">
+        <div class="container">
+            
+            <div class="section-slim post-header">
+                
+                <ul class="breadcrumbs">
+                    <li><a href="#">Индустрия</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="#">Статья</a></li>
+                    <li><span>/</span></li>
+                    <li><a href="#">Фотопост</a></li>
+                </ul>
+                
+                <h1 class="post-title">Сергей Рыбаченко возглавит российскую сборную на Кубке наций</h1>
+                
+                <div class="author-div">
+                    <span class="author"><a href="{{ data.postPage.contentTop.authorLink }}">{{ data.postPage.contentTop.authorName }}</a></span>
+                    <span class="date">{{ data.postPage.contentTop.date }}</span>
+                    <span class="comments"><i></i> {{ data.postPage.contentTop.comments }} <span>+{{ data.postPage.contentTop.commentsToday }}</span></span>
+                    <span class="views"><i></i> {{ data.postPage.contentTop.views }}</span>
+                </div>
+                
+            </div>
+            
+            <div class="section-medium post-content">
+                {{ data.postPage.content }}
+            </div>
+            
+            <div class="section-medium post-bottom">
+                
+                <div class="buttons">
+                    <a class="btn read-more" href="{{ data.postPage.contentBottom.but1Link }}">
+                        <span class="full">{{ data.postPage.contentBottom.but1Text }}</span>
+                        <span class="compact">{{ data.postPage.contentBottom.but1Text }}</span>
+                    </a><a class="btn read-more" href="{{ data.postPage.contentBottom.but2Link }}">
+                        <span class="full">{{ data.postPage.contentBottom.but2Text }}</span>
+                        <span class="compact">{{ data.postPage.contentBottom.but2Text }}</span>
+                    </a>
+                </div>
+                
+                <div class="comments-title">{{ data.postPage.contentBottom.colComments }} комментариев</div>
+                <div class="comments">
+                    <div class="one-comment">
+                        <div class="comment this-comment">
+                            <div class="comment-header">
+                                <a href="#" class="author"><img src="images/tmp/author.jpg"><span>Doktoroff</span></a>
+                                <span class="date">Вчера 20:18</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Попробовал я как то с год назад к ним податься. Анкету заполнил , вроде уже и связаться пообещали и в скайпе добавились. А в итоге Динамо.</p>
+                            </div>
+                            <div class="comment-bottom">
+                                <a href="#" class="reply">Ответить</a>
+                            </div>
+                        </div>
+                        <div class="comment reply-comment">
+                            <div class="comment-header">
+                                <a href="#" class="author"><img src="images/tmp/author.jpg"><span>Doktoroff</span></a>
+                                <span class="date">22 марта 17:15</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Неожиданные новости для нас. Спасибо за фидбек :)</p>
+                                <img src="images/tmp/img-5.jpg" style="width: 200px;">
+                                <p>Если вас не затруднит, свяжитесь, пожалуйста, с нами по почте team.firestorm.spin@gmail.com. Благодаря этому мы сможем детально разобрать по какой причине с вами не связались и учесть этот опыт.</p>
+                            </div>
+                            <div class="comment-bottom">
+                                <a href="#" class="reply">Ответить</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="one-comment">
+                        <div class="comment this-comment">
+                            <div class="comment-header">
+                                <a href="#" class="author"><img src="images/tmp/author.jpg"><span>Doktoroff</span></a>
+                                <span class="date">Вчера 20:18</span>
+                            </div>
+                            <div class="comment-content">
+                                <p>Неожиданные новости для нас. Спасибо за фидбек :)</p>
+                                <p>Если вас не затруднит, свяжитесь, пожалуйста, с нами по почте team.firestorm.spin@gmail.com. Благодаря этому мы сможем детально разобрать по какой причине с вами не связались и учесть этот опыт.</p>
+                            </div>
+                            <div class="comment-bottom">
+                                <a href="#" class="reply">Ответить</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+{% endblock %}

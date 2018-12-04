@@ -1,0 +1,32 @@
+@include r-with('sections') {
+
+    section {
+        padding-top: u(2);
+
+        &.section-grey {
+            @include r-offset('section-grey/vertical-offset', pv);
+
+            background: $body-grey-bg-color;
+
+            .section-title {
+                margin-bottom: 4px;
+            }
+        }
+
+        .section-two-col {
+            @include r-row();
+
+            .section-col {
+                @include r-col('two-col/col');
+            }
+        }
+
+        .section-footer {
+            @include r-offset('footer/offset', pv);
+
+            text-align: center;
+        }
+        
+    }
+
+}

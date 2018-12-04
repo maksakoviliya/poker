@@ -1,0 +1,116 @@
+@include r-config(sm, (
+    media-query: sm md,
+    media-query-container: 24,
+    layout: (
+        math: fluid,
+        container: auto,
+        container-position: center,
+        columns: 12,
+        gutters: 1.5,
+        outer-padding: .8,
+    ),
+
+    typography: (
+        h1: (
+            font: 42px 48px,
+        ),
+    ),
+
+    grid: (
+        gutter: .5,
+    ),
+
+    header: (
+        content-padding: .8 14 2 0 p,
+        short: true,
+        vip-short: true,
+        compact: (
+            height: u(5),
+            logo: (
+                width: 150px,
+                height: 40px,
+            ),
+        ),
+        sign: (
+            font: 16px,
+        ),
+        h1: (
+            offset: 2.2 0 0 0 m,
+        ),
+        sub-title: (
+            font: 16px,
+        ),
+        options: (
+            col-width: 100%,
+        )
+    ),
+
+    footer: (
+        info: (
+            col: 12,
+        ),
+        site-map: (
+            col: 12,
+            item-width: 42%,
+            offset: .5 1.5 mv,
+        ),
+        rooms: (
+            col: 12,
+            item-width: 50%,
+        ),
+        social-icons: (
+            size: 1.9,
+            offset: 0 1.1 1.1 0 m,
+        ),
+    ),
+
+    sections: (
+
+        two-col: (
+            col: 12,
+        ),
+
+        section-grey: (
+            vertical-offset: 0 2,
+        ),
+
+        footer: (
+            offset: .4 2,
+        )
+    ),
+
+    collection: (
+        offers-list: (
+            col: 6,
+            font: 14px 18px,
+        ),
+        posts-list: (
+            col: 6,
+            section-grey: (
+                col: 6,
+                title-font: 16px 20px,
+            ),
+        ),
+        posts-recommended: (
+            offset: -.5 mt,
+        ),
+    ),
+
+    components: (
+        offer-slogan: (
+            font: 26px 30px
+        ),
+    ),
+
+    navigation: (
+        main-nav: (
+            control: (
+                size: 48px,
+                pos: 15px,
+            ),
+        ),
+        read-more: (
+            font: 18px,
+        )
+    ),
+));

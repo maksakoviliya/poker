@@ -1,0 +1,16 @@
+.btn {
+    @include r-font('typography/btn/font');
+
+    border: 1px solid $link-color;
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0 u();
+    min-width: 150px;
+    text-align: center;
+    transition: opacity $ui-animation-duration;
+
+    &:hover {
+        opacity: .6;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,108 @@
+@include r-config(md, (
+    media-query: md lg,
+    media-query-container: 36,
+    layout: (
+        math: fluid,
+        container: auto,
+        container-position: center,
+        columns: 12,
+        gutters: 0.77,
+    ),
+
+    typography: (
+        h1: (
+            font: 54px 60px,
+        ),
+    ),
+
+    grid: (
+        gutter: .7,
+    ),
+
+    header: (
+        vip-short: true,
+        content-padding: .8 14 2 0 p,
+        h1: (
+            offset: 2.2 13.8 0 0 m,
+        ),
+        sub-title: (
+            font: 22px,
+        ),
+        options: (
+            col-width: 50%,
+        ),
+    ),
+
+    footer: (
+        info: (
+            col: 5,
+        ),
+        site-map: (
+            col: 3,
+            item-width: 100%,
+        ),
+        rooms: (
+            col: 4,
+            item-width: 100%,
+        ),
+        social-icons: (
+            width: 9,
+            size: 1.9,
+            offset: 0 1.1 1.1 0 m,
+        ),
+    ),
+
+    sections: (
+
+        two-col: (
+            col: 12,
+        ),
+
+        section-grey: (
+            vertical-offset: 0 3,
+        ),
+
+        footer: (
+            offset: .4 2,
+        )
+    ),
+
+    collection: (
+        offers-list: (
+            col: 6,
+        ),
+        posts-list: (
+            col: 6,
+            two-col: 6,
+            section-grey: (
+                col: 4,
+                show-last: true,
+                title-font: 16px 20px,
+            ),
+        ),
+        posts-recommended: (
+            offset: 0 mt,
+        ),
+    ),
+
+    components: (
+
+        offer-slogan: (
+            font: 40px 50px
+        ),
+
+        vip-chat: (
+            label: (
+                offset: 2.5 ml,
+            ),
+        ),
+    ),
+
+    navigation: (
+        main-nav: (
+            control: (
+                pos: 20px,
+            ),
+        ),
+    ),
+));
