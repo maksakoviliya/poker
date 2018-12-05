@@ -59,7 +59,7 @@
         width: 20px;
         display: inline-block;
         background: no-repeat center / contain;
-        background-image: url(/src/inline-icons/comment-black.svg) !important;
+        background-image: url(../images/comment-black.svg) !important;
       }
       span {
         color: #227118;
@@ -73,7 +73,7 @@
       width: 20px;
       display: inline-block;
       background: no-repeat center / contain;
-      background-image: url(/src/inline-icons/eye.svg) !important;
+      background-image: url(../images/eye.svg) !important;
     }
   }
 }
@@ -109,7 +109,7 @@
     position: relative;
     &:after {
       content: "";
-      background: url(images/my/quote.png) no-repeat;
+      background: url('../images/my/quote.png') no-repeat;
       width: 110px;
       height: 120px;
       position: absolute;
@@ -211,7 +211,7 @@
       width: 25px;
       display: inline-block;
       background: no-repeat center / contain;
-      background-image: url(/src/inline-icons/fire.svg) !important;
+      background-image: url(../images/fire.svg) !important;
     }
     span {
       border-bottom: 1px solid #2a67b9;
