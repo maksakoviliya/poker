@@ -22,13 +22,13 @@ section {
             line-height: 28px;
             height: 38px;
             width: 300px;
-            box-shadow: none !important;
-            outline: none !important;
+            box-shadow: none;
+            outline: none;
             cursor: pointer;
 
             &:focus {
-                box-shadow: none !important;
-                outline: none !important;
+                box-shadow: none;
+                outline: none;
             }
         }
 

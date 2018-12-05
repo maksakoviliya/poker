@@ -9,10 +9,10 @@ section{
 		}
 
 		@include desktop-only{
-			max-width: 600px !important;
+			max-width: 600px;
 		}
 		@include touch {
-			max-width: 600px !important;
+			max-width: 600px;
 		}
 	}
 }

@@ -1,5 +1,3 @@
-.section-full {}
-
 .section-slim {
   max-width: 920px;
   margin: auto;
@@ -49,7 +47,7 @@
     > span {
       padding-right: 30px;
     }
-    .author a, .date {}
+    
     .comments {
       i {
         margin-right: 4px;
@@ -65,15 +63,17 @@
         color: #227118;
       }
     }
-    .views i {
-      margin-right: 4px;
-      margin-top: -3px;
-      vertical-align: middle;
-      height: 18px;
-      width: 20px;
-      display: inline-block;
-      background: no-repeat center / contain;
-      @include bg('eye.svg');
+    .views {
+      i {
+        margin-right: 4px;
+        margin-top: -3px;
+        vertical-align: middle;
+        height: 18px;
+        width: 20px;
+        display: inline-block;
+        background: no-repeat center / contain;
+        @include bg('eye.svg');
+      }
     }
   }
 }
@@ -88,7 +88,7 @@
     margin-bottom: 45px;
     &.big-text {
       color: #000000;
-      font-family: "IBM Plex Serif";
+      font-family: header;
       font-size: 22px;
       line-height: 34px;
       margin-bottom: 45px;
@@ -102,7 +102,7 @@
     background: #f3f3f3;
     padding: 30px 35px 70px 45px;
     margin: 0px;
-    font-family: "IBM Plex Serif";
+    font-family: header;
     font-size: 22px;
     line-height: 34px;
     font-style: italic;
@@ -271,61 +271,65 @@
     padding-bottom: 15px;
     margin-top: 45px;
   }
-  .comments .one-comment {
-    .comment {
-      border-top: 2px solid #f3f3f3;
-    }
-    .this-comment {
-      padding: 20px 0px;
-    }
-    .reply-comment {
-      background: #f8f8f8;
-      padding: 20px;
-    }
-    .comment {
-      .comment-header {
-        margin-bottom: 10px;
-        font-size: 14px;
-        display: flex;
-        line-height: 30px;
-        .author {
-          line-height: 30px;
+  .comments {
+    .one-comment {
+      .comment {
+        border-top: 2px solid #f3f3f3;
+      }
+      .this-comment {
+        padding: 20px 0px;
+      }
+      .reply-comment {
+        background: #f8f8f8;
+        padding: 20px;
+      }
+      .comment {
+        .comment-header {
+          margin-bottom: 10px;
+          font-size: 14px;
           display: flex;
-          align-items: center;
-          margin-right: 15px;
-          img {
-            width: 30px;
-            height: 30px;
-            margin-right: 5px;
+          line-height: 30px;
+          .author {
+            line-height: 30px;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+            img {
+              width: 30px;
+              height: 30px;
+              margin-right: 5px;
+            }
+          }
+          .date {
+            color: #646464;
           }
         }
-        .date {
-          color: #646464;
-        }
-      }
-      .comment-content {
-        margin-bottom: 10px;
-        img {
-          display: block;
-          max-width: 100%;
+        .comment-content {
           margin-bottom: 10px;
+          img {
+            display: block;
+            max-width: 100%;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 10px;
+          }
+          > *:last-child {
+            margin-bottom: 0px;
+          }
         }
-        p {
-          font-size: 16px;
-          line-height: 22px;
-          margin-bottom: 10px;
-        }
-        > *:last-child {
-          margin-bottom: 0px;
-        }
-      }
-      .comment-bottom .reply {
-        font-size: 14px;
-        border-bottom: 1px solid $second-color;
-        &:hover {
-          font-size: 14px;
-          border-bottom: 1px solid #000000;
-          text-decoration: none;
+        .comment-bottom {
+          .reply {
+            font-size: 14px;
+            border-bottom: 1px solid $second-color;
+            &:hover {
+              font-size: 14px;
+              border-bottom: 1px solid #000000;
+              text-decoration: none;
+            }
+          }
         }
       }
     }
@@ -338,24 +342,28 @@
     max-width: 920px;
     margin: auto;
   }
-  .post-content blockquote.quote-1 {
-    margin-right: 0px;
+  .post-content {
+    blockquote{
+      &.quote-1 {
+        margin-right: 0px;
+      }
+    }
   }
 }
 
 // @media (max-width: 959px) and (min-width: 720px) {
 @include tablet-only{
   .post-header {
-    max-width: 640px !important;
-    margin-left: 55px !important;
+    max-width: 640px;
+    margin-left: 55px;
     .post-title {
       font-size: 42px;
       line-height: 50px;
     }
   }
   .post-content {
-    max-width: 540px !important;
-    margin-left: 55px !important;
+    max-width: 540px;
+    margin-left: 55px;
     p {
       &.big-text {
         font-size: 20px;
@@ -426,16 +434,15 @@
     }
   }
   .post-bottom {
-    max-width: 540px !important;
-    margin-left: 55px !important;
+    
   }
 }
 
 // @media (max-width: 720px) {
 @include touch {
   .post-header {
-    max-width: 100% !important;
-    margin-left: 0px !important;
+    max-width: 100% ;
+    margin-left: 0px ;
     .post-title {
       font-size: 26px;
       line-height: 30px;
@@ -453,8 +460,8 @@
         margin-bottom: 30px;
       }
     }
-    max-width: 100% !important;
-    margin-left: 0px !important;
+    max-width: 100%;
+    margin-left: 0px;
     p {
       &.big-text {
         font-size: 16px;
@@ -530,20 +537,34 @@
     }
   }
   .post-bottom {
-    max-width: 100% !important;
-    margin-left: 0px !important;
-    .buttons .btn {
-      width: 100%;
-      margin-bottom: 20px;
-      font-size: 16px;
-      &:last-child {
-        margin-bottom: 0px;
+    max-width: 100%;
+    margin-left: 0px;
+    padding-bottom: 40px;
+    @include tablet-only{
+      max-width: 540px;
+      margin-left: 55px;
+    }
+    .buttons{
+      .btn {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 16px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
       }
     }
-    .comments .one-comment .comment .comment-content p {
-      font-size: 14px;
-      line-height: 20px;
+    .comments {
+      .one-comment {
+        .comment {
+          .comment-content {
+            p {
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
     }
-    padding-bottom: 40px;
   }
 }

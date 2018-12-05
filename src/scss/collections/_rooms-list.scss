@@ -14,8 +14,8 @@
             box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.05);
             border: 1px solid #EBEBEB;
             position: relative;
-            text-decoration: none !important;
-            color: #333 !important;
+            text-decoration: none;
+            color: #333;
             transition: 0.3s, color 0.3s;
             @include touch{
                 flex-basis: 49%;
@@ -92,7 +92,7 @@
             
             &:hover {
                 text-decoration: none !important;
-                color: #333 !important;
+                color: #333;
                 background: $accent-color;
                 .game-header{
                 
