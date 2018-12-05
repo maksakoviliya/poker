@@ -116,6 +116,11 @@
       right: 0px;
       bottom: 0px;
     }
+    &.quote{
+      background-image: url('../images/quote_contour.png');
+      background-position: right bottom;
+      background-repeat: no-repeat;
+    }
     &.quote-1 {
       width: 360px;
       float: right;
