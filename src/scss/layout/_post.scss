@@ -1,12 +1,3 @@
-.header.fixed {
-  &.start {
-    transform: translateY(0%);
-  }
-  + main {
-    padding-top: 60px;
-  }
-}
-
 .section-full {}
 
 .section-slim {
@@ -437,10 +428,8 @@
   }
 }
 
-@media (max-width: 720px) {
-  .header.fixed + main {
-    padding-top: 143px;
-  }
+// @media (max-width: 720px) {
+@include touch {
   .post-header {
     max-width: 100% !important;
     margin-left: 0px !important;

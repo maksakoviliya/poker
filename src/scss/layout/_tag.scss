@@ -3,6 +3,14 @@ section{
     .tag-title {
         font-size: 48px;
         line-height: 58px;
+        @include desktop-only{
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @include touch{
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 
     .tag-subtitle {
@@ -10,6 +18,14 @@ section{
         line-height: 30px;
         font-weight: 600;
         margin-top: 30px;
+        @include touch {
+            font-size: 16px;
+            line-height: 26px;
+            margin-top: 20px;
+            br {
+                display: none;
+            }
+        }
     }
 
     .tag-text {
@@ -17,6 +33,15 @@ section{
         line-height: 28px;
         margin-top: 30px;
         padding-right: 100px;
+        @include desktop-only{
+            padding-right: 40px;
+        }
+        @include touch{
+            font-size: 14px;
+            line-height: 24px;
+            margin-top: 20px;
+            padding-right: 0px;
+        }
     }
 
     .tag-useful-links {
@@ -30,7 +55,11 @@ section{
             line-height: 24px;
             margin-bottom: 12.5px;
             padding-left: 5px;
-            
+            @include touch {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 10px;
+            }
             a {
                 color: $link-color;
                 text-decoration: none !important;
@@ -62,79 +91,29 @@ section{
         margin-bottom: 20px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        @include touch {
+             margin-top: 40px;
+         }
     }
 
     .section-list-more {
         margin: 10px 0px 150px 0px;
         text-align: center;
+        @include desktop-only{
+            margin: 10px 0px 120px 0px;
+        }
+        @include touch{
+            margin: 0px 0px 80px 0px;
+        }
     }
 
 }
 
-// @media (max-width: 959px) and (min-width: 720px) {
-@include desktop-only{
-    .tag-title {
-        font-size: 40px !important;
-        line-height: 50px !important;
-    }
-    .tag-text {
-        padding-right: 40px !important;
-    }
-
-    .section-list-more {
-        margin: 10px 0px 120px 0px !important;
-    }
-
-    .posts-list .post {
-        flex: 0 0 33.33% !important;
-        max-width: 33.33% !important;
-        margin-bottom: 30px !important;
-    }
-
-}
-
-// @media (max-width: 720px) {
 @include touch {
 
-    .tag-title {
-        font-size: 24px !important;
-        line-height: 30px !important;
-    }
-    .tag-subtitle {
-        font-size: 16px !important;
-        line-height: 26px !important;
-        margin-top: 20px !important;
-    }
-    .tag-subtitle br {
-        display: none !important;
-    }
-    .tag-useful-links li {
-        font-size: 16px !important;
-        line-height: 22px !important;
-        margin-bottom: 10px !important;
-    }
-    .tag-text {
-        font-size: 14px !important;
-        line-height: 24px !important;
-        margin-top: 20px !important;
-        padding-right: 0px !important;
-    }
-    .posts-list-title {
-        margin-top: 40px !important;
-    }
-
-    .section-list-more {
-        margin: 0px 0px 80px 0px !important;
-    }
-
     .post {
-      .posts-list {
-        flex: 0 0 33.33% !important;
-        max-width: 33.33% !important;
-        margin-bottom: 30px !important;
-      }
       .post-title {
-        font-size: 16px !important;
+        font-size: 16px;
       }
       .post-description {
         display: none !important;
@@ -143,19 +122,11 @@ section{
 
 }
 
-@media (max-width: 500px) {
+@include mobile {
 
     .post {
-      .posts-list {
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
-        margin-bottom: 20px !important;
-      }
       .post-title {
-        font-size: 14px !important;
-      }
-      .post-description {
-        display: none !important;
+        font-size: 14px;
       }
     }
 

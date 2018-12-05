@@ -142,6 +142,18 @@
             transition: transform $ui-animation-duration;
             z-index: 900;
             overflow: initial;
+                
+            &.start {
+              transform: translateY(0%);
+            }
+
+            + main {
+              padding-top: 60px;
+                @include touch {
+                    padding-top: 143px;
+                }
+            }
+
 
             &:before {
                 bottom: 0;

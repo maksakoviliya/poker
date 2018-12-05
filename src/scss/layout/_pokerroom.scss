@@ -1,33 +1,24 @@
-.header.fixed {
-  &.start {
-    transform: translateY(0%);
-}
-+ main {
-    padding-top: 60px;
-}
-}
-
 .section-medium {
   max-width: 840px;
   margin-left: 100px;
   > *:first-child {
     margin-top: 0px;
-}
+  }
 }
 
 .read-more-right i {
-    transform: none !important;
+  transform: none !important;
 }
 
 .make-review {
-    line-height: 46px;
-    background: $second-color;
-    color: #fff !important;
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: 400;
-    font-size: 18px;
-    padding: 0px 25px;
+  line-height: 46px;
+  background: $second-color;
+  color: #fff !important;
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 0px 25px;
 }
 
 .poker-room-header {
@@ -47,27 +38,27 @@
       margin: 0px 15px;
       img {
         width: 100%;
+      }
     }
-}
-.room-link a {
-  border-bottom: 1px solid #fff;
-  color: #fff !important;
-  font-weight: bold;
-  text-decoration: none !important;
-  &:hover {
-    border-bottom: 1px solid $second-color;
-}
-}
-}
-.title-room {
+    .room-link a {
+      border-bottom: 1px solid #fff;
+      color: #fff !important;
+      font-weight: bold;
+      text-decoration: none !important;
+      &:hover {
+        border-bottom: 1px solid $second-color;
+      }
+    }
+  }
+  .title-room {
     color: #FFFFFF;
     font-family: "IBM Plex Serif";
     font-size: 50px;
     line-height: 60px;
     max-width: 960px;
     margin: 20px auto 0px auto;
-}
-.go-to-room-div .go-ro-room {
+  }
+  .go-to-room-div .go-ro-room {
     font-size: 16px;
     line-height: 47px;
     padding: 0px 40px;
@@ -81,11 +72,11 @@
       vertical-align: middle;
       height: 15px;
       width: 17px;
-      background-image: url(/src/inline-icons/arrow.svg) !important;
+      background-image: url(../images/arrow.svg) !important;
       display: inline-block;
       background: no-repeat center / contain;
+    }
   }
-}
 }
 
 .room-advances {
@@ -103,10 +94,10 @@
         line-height: 24px;
         margin-bottom: 12.5px;
         padding-left: 5px;
+      }
     }
-}
-}
-.right {
+  }
+  .right {
     width: 50%;
     float: right;
     .room-manager {
@@ -125,95 +116,95 @@
           text-align: center;
           img {
             border-radius: 100%;
+          }
         }
+        .name {
+          color: $second-color;
+          font-family: "IBM Plex Serif";
+          font-size: 22px;
+          line-height: 22px;
+          text-align: center;
+        }
+        .line {
+          background: #EBEBEB;
+          height: 1px;
+          width: 30px;
+          margin: 20px auto;
+        }
+        .about {
+          text-align: center;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .links {
+        background: #f9f9f9;
+        min-width: 300px;
+        border-right: 1px solid #EBEBEB;
+        .one-link {
+          border-bottom: 1px solid #EBEBEB;
+          display: block;
+          height: 25%;
+          padding: 0px 30px;
+          color: #333;
+          font-size: 14px;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          line-height: 75px;
+          &:hover {
+            opacity: .6;
+            text-decoration: none;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+          i {
+            margin-right: 4px;
+            margin-top: -3px;
+            vertical-align: middle;
+            height: 24px;
+            width: 24px;
+            display: inline-block;
+            background: no-repeat center / contain;
+          }
+          &.link-sk i {
+            background-image: url(../images/soc-skype.svg) !important;
+          }
+          &.link-tg i {
+            background-image: url(../images/soc-telegram.svg) !important;
+          }
+          &.link-wa i {
+            background-image: url(../images/soc-whatsapp.svg) !important;
+          }
+          &.link-em i {
+            background-image: url(../images/soc-email.svg) !important;
+          }
+        }
+      }
     }
-    .name {
-      color: $second-color;
-      font-family: "IBM Plex Serif";
-      font-size: 22px;
-      line-height: 22px;
-      text-align: center;
   }
-  .line {
-      background: #EBEBEB;
-      height: 1px;
-      width: 30px;
-      margin: 20px auto;
-  }
-  .about {
-      text-align: center;
-      font-size: 14px;
-      line-height: 20px;
-  }
-}
-.links {
-    background: #f9f9f9;
-    min-width: 300px;
-    border-right: 1px solid #EBEBEB;
-    .one-link {
-      border-bottom: 1px solid #EBEBEB;
-      display: block;
-      height: 25%;
-      padding: 0px 30px;
-      color: #333;
-      font-size: 14px;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 75px;
-      &:hover {
-        opacity: .6;
-        text-decoration: none;
-    }
-    &:last-child {
-        border-bottom: none;
-    }
-    i {
-        margin-right: 4px;
-        margin-top: -3px;
-        vertical-align: middle;
-        height: 24px;
-        width: 24px;
-        display: inline-block;
-        background: no-repeat center / contain;
-    }
-    &.link-sk i {
-        background-image: url(/src/inline-icons/soc-skype.svg) !important;
-    }
-    &.link-tg i {
-        background-image: url(/src/inline-icons/soc-telegram.svg) !important;
-    }
-    &.link-wa i {
-        background-image: url(/src/inline-icons/soc-whatsapp.svg) !important;
-    }
-    &.link-em i {
-        background-image: url(/src/inline-icons/soc-email.svg) !important;
-    }
-}
-}
-}
-}
 }
 
 .enter-image {
   margin-bottom: 40px;
   img {
     max-width: 100%;
-}
+  }
 }
 
 .poker-room-title {
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 36px;
-    margin-top: 50px;
-    margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 36px;
+  margin-top: 50px;
+  margin-bottom: 25px;
 }
 
 .poker-room-text {
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 15px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 15px;
 }
 
 .poker-room-ul {
@@ -224,14 +215,14 @@
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 12.5px;
-}
+  }
 }
 
 .poker-room-img {
-    max-width: 100%;
-    display: block;
-    margin-top: 25px;
-    margin-bottom: 25px;
+  max-width: 100%;
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .video {
@@ -240,27 +231,27 @@
   iframe {
     width: 100%;
     height: 500px;
-}
+  }
 }
 
 .faq-quest {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    margin-top: 25px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 
 .faq-answer {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 15px;
-    margin-left: 40px;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  margin-left: 40px;
 }
 
 .all-user-quest-block {
-    text-align: center;
-    margin-top: 60px;
+  text-align: center;
+  margin-top: 60px;
 }
 
 .user-quest {
@@ -275,15 +266,15 @@
     letter-spacing: 1px;
     &.no-quest {
       color: #2a67b9;
-  }
-  &.yes-quest {
+    }
+    &.yes-quest {
       color: #2a67b9;
       span:last-child {
         color: #f3bf00;
+      }
     }
-}
-}
-.make-quest-div {
+  }
+  .make-quest-div {
     text-align: center;
     margin-top: 20px;
     .make-quest {
@@ -295,8 +286,8 @@
       text-transform: none;
       letter-spacing: normal;
       font-weight: 400;
+    }
   }
-}
 }
 
 .user-quest-block .one-user-quest {
@@ -309,11 +300,11 @@
   &:hover {
     opacity: .6;
     text-decoration: none !important;
-}
-.text-link {
+  }
+  .text-link {
     padding-right: 30px;
-}
-.user-quest-comments {
+  }
+  .user-quest-comments {
     font-size: 18px;
     white-space: nowrap;
     i {
@@ -324,9 +315,9 @@
       width: 20px;
       display: inline-block;
       background: no-repeat center / contain;
-      background-image: url(/src/inline-icons/comment.svg) !important;
+      background-image: url(../images/comment.svg) !important;
+    }
   }
-}
 }
 
 .user-reviews {
@@ -335,28 +326,28 @@
   margin-top: 100px;
   &.no-rewiew {
     margin-bottom: 100px;
-}
-&.yes-rewiew {
+  }
+  &.yes-rewiew {
     margin-bottom: 120px;
     position: relative;
-}
-.user-reviews-title {
+  }
+  .user-reviews-title {
     font-size: 14px;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
-}
-&.no-rewiew .user-reviews-title {
+  }
+  &.no-rewiew .user-reviews-title {
     color: #2a67b9;
-}
-&.yes-rewiew .user-reviews-title {
+  }
+  &.yes-rewiew .user-reviews-title {
     color: #2a67b9;
     span {
       color: #f3bf00;
+    }
   }
-}
-.make-review-div {
+  .make-review-div {
     text-align: center;
     margin-top: 20px;
     .make-review {
@@ -368,13 +359,13 @@
       text-transform: none;
       letter-spacing: normal;
       font-weight: 400;
+    }
   }
-}
-&.yes-rewiew {
+  &.yes-rewiew {
     .user-reviews-title, .make-review-div {
       width: 380px;
+    }
   }
-}
 }
 
 .one-rewiew {
@@ -385,7 +376,7 @@
   width: 740px;
   height: 120px;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-  background: url(images/my/quote.png) no-repeat right bottom, #fff;
+  background: url(../images/my/quote.png) no-repeat right bottom, #fff;
   .room-ico {
     width: 50px;
     height: 50px;
@@ -395,16 +386,16 @@
     img {
       max-width: 100%;
       max-height: 100%;
+    }
   }
-}
-.rewiew-text {
+  .rewiew-text {
     p {
       padding-top: 20px;
       margin-right: 80px;
       font-size: 16px;
       line-height: 20px;
-  }
-  .bottom {
+    }
+    .bottom {
       margin-top: 15px;
       display: flex;
       align-items: center;
@@ -417,53 +408,53 @@
           width: 30px;
           height: 30px;
           margin-right: 5px;
+        }
       }
-  }
-  .review-stars {
-    margin-right: 30px;
-    margin-top: -3px;
-    .one-star {
-      padding-right: 2.5px;
-      i {
-        background: linear-gradient(180deg, #ffffff 0%, #357f1e 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+      .review-stars {
+        margin-right: 30px;
+        margin-top: -3px;
+        .one-star {
+          padding-right: 2.5px;
+          i {
+            background: linear-gradient(180deg, #ffffff 0%, #357f1e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          .star-yes, .star-no {}
+        }
+      }
+      .read-more {
+        line-height: 28px;
+        font-size: 14px;
+        padding: 0px 20px;
+      }
     }
-    .star-yes, .star-no {}
-}
-}
-.read-more {
-    line-height: 28px;
-    font-size: 14px;
-    padding: 0px 20px;
-}
-}
-}
+  }
 }
 
 .poker-room-platforms {
   display: flex;
   > div {
     min-width: 50%;
-}
-.title {
+  }
+  .title {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 1px;
-}
-.left, .right {}
-.row-links {
+  }
+  .left, .right {}
+  .row-links {
     line-height: 24px;
     .one-link {
       padding-right: 15px;
       a {
         color: #000;
         &:hover {}
+      }
     }
-}
-}
+  }
 }
 
 .accepted-method-pay {
@@ -481,8 +472,8 @@
     img {
       max-width: 100%;
       max-height: 100%;
+    }
   }
-}
 }
 
 .poker-room-contacts {
@@ -490,22 +481,22 @@
   display: flex;
   > div {
     min-width: 50%;
-}
-.left, .right {}
-.title {
+  }
+  .left, .right {}
+  .title {
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
     letter-spacing: 1px;
-}
-p {
+  }
+  p {
     font-size: 14px;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 10px;
-}
-.one-contact {
+  }
+  .one-contact {
     font-size: 14px;
     line-height: 18px;
     margin-bottom: 10px;
@@ -514,19 +505,19 @@ p {
         width: 120px;
         font-weight: 300;
         display: inline-block;
-    }
-    &:last-child {
+      }
+      &:last-child {
         font-weight: 400;
+      }
     }
-}
-a {
-  border-bottom: 1px solid #2a67b9;
-  &:hover {
-    text-decoration: none !important;
-    border-bottom: 1px solid #000000;
-}
-}
-}
+    a {
+      border-bottom: 1px solid #2a67b9;
+      &:hover {
+        text-decoration: none !important;
+        border-bottom: 1px solid #000000;
+      }
+    }
+  }
 }
 
 .poker-room-additional-links {
@@ -535,26 +526,26 @@ a {
   background: #f9f9f9;
   .container {
     padding-left: 100px;
-}
-.title {
+  }
+  .title {
     font-weight: bold;
     font-size: 14px;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
-}
-.block-links {}
-.left {
+  }
+  .block-links {}
+  .left {
     width: 50%;
     float: left;
     padding-right: 25px;
-}
-.right {
+  }
+  .right {
     width: 50%;
     float: left;
     padding-left: 25px;
-}
-.block-links ul {
+  }
+  .block-links ul {
     line-height: 24px;
     font-size: 18px;
     list-style-type: square;
@@ -562,29 +553,30 @@ a {
     li {
       margin-bottom: 12.5px;
       a {}
+    }
   }
-}
 }
 
 .visible-xs {
-    display: none;
+  display: none;
 }
 
-@media (max-width: 1159px) and (min-width: 720px) {
+// @media (max-width: 1159px) and (min-width: 720px) {
+  @include desktop-only {
 
     .section-full {
-        max-width: 720px;
-        margin: auto;
+      max-width: 720px;
+      margin: auto;
     }
     .section-medium {
-        max-width: 540px;
-        margin-left: 55px;
+      max-width: 540px;
+      margin-left: 55px;
     }
 
     .poker-room-header .title-room {
-        font-size: 42px;
-        line-height: 50px;
-        max-width: 660px;
+      font-size: 42px;
+      line-height: 50px;
+      max-width: 660px;
     }
     .room-advances {
       .left {
@@ -593,112 +585,112 @@ a {
           font-size: 16px;
           line-height: 24px;
           margin-bottom: 10px;
+        }
       }
-  }
-  .right .room-manager {
-    width: 360px;
-    .links {
-      min-width: 110px;
-      .one-link {
-        padding: 0px 40px;
-        span {
-          display: none;
+      .right .room-manager {
+        width: 360px;
+        .links {
+          min-width: 110px;
+          .one-link {
+            padding: 0px 40px;
+            span {
+              display: none;
+            }
+            i {
+              width: 30px;
+              height: 30px;
+            }
+          }
+        }
       }
-      i {
-          width: 30px;
-          height: 30px;
-      }
-  }
-}
-}
-}
-.video iframe {
-    width: 100%;
-    height: 330px;
-}
-.user-quest-block .one-user-quest {
-    font-size: 18px;
-    line-height: 26px;
-}
-.user-reviews {
-  &.yes-rewiew {
-    .user-reviews-title {
-      width: 260px;
-      > .hidden-xs {
-        display: none;
     }
-}
-.make-review-div {
-  width: 260px;
-}
-}
-.make-review-div .make-review {
-    padding: 0px 25px;
-}
-&.yes-rewiew + .clearfix {
-    margin-bottom: 100px;
-}
-}
-.one-rewiew {
-  width: 440px;
-  height: initial;
-  position: static;
-  float: right;
-  margin-right: 25px;
-  margin-top: -46px;
-  .rewiew-text {
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      margin-left: 90px;
-      margin-right: 30px;
-  }
-  .bottom {
-      padding-left: 90px;
+    .video iframe {
       width: 100%;
+      height: 330px;
+    }
+    .user-quest-block .one-user-quest {
+      font-size: 18px;
+      line-height: 26px;
+    }
+    .user-reviews {
+      &.yes-rewiew {
+        .user-reviews-title {
+          width: 260px;
+          > .hidden-xs {
+            display: none;
+          }
+        }
+        .make-review-div {
+          width: 260px;
+        }
+      }
+      .make-review-div .make-review {
+        padding: 0px 25px;
+      }
+      &.yes-rewiew + .clearfix {
+        margin-bottom: 100px;
+      }
+    }
+    .one-rewiew {
+      width: 440px;
+      height: initial;
+      position: static;
+      float: right;
+      margin-right: 25px;
+      margin-top: -46px;
+      .rewiew-text {
+        p {
+          font-size: 16px;
+          line-height: 24px;
+          margin-left: 90px;
+          margin-right: 30px;
+        }
+        .bottom {
+          padding-left: 90px;
+          width: 100%;
+          flex-wrap: wrap;
+          .read-more {
+            line-height: 28px;
+            font-size: 14px;
+            padding: 0px 20px;
+            display: block;
+            margin: 20px 0px 25px 0px;
+          }
+          .review-stars {
+            min-width: 95px;
+          }
+        }
+      }
+    }
+    .accepted-method-pay {
       flex-wrap: wrap;
-      .read-more {
-        line-height: 28px;
-        font-size: 14px;
-        padding: 0px 20px;
+      .one-accept {
+        margin-bottom: 20px;
+      }
+    }
+    .poker-room-contacts {
+      .one-contact > span:first-child {
+        width: 100%;
         display: block;
-        margin: 20px 0px 25px 0px;
+      }
+      margin-top: 10px;
     }
-    .review-stars {
-        min-width: 95px;
+    .poker-room-additional-links {
+      .container {
+        width: 600px;
+        margin-left: 75px;
+        padding-left: 0px;
+      }
+      .block-links ul {
+        line-height: 24px;
+        font-size: 16px;
+      }
+      padding: 40px 0px;
     }
-}
-}
-}
-.accepted-method-pay {
-  flex-wrap: wrap;
-  .one-accept {
-    margin-bottom: 20px;
-}
-}
-.poker-room-contacts {
-  .one-contact > span:first-child {
-    width: 100%;
-    display: block;
-}
-margin-top: 10px;
-}
-.poker-room-additional-links {
-  .container {
-    width: 600px;
-    margin-left: 75px;
-    padding-left: 0px;
-}
-.block-links ul {
-    line-height: 24px;
-    font-size: 16px;
-}
-padding: 40px 0px;
-}
 
-}
+  }
 
-@media (max-width: 720px) {
+  @include touch {
 
     .poker-room-header {
       padding-top: 35px;
@@ -708,30 +700,26 @@ padding: 40px 0px;
     }
 
     .visible-xs {
-        display: block;
+      display: block;
     }
     .hidden-xs {
-        display: none;
-    }
-
-    .header.fixed + main {
-        padding-top: 143px;
+      display: none;
     }
 
     .section-full {
-        max-width: 100%;
-        margin: auto;
+      max-width: 100%;
+      margin: auto;
     }
     .section-medium {
-        max-width: 100%;
-        margin: auto;
+      max-width: 100%;
+      margin: auto;
     }
 
     .poker-room-header .title-room {
-        font-size: 26px;
-        line-height: 30px;
-        max-width: 100%;
-        padding: 0px 20px;
+      font-size: 26px;
+      line-height: 30px;
+      max-width: 100%;
+      padding: 0px 20px;
     }
     .room-advances {
       .left {
@@ -772,12 +760,12 @@ padding: 40px 0px;
       }
     }
     .video iframe {
-        width: 100%;
-        height: 200px;
+      width: 100%;
+      height: 200px;
     }
     .user-quest-block .one-user-quest {
-        font-size: 18px;
-        line-height: 26px;
+      font-size: 18px;
+      line-height: 26px;
     }
     .user-reviews {
       &.yes-rewiew {
@@ -871,12 +859,12 @@ padding: 40px 0px;
       margin-top: 50px;
     }
     .poker-room-title {
-        font-size: 22px;
-        line-height: 28px;
+      font-size: 22px;
+      line-height: 28px;
     }
     .poker-room-text {
-        font-size: 14px;
-        line-height: 20px;
+      font-size: 14px;
+      line-height: 20px;
     }
 
     .poker-room-platforms, .poker-room-contacts {
@@ -893,14 +881,14 @@ padding: 40px 0px;
     }
     
     .user-quest-block .one-user-quest {
-        font-size: 16px;
-        line-height: 22px;
-        padding: 25px 0px;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 25px 0px;
     }
     .user-quest {
-        padding: 30px 20px;
-        margin-left: -10px;
-        margin-right: -10px;
+      padding: 30px 20px;
+      margin-left: -10px;
+      margin-right: -10px;
     }
     .user-reviews {
       padding: 30px 20px;
@@ -946,21 +934,21 @@ padding: 40px 0px;
     }
 
     .all-user-quest-block {
-        text-align: center;
-        margin-top: 30px;
+      text-align: center;
+      margin-top: 30px;
     }
 
     .faq-quest {
-        font-size: 14px;
-        line-height: 20px;
+      font-size: 14px;
+      line-height: 20px;
     }
     .faq-answer {
-        font-size: 14px;
-        line-height: 20px;
+      font-size: 14px;
+      line-height: 20px;
     }
     .poker-room-ul li {
-        font-size: 14px;
-        line-height: 20px;
+      font-size: 14px;
+      line-height: 20px;
     }
 
-}
+  }

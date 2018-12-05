@@ -18,7 +18,8 @@
         },
         "images": {
             "files": [
-                "src/images/**/*"
+                "src/images/**/*",
+                "src/inline-icons/**/*"
             ]
         },
         "fonts": {
