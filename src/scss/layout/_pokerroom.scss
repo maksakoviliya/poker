@@ -72,7 +72,7 @@
       vertical-align: middle;
       height: 15px;
       width: 17px;
-      background-image: url(../images/arrow.svg) !important;
+      @include bg('arrow.svg');
       display: inline-block;
       background: no-repeat center / contain;
     }
@@ -88,7 +88,7 @@
     padding-right: 80px;
     ul {
       margin-left: 25px;
-      list-style-image: url(images/my/check.svg);
+      list-style-image: url($img-directory + '/my/check.svg');
       li {
         font-size: 18px;
         line-height: 24px;
@@ -169,16 +169,16 @@
             background: no-repeat center / contain;
           }
           &.link-sk i {
-            background-image: url(../images/soc-skype.svg) !important;
+            @include bg('soc-skype.svg');
           }
           &.link-tg i {
-            background-image: url(../images/soc-telegram.svg) !important;
+            @include bg('soc-telegram.svg');
           }
           &.link-wa i {
-            background-image: url(../images/soc-whatsapp.svg) !important;
+            @include bg('soc-whatsapp.svg');
           }
           &.link-em i {
-            background-image: url(../images/soc-email.svg) !important;
+            @include bg('soc-email.svg');
           }
         }
       }
@@ -265,12 +265,12 @@
     text-align: center;
     letter-spacing: 1px;
     &.no-quest {
-      color: #2a67b9;
+      color: $second-color;
     }
     &.yes-quest {
-      color: #2a67b9;
+      color: $second-color;
       span:last-child {
-        color: #f3bf00;
+        color: $accent-color;
       }
     }
   }
@@ -281,7 +281,7 @@
       font-size: 18px;
       line-height: 44px;
       padding: 0px 40px;
-      background: #2a67b9;
+      background: $second-color;
       color: #fff;
       text-transform: none;
       letter-spacing: normal;
@@ -294,7 +294,7 @@
   padding: 25px 30px 25px 30px;
   border-bottom: 1px solid #EBEBEB;
   display: block;
-  color: #2a67b9;
+  color: $second-color;
   font-size: 22px;
   line-height: 30px;
   &:hover {
@@ -315,7 +315,7 @@
       width: 20px;
       display: inline-block;
       background: no-repeat center / contain;
-      background-image: url(../images/comment.svg) !important;
+      @include bg('comment.svg');
     }
   }
 }
@@ -339,12 +339,12 @@
     letter-spacing: 1px;
   }
   &.no-rewiew .user-reviews-title {
-    color: #2a67b9;
+    color: $second-color;
   }
   &.yes-rewiew .user-reviews-title {
-    color: #2a67b9;
+    color: $second-color;
     span {
-      color: #f3bf00;
+      color: $accent-color;
     }
   }
   .make-review-div {
@@ -354,7 +354,7 @@
       font-size: 18px;
       line-height: 44px;
       padding: 0px 40px;
-      background: #2a67b9;
+      background: $second-color;
       color: #fff;
       text-transform: none;
       letter-spacing: normal;
@@ -511,7 +511,7 @@
       }
     }
     a {
-      border-bottom: 1px solid #2a67b9;
+      border-bottom: 1px solid $second-color;
       &:hover {
         text-decoration: none !important;
         border-bottom: 1px solid #000000;
