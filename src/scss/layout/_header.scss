@@ -39,24 +39,22 @@
             .link {
                 @extend %underline;
                 color: $accent-color;
+                order: 3;
+                margin-right: 8px;
             }
 
-            .link,
             span {
                 order: 3;
+                margin-right: 8px;
             }
 
             .logo {
                 line-height: inherit;
                 margin-bottom: 4px;
                 order: 4;
-            }
-
-            span,
-            .link,
-            .logo {
                 margin-right: 8px;
             }
+
         }
 
         @include r-each-if('short') {

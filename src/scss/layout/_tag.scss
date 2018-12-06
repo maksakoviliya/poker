@@ -1,13 +1,15 @@
-section{
+section {
 
     .tag-title {
         font-size: 48px;
         line-height: 58px;
-        @include desktop-only{
+
+        @include desktop-only {
             font-size: 40px;
             line-height: 50px;
         }
-        @include touch{
+
+        @include touch {
             font-size: 24px;
             line-height: 30px;
         }
@@ -18,10 +20,12 @@ section{
         line-height: 30px;
         font-weight: 600;
         margin-top: 30px;
+
         @include touch {
             font-size: 16px;
             line-height: 26px;
             margin-top: 20px;
+
             br {
                 display: none;
             }
@@ -33,10 +37,12 @@ section{
         line-height: 28px;
         margin-top: 30px;
         padding-right: 100px;
-        @include desktop-only{
+
+        @include desktop-only {
             padding-right: 40px;
         }
-        @include touch{
+
+        @include touch {
             font-size: 14px;
             line-height: 24px;
             margin-top: 20px;
@@ -49,38 +55,40 @@ section{
         margin-left: 35px;
         margin-top: 30px;
         margin-right: 100px;
-        
+
         li {
             font-size: 18px;
             line-height: 24px;
             margin-bottom: 12.5px;
             padding-left: 5px;
+
             @include touch {
                 font-size: 16px;
                 line-height: 22px;
                 margin-bottom: 10px;
             }
+
             a {
                 color: $link-color;
                 text-decoration: none !important;
                 border-bottom: 1px solid $link-color;
-                
+
                 &:hover {
                     border-bottom: 1px solid $text-black-color;
-                }    
-                
+                }
+
             }
-            
+
         }
-        
+
     }
-    
-    .link-underline{
+
+    .link-underline {
         border-bottom: 1px solid $link-color;
-        
-        &:hover{
+
+        &:hover {
             text-decoration: none !important;
-            border-bottom: 1px solid rgba(0,0,0,0);
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
         }
     }
 
@@ -91,43 +99,42 @@ section{
         margin-bottom: 20px;
         letter-spacing: 1px;
         text-transform: uppercase;
+
         @include touch {
-             margin-top: 40px;
-         }
+            margin-top: 40px;
+        }
     }
 
     .section-list-more {
         margin: 10px 0px 150px 0px;
         text-align: center;
-        @include desktop-only{
+
+        @include desktop-only {
             margin: 10px 0px 120px 0px;
         }
-        @include touch{
+
+        @include touch {
             margin: 0px 0px 80px 0px;
         }
     }
 
 }
 
-@include touch {
 
-    .post {
-      .post-title {
-        font-size: 16px;
-      }
-      .post-description {
-        display: none !important;
-      }
+.post {
+    .post-title {
+        @include touch {
+            font-size: 16px;
+        }
+
+        @include mobile {
+            font-size: 14px;
+        }
     }
 
-}
-
-@include mobile {
-
-    .post {
-      .post-title {
-        font-size: 14px;
-      }
+    .post-description {
+        @include touch {
+            display: none !important;
+        }
     }
-
 }

@@ -366,7 +366,9 @@
     }
   }
   &.yes-rewiew {
-    .user-reviews-title,
+    .user-reviews-title{
+      width: 380px;
+    }
     .make-review-div {
       width: 380px;
     }
@@ -885,12 +887,23 @@
       line-height: 20px;
     }
 
-    .poker-room-platforms,
+    .poker-room-platforms{
+      display: block;
+    }
+
     .poker-room-contacts {
       display: block;
     }
 
-    .poker-room-platforms,
+    .poker-room-platforms{
+      > div {
+        min-width: 100%;
+      }
+      .right {
+        margin-top: 25px;
+      }
+    }
+    
     .poker-room-contacts {
       > div {
         min-width: 100%;
