@@ -1,0 +1,116 @@
+.header-logged__navbar{
+	display: flex;
+	align-items: center;
+	.vip-chat-control{
+		padding-left: 10px;
+		display: flex !important;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	&_full{
+		display: flex;
+		align-items: center;
+		.profile-link{
+			margin: 36px 0 0 30px;
+		}
+		@include touch{
+			.profile-link{
+				margin: 0 0 20px -10px;
+			}
+			display: block;
+		}
+	}
+}
+
+
+.profile-link{
+	margin: 0;
+	position: relative;
+	@include touch{
+		margin: 15px 0 0 -10px;
+	}
+	& > a{
+		@include r-font('sign/font');
+		color: $accent-color !important;
+		position: relative;
+		z-index: 2;
+		padding: 0 40px 0 10px;
+		// padding: 0 40px 0 15px;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgb(39, 34, 30);
+			width: 100%;
+			height: calc(100% + 35px);
+			z-index: -1;
+			opacity: 0;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			left: auto;
+			right: 15px;
+			top: 50%;
+			background-color: transparent;
+			$angle-width: 12px;
+			$angle-height: 12px;
+			width: $angle-width;
+			height: $angle-height;
+			border: $angle-width/2 solid transparent;
+			border-top-color: $accent-color;
+			z-index: 3;
+		}
+	}
+	.profile-link__submenu{
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		// left: 57px;
+		left: 0;
+		background-color: rgb(49, 41, 38);
+		padding: 7px 0;
+		top: calc(100% + 17px);
+		width: 200px;
+		z-index: 1;
+		li{
+			display: block;
+			a{
+				@include r-font('sign/font');
+				display: block;
+				padding: 10px 20px;
+				margin-bottom: 1px;
+				background-color: rgb(78, 67, 63);
+				color: #fff;
+				font-weight: 300;
+				text-decoration: none;
+				font-family: "Open Sans";
+				&:hover{
+					background-color: rgb(70, 59, 55);
+					text-decoration: none !important;
+				}
+			}
+			&:last-child{
+				a{
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+	&:hover{
+		a{
+			text-decoration: underline;
+			color: $accent-color;
+			&:before{
+				opacity: 1;
+			}
+		}
+		.profile-link__submenu{
+			transition: .15s;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

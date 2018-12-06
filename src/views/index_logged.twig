@@ -1,0 +1,68 @@
+{% import 'collections/offers.twig' as offers %}
+{% import 'collections/posts.twig' as posts %}
+
+{% extends 'layout/layout_logged.twig' %}
+
+{% block page %}
+
+    <section class="section">
+        <div class="container slider">
+            <div class="offers-list slider-scroller">
+                <div class="slider-container">
+                    {{ offers.list(data.offers) }}
+                </div>
+            </div>
+            <div class="slider-progress">
+                {% for i in 0..data.offers|length %}
+                    <i></i>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="section-footer">
+            <p class="offer-slogan">— это предложения, которые<br />выбирают игроки!</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Новости покера</h2>
+        </div>
+        <div class="container">
+            <div class="posts-list">
+                {{ posts.list(data.posts|slice(0,4)) }}
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-two-col">
+                <div class="section-col posts-recommended">
+                    <div class="recommended-label">Выбор редакции</div>
+                    {{ posts.recommended(data.recommended) }}
+                </div>
+
+                <div class="section-col">
+                    <div class="posts-list">
+                        {{ posts.list(data.posts|slice(4, 4)) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container section-footer">
+            <a class="btn read-more" href="#">
+                <span class="full">Показать больше новостей</span>
+                <span class="compact">Больше новостей</span>
+                <i></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="container">
+            <h2 class="section-title">Выбор редакции</h2>
+            <div class="posts-list">
+                {{ posts.list(data.posts, false) }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+
