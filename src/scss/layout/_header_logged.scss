@@ -86,7 +86,7 @@
 				color: $white-color;
 				font-weight: 300;
 				text-decoration: none;
-				font-family: "Open Sans";
+				@include font('text');
 				&:hover{
 					background-color: rgb(70, 59, 55);
 					text-decoration: none !important;

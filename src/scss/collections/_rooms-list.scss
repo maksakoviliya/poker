@@ -56,7 +56,7 @@
                     font-size: $font-large;	
                     line-height: 22px;
                     color: $title-color;
-                    font-family: header;
+                     @include font('header');
                     transition: $ui-animation-duration, color $ui-animation-duration;
                 }
                 

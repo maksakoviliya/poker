@@ -88,7 +88,7 @@
     margin-bottom: 45px;
     &.big-text {
       color:  $black-color;
-      font-family: header;
+       @include font('header');
       font-size: $font-large;
       line-height: 34px;
       margin-bottom: 45px;
@@ -102,7 +102,7 @@
     background: $light-color;
     padding: 30px 35px 70px 45px;
     margin: 0px;
-    font-family: header;
+     @include font('header');
     font-size: $font-large;
     line-height: 34px;
     font-style: italic;
@@ -154,7 +154,7 @@
           margin-right: 10px;
         }
         a {
-          font-family: "Open Sans";
+           @include font('text');
           font-size: $font-small;
           font-style: normal;
         }
@@ -162,7 +162,7 @@
     }
   }
   h1 {
-    font-family: "Open Sans";
+    @include font('text');
     font-size: $title-font-large;
     line-height: 38px;
     font-weight: 600;
@@ -170,7 +170,7 @@
     margin-bottom: 15px;
   }
   h2 {
-    font-family: "Open Sans";
+    @include font('text');
     font-size: $title-font-big;
     line-height: 36px;
     font-weight: 400;
@@ -181,7 +181,7 @@
     color: $text-default-color;
   }
   h3 {
-    font-family: "Open Sans";
+    @include font('text');
     font-size: $font-large;
     line-height: 30px;
     font-weight: 400;

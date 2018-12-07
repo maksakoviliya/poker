@@ -64,7 +64,7 @@
 
   .title-room {
     color: $white-color;
-    font-family: header;
+    @include font('header');
     font-size: $title-font-extra-biggest;
     line-height: 60px;
     max-width: 960px;
@@ -145,7 +145,7 @@
 
         .name {
           color: $second-color;
-          font-family: "IBM Plex Serif";
+           @include font('header');
           font-size: $font-large;
           line-height: 22px;
           text-align: center;
