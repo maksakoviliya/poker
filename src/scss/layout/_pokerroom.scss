@@ -20,7 +20,7 @@
   text-transform: none;
   letter-spacing: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: $font-big;
   padding: 0px 25px;
 }
 
@@ -30,7 +30,7 @@
   padding: 50px 0px;
 
   .name-room {
-    font-size: 20px;
+    font-size: $font-extra-big;
     line-height: 28px;
     color: $white-color;
     display: flex;
@@ -64,8 +64,8 @@
 
   .title-room {
     color: $white-color;
-    font-family: "IBM Plex Serif";
-    font-size: 50px;
+    font-family: header;
+    font-size: $title-font-extra-biggest;
     line-height: 60px;
     max-width: 960px;
     margin: 20px auto 0px auto;
@@ -73,7 +73,7 @@
 
   .go-to-room-div {
     .go-ro-room {
-      font-size: 16px;
+      font-size: $font-medium;
       line-height: 47px;
       padding: 0px 40px;
       background: $second-color;
@@ -109,7 +109,7 @@
       list-style-image: url($img-directory + '/my/check.svg');
 
       li {
-        font-size: 18px;
+        font-size: $font-big;
         line-height: 24px;
         margin-bottom: 12.5px;
         padding-left: 5px;
@@ -146,7 +146,7 @@
         .name {
           color: $second-color;
           font-family: "IBM Plex Serif";
-          font-size: 22px;
+          font-size: $font-large;
           line-height: 22px;
           text-align: center;
         }
@@ -160,7 +160,7 @@
 
         .about {
           text-align: center;
-          font-size: 14px;
+          font-size: $font-small;
           line-height: 20px;
         }
       }
@@ -176,7 +176,7 @@
           height: 25%;
           padding: 0px 30px;
           color: $text-default-color;
-          font-size: 14px;
+          font-size: $font-small;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 1px;
@@ -239,7 +239,7 @@
 }
 
 .poker-room-title {
-  font-size: 28px;
+  font-size: $font-biggest;
   font-weight: 600;
   line-height: 36px;
   margin-top: 50px;
@@ -247,7 +247,7 @@
 }
 
 .poker-room-text {
-  font-size: 18px;
+  font-size: $font-big;
   line-height: 24px;
   margin-top: 15px;
 }
@@ -258,7 +258,7 @@
   margin-top: 15px;
 
   li {
-    font-size: 18px;
+    font-size: $font-big;
     line-height: 24px;
     margin-bottom: 12.5px;
   }
@@ -282,7 +282,7 @@
 }
 
 .faq-quest {
-  font-size: 18px;
+  font-size: $font-big;
   line-height: 24px;
   font-weight: 600;
   margin-bottom: 15px;
@@ -290,7 +290,7 @@
 }
 
 .faq-answer {
-  font-size: 18px;
+  font-size: $font-big;
   line-height: 24px;
   margin-bottom: 15px;
   margin-left: 40px;
@@ -307,7 +307,7 @@
   margin-top: 100px;
 
   .user-quest-title {
-    font-size: 14px;
+    font-size: $font-small;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -331,7 +331,7 @@
     margin-top: 20px;
 
     .make-quest {
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 44px;
       padding: 0px 40px;
       background: $second-color;
@@ -349,7 +349,7 @@
     border-bottom: 1px solid $light-color;
     display: block;
     color: $second-color;
-    font-size: 22px;
+    font-size: $font-large;
     line-height: 30px;
 
     &:hover {
@@ -362,7 +362,7 @@
     }
 
     .user-quest-comments {
-      font-size: 18px;
+      font-size: $font-big;
       white-space: nowrap;
 
       i {
@@ -394,7 +394,7 @@
   }
 
   .user-reviews-title {
-    font-size: 14px;
+    font-size: $font-small;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
@@ -418,7 +418,7 @@
     margin-top: 20px;
 
     .make-review {
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 44px;
       padding: 0px 40px;
       background: $second-color;
@@ -467,7 +467,7 @@
     p {
       padding-top: 20px;
       margin-right: 80px;
-      font-size: 16px;
+      font-size: $font-medium;
       line-height: 20px;
     }
 
@@ -506,7 +506,7 @@
 
       .read-more {
         line-height: 28px;
-        font-size: 14px;
+        font-size: $font-small;
         padding: 0px 20px;
       }
     }
@@ -521,7 +521,7 @@
   }
 
   .title {
-    font-size: 14px;
+    font-size: $font-small;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -573,7 +573,7 @@
   }
 
   .title {
-    font-size: 14px;
+    font-size: $font-small;
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -581,14 +581,14 @@
   }
 
   p {
-    font-size: 14px;
+    font-size: $font-small;
     font-weight: 400;
     line-height: 18px;
     margin-bottom: 10px;
   }
 
   .one-contact {
-    font-size: 14px;
+    font-size: $font-small;
     line-height: 18px;
     margin-bottom: 10px;
 
@@ -626,7 +626,7 @@
 
   .title {
     font-weight: bold;
-    font-size: 14px;
+    font-size: $font-small;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -648,7 +648,7 @@
 
   .block-links ul {
     line-height: 24px;
-    font-size: 18px;
+    font-size: $font-big;
     list-style-type: square;
     margin-left: 35px;
 
@@ -677,7 +677,7 @@
 
     .poker-room-header {
       .title-room {
-        font-size: 42px;
+        font-size: $title-font-extra-big;
         line-height: 50px;
         max-width: 660px;
       }
@@ -689,7 +689,7 @@
 
         ul {
           li {
-            font-size: 16px;
+            font-size: $font-medium;
             line-height: 24px;
             margin-bottom: 10px;
           }
@@ -729,7 +729,7 @@
 
     .user-quest-block {
       .one-user-quest {
-        font-size: 18px;
+        font-size: $font-big;
         line-height: 26px;
       }
     }
@@ -770,7 +770,7 @@
 
       .rewiew-text {
         p {
-          font-size: 16px;
+          font-size: $font-medium;
           line-height: 24px;
           margin-left: 90px;
           margin-right: 30px;
@@ -783,7 +783,7 @@
 
           .read-more {
             line-height: 28px;
-            font-size: 14px;
+            font-size: $font-small;
             padding: 0px 20px;
             display: block;
             margin: 20px 0px 25px 0px;
@@ -822,7 +822,7 @@
 
       .block-links ul {
         line-height: 24px;
-        font-size: 16px;
+        font-size: $font-medium;
       }
 
       padding: 40px 0px;
@@ -836,7 +836,7 @@
       padding-top: 35px;
 
       .name-room {
-        font-size: 14px;
+        font-size: $font-small;
       }
     }
 
@@ -860,7 +860,7 @@
 
     .poker-room-header {
       .title-room {
-        font-size: 26px;
+        font-size: $font-very-large;
         line-height: 30px;
         max-width: 100%;
         padding: 0px 20px;
@@ -876,7 +876,7 @@
 
         ul {
           li {
-            font-size: 16px;
+            font-size: $font-medium;
             line-height: 24px;
             margin-bottom: 10px;
           }
@@ -923,7 +923,7 @@
 
     .user-quest-block {
       .one-user-quest {
-        font-size: 18px;
+        font-size: $font-big;
         line-height: 26px;
       }
     }
@@ -964,7 +964,7 @@
 
       .rewiew-text {
         p {
-          font-size: 16px;
+          font-size: $font-medium;
           line-height: 24px;
           margin-left: 20px;
           margin-right: 20px;
@@ -979,7 +979,7 @@
 
           .read-more {
             line-height: 28px;
-            font-size: 14px;
+            font-size: $font-small;
             padding: 0px 20px;
             display: block;
             margin: 20px 0px;
@@ -1036,19 +1036,19 @@
       .block-links {
         ul {
           line-height: 22px;
-          font-size: 14px;
+          font-size: $font-small;
           margin-left: 25px;
         }
       }
     }
 
     .poker-room-title {
-      font-size: 22px;
+      font-size: $font-large;
       line-height: 28px;
     }
 
     .poker-room-text {
-      font-size: 14px;
+      font-size: $font-small;
       line-height: 20px;
     }
 
@@ -1082,7 +1082,7 @@
 
     .user-quest-block {
       .one-user-quest {
-        font-size: 16px;
+        font-size: $font-medium;
         line-height: 22px;
         padding: 25px 0px;
       }
@@ -1149,18 +1149,18 @@
     }
 
     .faq-quest {
-      font-size: 14px;
+      font-size: $font-small;
       line-height: 20px;
     }
 
     .faq-answer {
-      font-size: 14px;
+      font-size: $font-small;
       line-height: 20px;
     }
 
     .poker-room-ul {
       li {
-        font-size: 14px;
+        font-size: $font-small;
         line-height: 20px;
       }
     }

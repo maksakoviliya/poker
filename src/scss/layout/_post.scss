@@ -24,7 +24,7 @@
   .breadcrumbs {
     margin-bottom: 10px;
     li {
-      font-size: 14px;
+      font-size: $font-small;
       line-height: 14px;
       display: inline;
       a {
@@ -37,12 +37,12 @@
     }
   }
   .post-title {
-    font-size: 48px;
+    font-size: $title-font-biggest;
     line-height: 60px;
     margin-bottom: 15px;
   }
   .author-div {
-    font-size: 14px;
+    font-size: $font-small;
     font-weight: bold;
     > span {
       padding-right: 30px;
@@ -83,13 +83,13 @@
     margin-bottom: 0px;
   }
   p {
-    font-size: 18px;
+    font-size: $font-big;
     line-height: 28px;
     margin-bottom: 45px;
     &.big-text {
       color:  $black-color;
       font-family: header;
-      font-size: 22px;
+      font-size: $font-large;
       line-height: 34px;
       margin-bottom: 45px;
       margin-top: 25px;
@@ -103,7 +103,7 @@
     padding: 30px 35px 70px 45px;
     margin: 0px;
     font-family: header;
-    font-size: 22px;
+    font-size: $font-large;
     line-height: 34px;
     font-style: italic;
     position: relative;
@@ -137,7 +137,7 @@
       width: 100%;
       margin-top: 70px;
       margin-bottom: 45px;
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 28px;
       padding-bottom: 90px;
       .author {
@@ -155,7 +155,7 @@
         }
         a {
           font-family: "Open Sans";
-          font-size: 14px;
+          font-size: $font-small;
           font-style: normal;
         }
       }
@@ -163,7 +163,7 @@
   }
   h1 {
     font-family: "Open Sans";
-    font-size: 32px;
+    font-size: $title-font-large;
     line-height: 38px;
     font-weight: 600;
     margin-top: 65px;
@@ -171,7 +171,7 @@
   }
   h2 {
     font-family: "Open Sans";
-    font-size: 30px;
+    font-size: $title-font-big;
     line-height: 36px;
     font-weight: 400;
     margin-top: 45px;
@@ -182,7 +182,7 @@
   }
   h3 {
     font-family: "Open Sans";
-    font-size: 22px;
+    font-size: $font-large;
     line-height: 30px;
     font-weight: 400;
     margin-top: 45px;
@@ -193,7 +193,7 @@
   }
   .fire {
     border: 1px solid $accent-color;
-    font-size: 18px;
+    font-size: $font-big;
     padding: 15px 0px;
     display: block;
     width: 100%;
@@ -226,7 +226,7 @@
     margin-bottom: 45px;
     margin-top: 25px;
     li {
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 24px;
       margin-bottom: 15px;
       padding-left: 10px;
@@ -236,7 +236,7 @@
     max-width: 100%;
     margin-bottom: 45px;
     + span {
-      font-size: 14px;
+      font-size: $font-small;
       font-style: italic;
       font-weight: 300;
       line-height: 18px;
@@ -266,7 +266,7 @@
     }
   }
   .comments-title {
-    font-size: 22px;
+    font-size: $font-large;
     border-bottom: 2px solid $light-color;
     padding-bottom: 15px;
     margin-top: 45px;
@@ -286,7 +286,7 @@
       .comment {
         .comment-header {
           margin-bottom: 10px;
-          font-size: 14px;
+          font-size: $font-small;
           display: flex;
           line-height: 30px;
           .author {
@@ -312,7 +312,7 @@
             margin-bottom: 10px;
           }
           p {
-            font-size: 16px;
+            font-size: $font-medium;
             line-height: 22px;
             margin-bottom: 10px;
           }
@@ -322,10 +322,10 @@
         }
         .comment-bottom {
           .reply {
-            font-size: 14px;
+            font-size: $font-small;
             border-bottom: 1px solid $second-color;
             &:hover {
-              font-size: 14px;
+              font-size: $font-small;
               border-bottom: 1px solid  $black-color;
               text-decoration: none;
             }
@@ -357,7 +357,7 @@
     max-width: 640px;
     margin-left: 55px;
     .post-title {
-      font-size: 42px;
+      font-size: $title-font-extra-big;
       line-height: 50px;
     }
   }
@@ -366,17 +366,17 @@
     margin-left: 55px;
     p {
       &.big-text {
-        font-size: 20px;
+        font-size: $font-extra-big;
         line-height: 32px;
       }
-      font-size: 16px;
+      font-size: $font-medium;
       line-height: 24px;
       margin-bottom: 35px;
     }
     blockquote {
-      font-size: 20px;
+      font-size: $font-extra-big;
       line-height: 30px;
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 28px;
       padding: 30px 30px 70px 30px;
       &.quote-1 {
@@ -384,11 +384,11 @@
       }
     }
     h1 {
-      font-size: 28px;
+      font-size: $font-biggest;
       line-height: 34px;
     }
     h2 {
-      font-size: 24px;
+      font-size: $font-extra-large;
       line-height: 30px;
     }
     blockquote {
@@ -399,22 +399,22 @@
       &.quote-3 {
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 16px;
+        font-size: $font-medium;
         line-height: 26px;
       }
     }
     .fire {
-      font-size: 16px;
+      font-size: $font-medium;
     }
     h3 {
-      font-size: 20px;
+      font-size: $font-extra-big;
       line-height: 26px;
       margin-top: 35px;
     }
     ul {
       margin-bottom: 35px;
       li {
-        font-size: 16px;
+        font-size: $font-medium;
         line-height: 22px;
         margin-bottom: 10px;
       }
@@ -444,7 +444,7 @@
     max-width: 100% ;
     margin-left: 0px ;
     .post-title {
-      font-size: 26px;
+      font-size: $font-very-large;
       line-height: 30px;
     }
     .author-div {
@@ -464,18 +464,18 @@
     margin-left: 0px;
     p {
       &.big-text {
-        font-size: 16px;
+        font-size: $font-medium;
         line-height: 24px;
         margin-bottom: 30px;
       }
-      font-size: 14px;
+      font-size: $font-small;
       line-height: 20px;
       margin-bottom: 30px;
     }
     blockquote {
-      font-size: 20px;
+      font-size: $font-extra-big;
       line-height: 30px;
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 28px;
       padding: 30px 30px 70px 30px;
       &.quote-1 {
@@ -486,12 +486,12 @@
       }
     }
     h1 {
-      font-size: 24px;
+      font-size: $font-extra-large;
       line-height: 30px;
       margin-top: 45px;
     }
     h2 {
-      font-size: 22px;
+      font-size: $font-large;
       line-height: 28px;
     }
     blockquote {
@@ -502,22 +502,22 @@
       &.quote-3 {
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 16px;
+        font-size: $font-medium;
         line-height: 24px;
       }
     }
     .fire {
-      font-size: 16px;
+      font-size: $font-medium;
     }
     h3 {
-      font-size: 18px;
+      font-size: $font-big;
       line-height: 24px;
       margin-top: 30px;
     }
     ul {
       margin-bottom: 30px;
       li {
-        font-size: 14px;
+        font-size: $font-small;
         line-height: 20px;
         margin-bottom: 10px;
       }
@@ -548,7 +548,7 @@
       .btn {
         width: 100%;
         margin-bottom: 20px;
-        font-size: 16px;
+        font-size: $font-medium;
         &:last-child {
           margin-bottom: 0px;
         }
@@ -559,7 +559,7 @@
         .comment {
           .comment-content {
             p {
-              font-size: 14px;
+              font-size: $font-small;
               line-height: 20px;
             }
           }

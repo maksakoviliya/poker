@@ -165,7 +165,7 @@
                 padding-top: u(.7);
 
                 @include r-each-if('vip-short') {
-                    font-size: 16px;
+                    font-size: $font-medium;
                 }
             }
 

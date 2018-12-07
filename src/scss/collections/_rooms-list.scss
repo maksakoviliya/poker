@@ -53,7 +53,7 @@
                 }
                 
                 .title{
-                    font-size: 22px;	
+                    font-size: $font-large;	
                     line-height: 22px;
                     color: $title-color;
                     font-family: header;
@@ -132,17 +132,17 @@
                     list-style: square;
                     
                     li{
-                        font-size: 18px;
+                        font-size: $font-big;
                         line-height: 24px;
                         margin-bottom: 8px;
                         padding-left: 5px;
                         @include desktop-only{
-                            font-size: 14px;
+                            font-size: $font-small;
                             line-height: 18px;
                             padding-left: 0px;
                         }
                         @include touch{
-                            font-size: 14px;
+                            font-size: $font-small;
                             line-height: 18px;
                             padding-left: 0px;
                         }
@@ -155,7 +155,7 @@
             .game-footer{
                 padding: 15px 0px;
                 color: $second-color;
-                font-size: 14px;
+                font-size: $font-small;
                 text-transform: uppercase;
                 background: $body-grey-bg-color;
                 letter-spacing: 1px;

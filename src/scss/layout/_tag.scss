@@ -1,28 +1,28 @@
 section {
 
     .tag-title {
-        font-size: 48px;
+        font-size: $title-font-biggest;
         line-height: 58px;
 
         @include desktop-only {
-            font-size: 40px;
+            font-size: $title-font-extra-large;
             line-height: 50px;
         }
 
         @include touch {
-            font-size: 24px;
+            font-size: $font-extra-large;
             line-height: 30px;
         }
     }
 
     .tag-subtitle {
-        font-size: 20px;
+        font-size: $font-extra-big;
         line-height: 30px;
         font-weight: 600;
         margin-top: 30px;
 
         @include touch {
-            font-size: 16px;
+            font-size: $font-medium;
             line-height: 26px;
             margin-top: 20px;
 
@@ -33,7 +33,7 @@ section {
     }
 
     .tag-text {
-        font-size: 18px;
+        font-size: $font-big;
         line-height: 28px;
         margin-top: 30px;
         padding-right: 100px;
@@ -43,7 +43,7 @@ section {
         }
 
         @include touch {
-            font-size: 14px;
+            font-size: $font-small;
             line-height: 24px;
             margin-top: 20px;
             padding-right: 0px;
@@ -57,13 +57,13 @@ section {
         margin-right: 100px;
 
         li {
-            font-size: 18px;
+            font-size: $font-big;
             line-height: 24px;
             margin-bottom: 12.5px;
             padding-left: 5px;
 
             @include touch {
-                font-size: 16px;
+                font-size: $font-medium;
                 line-height: 22px;
                 margin-bottom: 10px;
             }
@@ -93,7 +93,7 @@ section {
     }
 
     .posts-list-title {
-        font-size: 14px;
+        font-size: $font-small;
         font-weight: bold;
         margin-top: 70px;
         margin-bottom: 20px;
@@ -124,11 +124,11 @@ section {
 .post {
     .post-title {
         @include touch {
-            font-size: 16px;
+            font-size: $font-medium;
         }
 
         @include mobile {
-            font-size: 14px;
+            font-size: $font-small;
         }
     }
 

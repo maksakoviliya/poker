@@ -2,6 +2,22 @@ $font-light: 300;
 $font-regular: 400;
 $font-bold: 700;
 
+$font-small: 14px;
+$font-medium: 16px;
+$font-big: 18px;
+$font-extra-big: 20px;
+$font-large: 22px;
+$font-extra-large: 24px;
+$font-very-large: 26px;
+$font-biggest: 28px;
+
+$title-font-big: 30px;
+$title-font-large: 32px;
+$title-font-extra-large: 40px;
+$title-font-extra-big: 42px;
+$title-font-biggest: 48px;
+$title-font-extra-biggest: 50px;
+
 @include register-font(header, ('IBM Plex Serif', serif));
 
 @include register-font(text, ('Open Sans', sans-serif));
