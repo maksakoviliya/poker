@@ -83,7 +83,7 @@
 				padding: 10px 20px;
 				margin-bottom: 1px;
 				background-color: rgb(78, 67, 63);
-				color: #fff;
+				color: $white-color;
 				font-weight: 300;
 				text-decoration: none;
 				font-family: "Open Sans";
@@ -108,7 +108,7 @@
 			}
 		}
 		.profile-link__submenu{
-			transition: .15s;
+			transition: $ui-animation-duration / 2;
 			opacity: 1;
 			visibility: visible;
 		}

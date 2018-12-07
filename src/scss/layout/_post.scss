@@ -28,10 +28,10 @@
       line-height: 14px;
       display: inline;
       a {
-        color: #227118;
+        color: $green-color;
       }
       span {
-        color: #227118;
+        color: $green-color;
         padding: 0px 5px;
       }
     }
@@ -60,7 +60,7 @@
         @include bg('comment-black.svg');
       }
       span {
-        color: #227118;
+        color: $green-color;
       }
     }
     .views {
@@ -87,7 +87,7 @@
     line-height: 28px;
     margin-bottom: 45px;
     &.big-text {
-      color: #000000;
+      color:  $black-color;
       font-family: header;
       font-size: 22px;
       line-height: 34px;
@@ -98,8 +98,8 @@
   blockquote {
     width: 360px;
     max-width: 100%;
-    border-top: 10px solid #303030;
-    background: #f3f3f3;
+    border-top: 10px solid $light-gray;
+    background: $light-color;
     padding: 30px 35px 70px 45px;
     margin: 0px;
     font-family: header;
@@ -178,7 +178,7 @@
     letter-spacing: normal;
     text-transform: none;
     margin-bottom: 15px;
-    color: #333;
+    color: $text-default-color;
   }
   h3 {
     font-family: "Open Sans";
@@ -189,7 +189,7 @@
     letter-spacing: normal;
     text-transform: none;
     margin-bottom: 15px;
-    color: #333;
+    color: $text-default-color;
   }
   .fire {
     border: 1px solid $accent-color;
@@ -215,7 +215,7 @@
     &:hover {
       text-decoration: none !important;
       span {
-        border-bottom: #000000;
+        border-bottom:  $black-color;
       }
     }
   }
@@ -240,7 +240,7 @@
       font-style: italic;
       font-weight: 300;
       line-height: 18px;
-      color: #646464;
+      color: $brand-color;
       margin-bottom: 45px;
       display: block;
       margin-top: -40px;
@@ -267,20 +267,20 @@
   }
   .comments-title {
     font-size: 22px;
-    border-bottom: 2px solid #f3f3f3;
+    border-bottom: 2px solid $light-color;
     padding-bottom: 15px;
     margin-top: 45px;
   }
   .comments {
     .one-comment {
       .comment {
-        border-top: 2px solid #f3f3f3;
+        border-top: 2px solid $light-color;
       }
       .this-comment {
         padding: 20px 0px;
       }
       .reply-comment {
-        background: #f8f8f8;
+        background: $light-color;
         padding: 20px;
       }
       .comment {
@@ -301,7 +301,7 @@
             }
           }
           .date {
-            color: #646464;
+            color: $brand-color;
           }
         }
         .comment-content {
@@ -326,7 +326,7 @@
             border-bottom: 1px solid $second-color;
             &:hover {
               font-size: 14px;
-              border-bottom: 1px solid #000000;
+              border-bottom: 1px solid  $black-color;
               text-decoration: none;
             }
           }

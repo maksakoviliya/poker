@@ -11,7 +11,7 @@
     .slider-container {
         display: flex;
         transform: translate3D(0, 0, 0);
-        transition: transform .4s;
+        transition: transform $ui-animation-duration;
     }
 
     .slider-progress {

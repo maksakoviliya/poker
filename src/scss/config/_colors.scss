@@ -1,9 +1,19 @@
 $accent-color: #f3bf00;
 $second-color: #2a67b9;
 
+$white-color: #ffffff;
+$light-color: #ebebeb;
+$black-color: #000000;
+$brand-color: #777777;
+$green-color: #227118;
+$gray-color: #534741;
+$light-gray: #303030;
+$dark-gray: #1d1917;
+
+
 $header-bg-color: #312a26;
-$body-bg-color: #ffffff;
-$white-bg-color: #ffffff;
+$body-bg-color: $white-color;
+$white-bg-color: $white-color;
 $body-grey-bg-color: #f9f9f9;
 
 $footer-rooms-bg-color: #2b2521;
@@ -11,25 +21,25 @@ $footer-rooms-bg-color: #2b2521;
 $offer-bg-color: $second-color;
 $offer-accent-bg-color: $accent-color;
 
-$posts-label-color: #000000;
+$posts-label-color: $black-color;
 $posts-label-bg-color: $accent-color;
 
 $nav-border-color: $accent-color;
 
-$btn-white-border-color: #fff;
+$btn-white-border-color: $white-color;
 
 $text-default-color: #333333;
-$text-white-color: #ffffff;
-$text-black-color: #000000;
+$text-white-color: $white-color;
+$text-black-color: $black-color;
 $title-color: $second-color;
 $link-color: $second-color;
 
 $main-nav-bg-color: $second-color;
 $main-nav-title-color: #001f56;
-$main-nav-item-color: #ffffff;
+$main-nav-item-color: $white-color;
 $main-nav-selected-color: $accent-color;
 $main-menu-open-bg-color: $accent-color;
-$main-menu-close-bg-color: #001f56;
+$main-menu-close-bg-color: $main-nav-title-color;
 
 $vip-chat-bg-color: $accent-color;
 $vip-chat-select-bg-color: $main-nav-bg-color;

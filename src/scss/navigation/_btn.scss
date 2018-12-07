@@ -2,7 +2,7 @@
     @include r-font('typography/btn/font');
 
     border: 1px solid $link-color;
-    border-radius: 8px;
+    border-radius: $border-radius;
     display: inline-block;
     padding: 0 u();
     min-width: 150px;

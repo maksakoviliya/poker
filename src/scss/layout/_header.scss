@@ -13,7 +13,7 @@
 
         &:before {
             content: ' ';
-            background-image: radial-gradient(ellipse at right bottom, #534741, transparent 70%);
+            background-image: radial-gradient(ellipse at right bottom, $gray-color, transparent 70%);
             position: absolute;
             top: 0;
             right: 0;

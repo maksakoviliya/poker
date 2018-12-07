@@ -5,7 +5,7 @@
 
         background-color: $header-bg-color;
         background-position: 0 40px;
-        border-top: u() solid #27221e;
+        border-top: u() solid $footer-rooms-bg-color;
         font-weight: $font-light;
 
         .footer-body {

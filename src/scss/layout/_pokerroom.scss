@@ -16,7 +16,7 @@
 .make-review {
   line-height: 46px;
   background: $second-color;
-  color: #fff;
+  color: $white-color;
   text-transform: none;
   letter-spacing: normal;
   font-weight: 400;
@@ -25,14 +25,14 @@
 }
 
 .poker-room-header {
-  background: radial-gradient(at bottom, #332b28, #1d1917);
+  background: radial-gradient(at bottom, $gray-color, $dark-gray);
   text-align: center;
   padding: 50px 0px;
 
   .name-room {
     font-size: 20px;
     line-height: 28px;
-    color: #fff;
+    color: $white-color;
     display: flex;
     justify-content: center;
 
@@ -50,7 +50,7 @@
 
     .room-link {
       a {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid $white-color;
         color: $text-white-color;
         font-weight: bold;
         text-decoration: none;
@@ -63,7 +63,7 @@
   }
 
   .title-room {
-    color: #FFFFFF;
+    color: $white-color;
     font-family: "IBM Plex Serif";
     font-size: 50px;
     line-height: 60px;
@@ -77,7 +77,7 @@
       line-height: 47px;
       padding: 0px 40px;
       background: $second-color;
-      color: #fff;
+      color: $white-color;
       margin-top: 30px;
       box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.45);
 
@@ -123,16 +123,16 @@
 
     .room-manager {
       width: 550px;
-      border: 1px solid #EBEBEB;
+      border: 1px solid $light-color;
       box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
       margin-top: -50px;
       display: flex;
 
       .profile {
-        background: #fff;
+        background: $white-color;
         min-width: 250px;
         padding: 25px 0px;
-        border-right: 1px solid #EBEBEB;
+        border-right: 1px solid $light-color;
 
         .avatar {
           margin: 0px 0px 25px 0px;
@@ -152,7 +152,7 @@
         }
 
         .line {
-          background: #EBEBEB;
+          background: $light-color;
           height: 1px;
           width: 30px;
           margin: 20px auto;
@@ -166,16 +166,16 @@
       }
 
       .links {
-        background: #f9f9f9;
+        background: $body-grey-bg-color;
         min-width: 300px;
-        border-right: 1px solid #EBEBEB;
+        border-right: 1px solid $light-color;
 
         .one-link {
-          border-bottom: 1px solid #EBEBEB;
+          border-bottom: 1px solid $light-color;
           display: block;
           height: 25%;
           padding: 0px 30px;
-          color: #333;
+          color: $text-default-color;
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
@@ -302,7 +302,7 @@
 }
 
 .user-quest {
-  background: #f9f9f9;
+  background: $body-grey-bg-color;
   padding: 30px 0px;
   margin-top: 100px;
 
@@ -335,7 +335,7 @@
       line-height: 44px;
       padding: 0px 40px;
       background: $second-color;
-      color: #fff;
+      color: $white-color;
       text-transform: none;
       letter-spacing: normal;
       font-weight: 400;
@@ -346,7 +346,7 @@
 .user-quest-block {
   .one-user-quest {
     padding: 25px 30px 25px 30px;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid $light-color;
     display: block;
     color: $second-color;
     font-size: 22px;
@@ -380,7 +380,7 @@
 }
 
 .user-reviews {
-  background: #f9f9f9;
+  background: $body-grey-bg-color;
   padding: 30px 0px;
   margin-top: 100px;
 
@@ -422,7 +422,7 @@
       line-height: 44px;
       padding: 0px 40px;
       background: $second-color;
-      color: #fff;
+      color: $white-color;
       text-transform: none;
       letter-spacing: normal;
       font-weight: 400;
@@ -444,11 +444,11 @@
   position: absolute;
   right: 25px;
   bottom: -20px;
-  background: #fff;
+  background: $white-color;
   width: 740px;
   height: 120px;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-  background: url(../images/my/quote.png) no-repeat right bottom, #fff;
+  background: url(../images/my/quote.png) no-repeat right bottom, $white-color;
 
   .room-ico {
     width: 50px;
@@ -497,7 +497,7 @@
           padding-right: 2.5px;
 
           i {
-            background: linear-gradient(180deg, #ffffff 0%, #357f1e 100%);
+            background: linear-gradient(180deg, $white-color 0%, $green-color 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -535,7 +535,7 @@
       padding-right: 15px;
 
       a {
-        color: #000;
+        color:  $black-color;
 
         &:hover {}
       }
@@ -548,7 +548,7 @@
   display: flex;
 
   .one-accept {
-    border: 1px solid #EBEBEB;
+    border: 1px solid $light-color;
     height: 50px;
     flex-basis: 75px;
     min-width: 75px;
@@ -609,7 +609,7 @@
 
       &:hover {
         text-decoration: none !important;
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid  $black-color;
       }
     }
   }
@@ -618,7 +618,7 @@
 .poker-room-additional-links {
   padding: 50px 0px 50px 0px;
   margin-top: 100px;
-  background: #f9f9f9;
+  background: $body-grey-bg-color;
 
   .container {
     padding-left: 100px;
@@ -1111,7 +1111,7 @@
         &:before {
           content: "";
           position: absolute;
-          background: #f9f9f9;
+          background: $body-grey-bg-color;
           height: 215px;
           width: 100%;
           z-index: 0;
@@ -1127,7 +1127,7 @@
     }
 
     .one-rewiew {
-      background: #fff;
+      background: $white-color;
       padding-top: 20px;
       top: initial;
       left: initial;

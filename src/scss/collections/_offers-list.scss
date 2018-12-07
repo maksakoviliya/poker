@@ -9,7 +9,31 @@
             margin: 0;
         }
 
-        .offer,
+        .offer{
+            @include r-col('col', p);
+
+            .offer-container {
+                background: $body-grey-bg-color;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                transition: box-shadow $ui-animation-duration;
+            }
+
+            .offer-footer {
+                line-height: 80px;
+                text-align: center;
+            }
+
+            &:hover {
+
+                .offer-container {
+                    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.1);
+                }
+            }
+        }
+        
         .offer-more {
             @include r-col('col', p);
 
@@ -39,7 +63,7 @@
 
             .offer-cover {
                 border-top: 10px solid $offer-bg-color;
-                background: #fff;
+                background: $white-color;
                 height: 100px;
                 display: flex;
                 align-items: center;
