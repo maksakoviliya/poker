@@ -11,65 +11,72 @@
   }
 }
   
-
+// 0 to 400px
 @mixin mobile {
   @media screen and (max-width: $tablet - 1px){
     @content
   }
 }
   
-
+// from 401px ....
 @mixin tablet {
   @media screen and (min-width: $tablet), print{
     @content
   }
 }
   
-
+// 401px to 720px
 @mixin tablet-only {
   @media screen and (min-width: $tablet) and (max-width: $desktop - 1px){
     @content
   }
 }
   
-
+// 0 to 720px
 @mixin touch {
   @media screen and (max-width: $desktop - 1px){
     @content
   }
 }
   
-
+// from 721px
 @mixin desktop {
   @media screen and (min-width: $desktop){
     @content
   }
 }
   
-
+// 721px to 960px
 @mixin desktop-only {
   @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px){
     @content
   }
 }
   
-
+// 0 to 960px
 @mixin until-widescreen {
   @media screen and (max-width: $widescreen - 1px){
     @content
   }
 }
   
-
+// from 960px
 @mixin widescreen {
   @media screen and (min-width: $widescreen){
     @content
   }
 }
   
-
+// from 1160px
 @mixin fullhd {
   @media screen and (min-width: $fullhd){
+    @content
+  }
+}
+  
+// 0 to 1160px
+@mixin until-fullhd {
+  @media screen and (max-width: $fullhd - 1px){
     @content
   }
 }
