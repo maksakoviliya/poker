@@ -37,15 +37,39 @@
     }
   }
   .post-title {
-    font-size: $title-font-biggest;
+    font-size: $title-font-extra-biggest;
     line-height: 60px;
-    margin-bottom: 15px;
+    letter-spacing: -0.8px;
   }
   .author-div {
     font-size: $font-small;
-    font-weight: bold;
-    > span {
-      padding-right: 30px;
+    margin-top: 13px;
+    @include desktop {
+      display: flex !important;
+    }
+    .author_pro{
+      position: relative;
+      padding-left: 33px;
+      &:before{
+        content: 'pro';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #b93b34;
+        width: 28px;
+        height: 12px;
+        color: #fff;
+        text-align: center;
+        line-height: 12px;
+        text-transform: uppercase;
+        font-size: 10px;
+      }
+    }
+    div {
+      > span {
+        padding-right: 30px;
+      }
     }
     
     .comments {
@@ -76,7 +100,20 @@
       }
     }
   }
+
 }
+
+  .post-image{
+    @include mobile {
+      margin-left: -$header-mobile-padding;
+      margin-right: -$header-mobile-padding;
+    }
+    img{
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 
 .post-content {
   > img:first-child {
@@ -85,14 +122,14 @@
   p {
     font-size: $font-big;
     line-height: 28px;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
     &.big-text {
       color:  $black-color;
        @include font('header');
       font-size: $font-large;
       line-height: 34px;
-      margin-bottom: 45px;
-      margin-top: 25px;
+      margin-bottom: 30px;
+      margin-top: 15px;
     }
   }
   blockquote {
@@ -100,13 +137,25 @@
     max-width: 100%;
     border-top: 10px solid $light-gray;
     background: $light-color;
-    padding: 30px 35px 70px 45px;
-    margin: 0px;
-     @include font('header');
+    padding: 30px 40px 70px 40px;
+    margin: 8px 0 0;
     font-size: $font-large;
     line-height: 34px;
     font-style: italic;
     position: relative;
+    @include font('header');
+
+    @include mobile{
+      padding: 23px 35px 70px 45px;
+    }
+      
+    @include tablet-only{
+      font-size: $font-extra-big;
+      line-height: 30px;
+      font-size: $font-big;
+      line-height: 28px;
+      padding: 30px 30px 70px 30px;
+    }
     &:after {
       content: "";
       @include bg('my/quote.png');
@@ -120,18 +169,25 @@
     &.quote-1 {
       width: 360px;
       float: right;
-      margin-right: -100px;
-      margin-left: 25px;
+      margin-right: -90px;
+      margin-left: 20px;
       + *:after {
         content: "";
         display: block;
         clear: both;
+      }
+      @include tablet-only{
+        width: 230px;
       }
     }
     &.quote-2 {
       width: 100%;
       margin-top: 70px;
       margin-bottom: 45px;
+      @include tablet-only{
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
     }
     &.quote-3 {
       width: 100%;
@@ -140,18 +196,30 @@
       font-size: $font-big;
       line-height: 28px;
       padding-bottom: 90px;
+      @include mobile {
+        font-size: $font-medium;
+        padding: 10px 20px 17px 17px;
+      }
+      @include tablet-only {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: $font-medium;
+        line-height: 26px;
+      }
       .author {
         line-height: 40px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         text-align: right;
-        float: right;
-        margin-right: 50px;
-        margin-top: 25px;
+        width: 30%;
+        margin-left: auto;
+        margin-right: 0;
+        margin-top: 30px;
         img {
           width: 40px;
           height: 40px;
-          margin-right: 10px;
+          margin-right: 15px;
+          border-radius: 50%;
         }
         a {
            @include font('text');
@@ -174,7 +242,7 @@
     font-size: $title-font-big;
     line-height: 36px;
     font-weight: 400;
-    margin-top: 45px;
+    margin-top: 30px;
     letter-spacing: normal;
     text-transform: none;
     margin-bottom: 15px;
@@ -194,23 +262,23 @@
   .fire {
     border: 1px solid $accent-color;
     font-size: $font-big;
-    padding: 15px 0px;
-    display: block;
+    padding: 20px;
+    display: flex;
+    align-items: center;
     width: 100%;
-    text-align: center;
-    margin-bottom: 45px;
     i {
-      margin-right: 4px;
-      margin-top: -3px;
+      margin-right: 18px;
       vertical-align: middle;
       height: 31px;
-      width: 25px;
+      min-width: 25px;
       display: inline-block;
-      background: no-repeat center / contain;
+      background: no-repeat center / cover;
       @include bg('fire.svg');
     }
     span {
-      border-bottom: 1px solid $second-color;
+      text-decoration: underline;;
+      font-size: $font-small;
+      max-width: 180px;
     }
     &:hover {
       text-decoration: none !important;
@@ -233,7 +301,7 @@
     }
   }
   > img {
-    max-width: 100%;
+    max-width: 88%;
     margin-bottom: 45px;
     + span {
       font-size: $font-small;
@@ -352,7 +420,7 @@
 }
 
 // @media (max-width: 959px) and (min-width: 720px) {
-@include tablet-only{
+@include desktop-only{
   .post-header {
     max-width: 640px;
     margin-left: 55px;
@@ -374,14 +442,7 @@
       margin-bottom: 35px;
     }
     blockquote {
-      font-size: $font-extra-big;
-      line-height: 30px;
-      font-size: $font-big;
-      line-height: 28px;
-      padding: 30px 30px 70px 30px;
-      &.quote-1 {
-        width: 230px;
-      }
+      
     }
     h1 {
       font-size: $font-biggest;
@@ -390,18 +451,6 @@
     h2 {
       font-size: $font-extra-large;
       line-height: 30px;
-    }
-    blockquote {
-      &.quote-2 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      &.quote-3 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: $font-medium;
-        line-height: 26px;
-      }
     }
     .fire {
       font-size: $font-medium;

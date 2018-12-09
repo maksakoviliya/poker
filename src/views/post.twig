@@ -18,10 +18,14 @@
                 <h1 class="post-title">Сергей Рыбаченко возглавит российскую сборную на Кубке наций</h1>
                 
                 <div class="author-div">
-                    <span class="author"><a href="{{ data.postPage.contentTop.authorLink }}">{{ data.postPage.contentTop.authorName }}</a></span>
-                    <span class="date">{{ data.postPage.contentTop.date }}</span>
-                    <span class="comments"><i></i> {{ data.postPage.contentTop.comments }} <span>+{{ data.postPage.contentTop.commentsToday }}</span></span>
-                    <span class="views"><i></i> {{ data.postPage.contentTop.views }}</span>
+                    <div>
+                        <span class="author author_pro"><a href="{{ data.postPage.contentTop.authorLink }}">{{ data.postPage.contentTop.authorName }}</a></span>
+                        <span class="date">{{ data.postPage.contentTop.date }}</span>
+                    </div>
+                    <div>
+                        <span class="comments"><i></i> {{ data.postPage.contentTop.comments }} <span>+{{ data.postPage.contentTop.commentsToday }}</span></span>
+                        <span class="views"><i></i> {{ data.postPage.contentTop.views }}</span>
+                    </div>
                 </div>
                 
             </div>

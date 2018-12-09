@@ -3,6 +3,13 @@
     section {
         padding-top: u(2);
 
+        &.section{
+            @include mobile {
+                padding-left: $header-mobile-padding;
+                padding-right: $header-mobile-padding;
+            }
+        }
+
         &.section-grey {
             @include r-offset('section-grey/vertical-offset', pv);
 

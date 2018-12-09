@@ -140,6 +140,9 @@
             transition: transform $ui-animation-duration;
             z-index: 900;
             overflow: initial;
+            @include mobile {
+                padding: 0 $header-mobile-padding;
+            }
                 
             &.start {
               transform: translateY(0%);
@@ -229,37 +232,6 @@
                 }
             }
 
-            @include r-each-if('short') {
-
-                .container {
-                    display: block;
-                }
-
-                .logo {
-                    display: block;
-                    margin-bottom: 10px;
-                }
-
-                .logo-compact {
-                    display: none;
-                }
-            }
-        }
-
-        &.full {
-
-            .vip-chat {
-                transform: translateY(105%);
-                transition: transform $ui-animation-duration * 1.5;
-
-                &.is-active {
-                    transform: translateY(0);
-                }
-            }
-        }
-
-        &.fixed {
-
             .vip-chat-overlay {
                 position: absolute;
                 top: 44px;
@@ -292,7 +264,37 @@
                     top: 10px;
                 }
             }
+
+            @include r-each-if('short') {
+
+                .container {
+                    display: block;
+                }
+
+                .logo {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+
+                .logo-compact {
+                    display: none;
+                }
+            }
         }
+
+
+        &.full {
+
+            .vip-chat {
+                transform: translateY(105%);
+                transition: transform $ui-animation-duration * 1.5;
+
+                &.is-active {
+                    transform: translateY(0);
+                }
+            }
+        }
+
     }
 
     .compact-header {
