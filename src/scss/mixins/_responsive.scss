@@ -1,3 +1,8 @@
+$tablet: 401px;
+$desktop: 721px;
+$widescreen: 960px;
+$fullhd: 1161px;
+
 @mixin from($device) {
   @media screen and (min-width: $device){
     @content

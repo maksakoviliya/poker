@@ -28,7 +28,15 @@
     margin-left: 0px ;
   }
   .breadcrumbs {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    @include desktop-only{
+      margin-top: -5px;
+    }
+    @include touch{
+      margin-top: -15px;
+      margin-bottom: 8px;
+    }
     li {
       font-size: $font-small;
       line-height: 14px;
@@ -63,6 +71,7 @@
     }
     @include touch{
       line-height: 30px;
+      margin-top: 6px;
     }
     .author_pro{
       position: relative;
@@ -148,12 +157,18 @@
   > * {
     &:first-child {
       margin-top: 45px;
+      @include desktop-only{
+        margin-top: 40px;
+      }
       @include touch{
-        margin-top: 30px;
+        margin-top: 26px;
       }
     }
     &:last-child {
       margin-bottom: 45px;
+      @include desktop-only{
+        margin-bottom: 35px;
+      }
       @include touch{
         margin-bottom: 30px;
       }
@@ -171,12 +186,12 @@
     @include desktop-only{
       font-size: $font-medium;
       line-height: 24px;
-      margin-bottom: 35px;
+      margin-bottom: 23px;
     }
     @include touch{
       font-size: $font-small;
       line-height: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     &.big-text {
       color:  $black-color;
@@ -188,10 +203,13 @@
       @include desktop-only{
         font-size: $font-extra-big;
         line-height: 32px;
+        margin-top: 8px;
+        margin-bottom: 35px;
       }
       @include touch{
         font-size: $font-medium;
         line-height: 24px;
+        margin-top: 10px;
         // margin-bottom: 30px;
       }
     }
@@ -203,6 +221,8 @@
   .blockquote-row{
     display: flex;
     align-items: flex-start;
+    margin-top: 3px;
+    padding-top: 5px;
     @include touch{
       flex-direction: column;
     }
@@ -219,7 +239,7 @@
     blockquote{
       min-width: 360px;
       width: 360px;
-      margin: 0 0 0 20px;
+      margin: 9px 0 0 20px;
       height: 100%;
       @include until(1080px){
         min-width: 230px;
@@ -243,7 +263,7 @@
     width: 100%;
     border-top: 10px solid $light-gray;
     background: $light-color;
-    padding: 30px 40px 60px;
+    padding: 30px 25px 60px 40px;
     font-size: $font-large;
     line-height: 34px;
     font-style: italic;
@@ -251,6 +271,7 @@
     position: relative;
     height: auto;
     margin: 70px 0 10px;
+    z-index: 3;
     @include font('header');
 
     @include desktop-only{
@@ -271,7 +292,7 @@
       line-height: 28px;
     }
 
-    &:after {
+    &:before {
       content: "";
       @include bg('my/quote.png');
       background-repeat: no-repeat;
@@ -280,6 +301,7 @@
       position: absolute;
       right: 0px;
       bottom: 0px;
+      z-index: -1;
     }
     &.quote-1 {
       
@@ -311,12 +333,14 @@
     &.quote-3 {
       font-size: $font-big;
       line-height: 28px;
-      padding-bottom: 20px;
+      padding-bottom: 26px;
+      margin-top: 48px;
       @include desktop-only{
         margin-top: 0;
         font-size: $font-medium;
         line-height: 26px;
-        padding: 31px 37px;
+        padding: 31px 37px 20px;
+        margin-bottom: 50px;
       }
       @include mobile {
         font-size: $font-medium;
@@ -340,13 +364,13 @@
         align-items: flex-end;
         text-align: right;
         width: 25%;
-        margin: 30px 0 0 auto;
+        margin: 23px 0 0 auto;
         @include desktop-only{
-          margin: 0 60px 0 auto ;
+          margin: 15px 60px 0 auto ;
         }
         @include touch{
           width: 50%;
-          margin: 0 auto;
+          margin: 35px auto 0;
           justify-content: center;
         }
         img {
@@ -369,8 +393,8 @@
     font-size: $title-font-large;
     line-height: 38px;
     font-weight: 600;
-    margin-top: 45px;
-    margin-bottom: 15px;
+    margin-top: 28px;
+    margin-bottom: 10px;
     @include desktop-only{
       font-size: $font-biggest;
       line-height: 34px;
@@ -378,7 +402,7 @@
     @include touch{
       font-size: $font-extra-large;
       line-height: 30px;
-      // margin-top: 45px;
+      margin-top: 13px;
     }
   }
 
@@ -390,7 +414,7 @@
     margin-top: 30px;
     letter-spacing: normal;
     text-transform: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: $text-default-color;
     @include desktop-only{
       font-size: $font-extra-large;
@@ -410,34 +434,42 @@
     margin-top: 45px;
     letter-spacing: normal;
     text-transform: none;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: $text-default-color;
+    max-width: 60%;
     @include desktop-only{
       font-size: $font-extra-big;
       line-height: 26px;
-      margin-top: 35px;
+      margin-top: 32px;
+      max-width: 85%;
     }
     @include touch{
+      max-width: 100%;
       font-size: $font-big;
       line-height: 24px;
-      margin-top: 30px;
+      margin-top: 37px;
     }
   }
 
   .fire {
     border: 1px solid $accent-color;
     font-size: $font-big;
-    padding: 20px;
+    padding: 13px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 28px;
     width: 100%;
+    margin-top: 44px;
     @include desktop-only{
       font-size: $font-medium;
+      margin-top: 35px;
     }
     @include touch{
-      font-size: $font-medium;
+      font-size: $font-small;
+      line-height: 20px;
+      margin-top: 35px;
+      padding: 15px;
     }
     i {
       margin-right: 18px;
@@ -450,6 +482,9 @@
       text-decoration: underline;
       @include desktop-only{
         width: 250px;
+      }
+      @include touch{
+        width: 180px;
       }
       // font-size: $font-small;
       // max-width: 180px;
@@ -464,12 +499,9 @@
 
   ul {
     list-style-type: square;
-    margin-left: 35px;
-    margin-top: 0px;
-    margin-bottom: 45px;
-    margin-top: 25px;
+    margin: 20px 35px 45px 32px;
     @include desktop-only{
-      margin-bottom: 35px;
+      margin: 20px 35px 40px 28px;
     }
     @include touch{
       margin-bottom: 30px;
@@ -482,7 +514,7 @@
       @include desktop-only{
         font-size: $font-medium;
         line-height: 22px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
       @include touch{
         font-size: $font-small;
@@ -497,6 +529,7 @@
     margin-bottom: 45px;
     @include desktop-only{
       margin-bottom: 35px;
+      max-width: 78%;
     }
     @include touch{
       margin-bottom: 30px;
@@ -547,6 +580,13 @@
 
 .post-bottom {
   @extend %post-container;
+  padding-right: 180px;
+  @include desktop-only{
+    padding-right: 65px;
+  }
+  @include touch{
+    padding-right: 0;
+  }
   .buttons{
     .btn {
       width: 49.5%;
@@ -568,25 +608,32 @@
 
   .comments-title {
     font-size: $font-large;
+    margin-top: 42px;
+    padding-bottom: 13px;
     border-bottom: 2px solid $light-color;
-    padding-bottom: 15px;
-    margin-top: 45px;
+    @include desktop-only{
+      margin-top: 30px;
+    }
   }
   .comments {
+    padding-top: 10px;
     .one-comment {
-      .comment {
-        border-top: 2px solid $light-color;
+      border-bottom: 1px solid $light-color;
+      margin-bottom: 10px;
+      &:last-child{
+        border-bottom: 0;
       }
       .this-comment {
         padding: 20px 0px;
       }
       .reply-comment {
         background: $light-color;
-        padding: 20px;
+        padding: 30px 20px;
+        margin-top: 7px;
       }
       .comment {
         .comment-header {
-          margin-bottom: 10px;
+          margin-bottom: 7px;
           font-size: $font-small;
           display: flex;
           line-height: 30px;
