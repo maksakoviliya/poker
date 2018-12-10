@@ -1,6 +1,25 @@
+.section-full {
+  @include desktop-only{
+    max-width: 720px;
+    margin: auto;
+  }
+  @include touch{
+    max-width: 100%;
+    // margin: auto;
+  }
+}
+
 .section-medium {
   max-width: 840px;
   margin-left: 100px;
+  @include desktop-only{
+    max-width: 540px;
+    margin-left: 55px;
+  }
+  @include touch{
+    max-width: 100%;
+    margin: auto;
+  }
 
   >*:first-child {
     margin-top: 0px;
@@ -28,6 +47,9 @@
   background: radial-gradient(at bottom, $gray-color, $dark-gray);
   text-align: center;
   padding: 50px 0px;
+  @include touch{
+    padding-top: 35px;
+  }
 
   .name-room {
     font-size: $font-extra-big;
@@ -35,6 +57,9 @@
     color: $white-color;
     display: flex;
     justify-content: center;
+    @include touch{
+      font-size: $font-small;
+    }
 
     .room-word {}
 
@@ -69,6 +94,17 @@
     line-height: 60px;
     max-width: 960px;
     margin: 20px auto 0px auto;
+    @include desktop-only{
+      font-size: $title-font-extra-big;
+      line-height: 50px;
+      max-width: 660px;
+    }
+    @include touch{
+      font-size: $font-very-large;
+      line-height: 30px;
+      max-width: 100%;
+      padding: 0px 20px;
+    }
   }
 
   .go-to-room-div {
@@ -103,6 +139,15 @@
     width: 50%;
     float: left;
     padding-right: 80px;
+    @include desktop-only{
+      padding-right: 30px;
+    }
+    @include touch{
+      width: 100%;
+      float: none;
+      padding-right: 0px;
+      margin-top: 30px;
+    }
 
     ul {
       margin-left: 25px;
@@ -113,6 +158,16 @@
         line-height: 24px;
         margin-bottom: 12.5px;
         padding-left: 5px;
+        @include desktop-only{
+          font-size: $font-medium;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
+        @include touch{
+          font-size: $font-medium;
+          line-height: 24px;
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -120,6 +175,10 @@
   .right {
     width: 50%;
     float: right;
+    @include touch{
+      width: 100%;
+      float: none;
+    }
 
     .room-manager {
       width: 550px;
@@ -127,12 +186,22 @@
       box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
       margin-top: -50px;
       display: flex;
+      @include desktop-only{
+        width: 360px;
+      }
+      @include touch{
+        width: 300px;
+        margin: -50px auto 0px auto;
+      }
 
       .profile {
         background: $white-color;
         min-width: 250px;
         padding: 25px 0px;
         border-right: 1px solid $light-color;
+        @include touch{
+          min-width: 220px;
+        }
 
         .avatar {
           margin: 0px 0px 25px 0px;
@@ -169,6 +238,12 @@
         background: $body-grey-bg-color;
         min-width: 300px;
         border-right: 1px solid $light-color;
+        @include desktop-only{
+          min-width: 110px;
+        }
+        @include touch{
+          min-width: 80px;
+        }
 
         .one-link {
           border-bottom: 1px solid $light-color;
@@ -181,6 +256,21 @@
           text-transform: uppercase;
           letter-spacing: 1px;
           line-height: 75px;
+          @include desktop-only{
+            padding: 0px 40px;
+          }
+          @include touch{
+            padding: 0px 25px;
+          }
+
+          span{
+            @include desktop-only{
+              display: none;
+            }
+            @include touch{
+              display: none;
+            }
+          }
 
           &:hover {
             opacity: .6;
@@ -199,6 +289,15 @@
             width: 24px;
             display: inline-block;
             background: no-repeat center / contain;
+            @include desktop-only{
+              width: 30px;
+              height: 30px;
+            }
+            @include touch{
+              width: 30px;
+              height: 30px;
+              margin-right: 0px;
+            }
           }
 
           &.link-sk {
@@ -244,12 +343,20 @@
   line-height: 36px;
   margin-top: 50px;
   margin-bottom: 25px;
+  @include touch{
+    font-size: $font-large;
+    line-height: 28px;
+  }
 }
 
 .poker-room-text {
   font-size: $font-big;
   line-height: 24px;
   margin-top: 15px;
+  @include touch{
+    font-size: $font-small;
+    line-height: 20px;
+  }
 }
 
 .poker-room-ul {
@@ -261,6 +368,10 @@
     font-size: $font-big;
     line-height: 24px;
     margin-bottom: 12.5px;
+    @include touch{
+      font-size: $font-small;
+      line-height: 20px;
+    }
   }
 }
 
@@ -278,6 +389,14 @@
   iframe {
     width: 100%;
     height: 500px;
+    @include desktop-only{
+      // width: 100%;
+      height: 330px;
+    }
+    @include touch{
+      // width: 100%;
+      height: 200px;
+    }
   }
 }
 
@@ -287,6 +406,10 @@
   font-weight: 600;
   margin-bottom: 15px;
   margin-top: 25px;
+  @include touch{
+    font-size: $font-small;
+    line-height: 20px;
+  }
 }
 
 .faq-answer {
@@ -294,17 +417,30 @@
   line-height: 24px;
   margin-bottom: 15px;
   margin-left: 40px;
+  @include touch{
+    font-size: $font-small;
+    line-height: 20px;
+  }
 }
 
 .all-user-quest-block {
   text-align: center;
   margin-top: 60px;
+  @include touch{
+    text-align: center;
+    margin-top: 30px;
+  }
 }
 
 .user-quest {
   background: $body-grey-bg-color;
   padding: 30px 0px;
   margin-top: 100px;
+  @include touch{
+    padding: 30px 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
 
   .user-quest-title {
     font-size: $font-small;
@@ -351,6 +487,17 @@
     color: $second-color;
     font-size: $font-large;
     line-height: 30px;
+    @include desktop-only{
+      font-size: $font-big;
+      line-height: 26px;
+    }
+    @include touch{
+      font-size: $font-big;
+      line-height: 26px;
+      font-size: $font-medium;
+      line-height: 22px;
+      padding: 25px 0px;
+    }
 
     &:hover {
       opacity: .6;
@@ -383,14 +530,93 @@
   background: $body-grey-bg-color;
   padding: 30px 0px;
   margin-top: 100px;
+  @include touch{
+    padding: 30px 20px;
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  >* {
+    @include touch{
+      position: relative;
+      z-index: 10;
+      
+    }
+  }
 
   &.no-rewiew {
     margin-bottom: 100px;
+    @include touch{
+      margin-bottom: 50px;
+    }
+    .user-reviews-title {
+      color: $second-color;
+    }
   }
+
 
   &.yes-rewiew {
     margin-bottom: 120px;
     position: relative;
+    @include touch{
+      margin-bottom: 50px;
+      background: none;
+      padding-bottom: 0px;
+    }
+
+    &:before{
+      @include touch{
+        content: "";
+        position: absolute;
+        background: $body-grey-bg-color;
+        height: 215px;
+        width: 100%;
+        z-index: 0;
+        left: 0px;
+        top: 0px;
+      }
+    }
+    .user-reviews-title {
+      width: 380px;
+      color: $second-color;
+      @include desktop-only{
+        width: 260px;
+      }
+      @include touch{
+        width: 100%;
+      }
+
+      >.hidden-xs {
+        @include desktop-only{
+          display: none;
+        }
+        @include touch{
+          display: none;
+        }
+      }
+
+      + .clearfix {
+        @include desktop-only{
+          margin-bottom: 100px;
+        }
+        @include touch{
+          display: none;
+        }
+      }
+
+      span {
+        color: $accent-color;
+      }
+    }
+    .make-review-div {
+      width: 380px;
+      @include desktop-only{
+        width: 260px;
+      }
+      @include touch{
+        width: 100%;
+      }
+    }
   }
 
   .user-reviews-title {
@@ -401,17 +627,6 @@
     letter-spacing: 1px;
   }
 
-  &.no-rewiew .user-reviews-title {
-    color: $second-color;
-  }
-
-  &.yes-rewiew .user-reviews-title {
-    color: $second-color;
-
-    span {
-      color: $accent-color;
-    }
-  }
 
   .make-review-div {
     text-align: center;
@@ -426,16 +641,12 @@
       text-transform: none;
       letter-spacing: normal;
       font-weight: 400;
-    }
-  }
-
-  &.yes-rewiew {
-    .user-reviews-title {
-      width: 380px;
-    }
-
-    .make-review-div {
-      width: 380px;
+      @include desktop-only{
+        padding: 0px 25px;
+      }
+      @include touch{
+        padding: 0px 25px;
+      }
     }
   }
 }
@@ -449,6 +660,31 @@
   height: 120px;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
   background: url(../images/my/quote.png) no-repeat right bottom, $white-color;
+  @include desktop-only{
+    width: 440px;
+    height: initial;
+    position: static;
+    float: right;
+    margin-right: 25px;
+    margin-top: -46px;
+  }
+  @include touch{
+    width: 100%;
+    height: initial;
+    position: static;
+    float: none;
+    margin-right: 0px;
+    margin-top: 30px;
+    background: $white-color;
+    padding-top: 20px;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    margin-left: -10px;
+    margin-right: -10px;
+    width: initial;
+  }
 
   .room-ico {
     width: 50px;
@@ -456,6 +692,10 @@
     float: left;
     margin: 20px;
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+    @include touch{
+      float: none;
+      margin-top: 0px;
+    }
 
     img {
       max-width: 100%;
@@ -469,12 +709,36 @@
       margin-right: 80px;
       font-size: $font-medium;
       line-height: 20px;
+      @include desktop-only{
+        font-size: $font-medium;
+        line-height: 24px;
+        margin-left: 90px;
+        margin-right: 30px;
+      }
+      @include touch{
+        font-size: $font-medium;
+        line-height: 24px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 0px;
+      }
     }
 
     .bottom {
       margin-top: 15px;
       display: flex;
       align-items: center;
+      @include desktop-only{
+        padding-left: 90px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      @include touch{
+        padding-left: 20px;
+        padding-right: 0px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
 
       .review-b-user {
         margin-right: 30px;
@@ -492,6 +756,9 @@
       .review-stars {
         margin-right: 30px;
         margin-top: -3px;
+        @include desktop-only{
+          min-width: 95px;
+        }
 
         .one-star {
           padding-right: 2.5px;
@@ -508,6 +775,21 @@
         line-height: 28px;
         font-size: $font-small;
         padding: 0px 20px;
+        @include desktop-only{
+          line-height: 28px;
+          font-size: $font-small;
+          padding: 0px 20px;
+          display: block;
+          margin: 20px 0px 25px 0px;
+        }
+        @include touch{
+          line-height: 28px;
+          font-size: $font-small;
+          padding: 0px 20px;
+          display: block;
+          margin: 20px 0px;
+          width: 150px;
+        }
       }
     }
   }
@@ -515,9 +797,15 @@
 
 .poker-room-platforms {
   display: flex;
+  @include touch{
+    display: block;
+  }
 
   >div {
     min-width: 50%;
+    @include touch{
+      min-width: 100%;
+    }
   }
 
   .title {
@@ -526,6 +814,12 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     letter-spacing: 1px;
+  }
+
+  .right{
+    @include touch{
+      margin-top: 25px;
+    }
   }
 
   .row-links {
@@ -546,6 +840,12 @@
 .accepted-method-pay {
   margin-top: 30px;
   display: flex;
+  @include desktop-only{
+    flex-wrap: wrap;
+  }
+  @include touch{
+    flex-wrap: wrap;
+  }
 
   .one-accept {
     border: 1px solid $light-color;
@@ -556,6 +856,12 @@
     align-items: center;
     justify-content: center;
     margin-right: 25px;
+    @include desktop-only{
+      margin-bottom: 20px;
+    }
+    @include touch{
+      margin-bottom: 20px;
+    }
 
     img {
       max-width: 100%;
@@ -567,9 +873,19 @@
 .poker-room-contacts {
   margin-top: 30px;
   display: flex;
+  @include desktop-only{
+    margin-top: 10px;
+  }
+  @include touch{
+    display: block;
+    margin-top: 10px;
+  }
 
   >div {
     min-width: 50%;
+    @include touch{
+      min-width: 100%;
+    }
   }
 
   .title {
@@ -597,6 +913,14 @@
         width: 120px;
         font-weight: 300;
         display: inline-block;
+        @include desktop-only{
+          width: 100%;
+          display: block;
+        }
+        @include touch{
+          width: 100%;
+          display: block;
+        }
       }
 
       &:last-child {
@@ -619,9 +943,27 @@
   padding: 50px 0px 50px 0px;
   margin-top: 100px;
   background: $body-grey-bg-color;
+  @include desktop-only{
+    padding: 40px 0px;
+  }
+  @include touch{
+    padding: 40px 0px;
+    margin-top: 50px;
+  }
 
   .container {
     padding-left: 100px;
+    @include desktop-only{
+      width: 600px;
+      margin-left: 75px;
+      padding-left: 0px;
+    }
+    @include touch{
+      width: 100%;
+      margin-left: 0px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   .title {
@@ -632,537 +974,63 @@
     margin-bottom: 20px;
   }
 
-  .block-links {}
+  .block-links {
+    ul {
+      line-height: 24px;
+      font-size: $font-big;
+      list-style-type: square;
+      margin-left: 35px;
+      @include desktop-only{
+        line-height: 24px;
+        font-size: $font-medium;
+      }
+      @include touch{
+        line-height: 22px;
+        font-size: $font-small;
+        margin-left: 25px;
+      }
+
+      li {
+        margin-bottom: 12.5px;
+      }
+    }
+  }
 
   .left {
     width: 50%;
     float: left;
     padding-right: 25px;
+    @include touch{
+      width: 100%;
+      float: none;
+      padding-right: 0px;
+    }
   }
 
   .right {
     width: 50%;
     float: left;
     padding-left: 25px;
-  }
-
-  .block-links ul {
-    line-height: 24px;
-    font-size: $font-big;
-    list-style-type: square;
-    margin-left: 35px;
-
-    li {
-      margin-bottom: 12.5px;
+    @include touch{
+      width: 100%;
+      float: none;
+      padding-left: 0px;
     }
   }
+
 }
 
 .visible-xs {
   display: none;
+  @include touch{
+    display: block;
+  }
 }
 
-// @media (max-width: 1159px) and (min-width: 720px) {
-  @include desktop-only {
-
-    .section-full {
-      max-width: 720px;
-      margin: auto;
-    }
-
-    .section-medium {
-      max-width: 540px;
-      margin-left: 55px;
-    }
-
-    .poker-room-header {
-      .title-room {
-        font-size: $title-font-extra-big;
-        line-height: 50px;
-        max-width: 660px;
-      }
-    }
-
-    .room-advances {
-      .left {
-        padding-right: 30px;
-
-        ul {
-          li {
-            font-size: $font-medium;
-            line-height: 24px;
-            margin-bottom: 10px;
-          }
-        }
-      }
-
-      .right {
-        .room-manager {
-          width: 360px;
-
-          .links {
-            min-width: 110px;
-
-            .one-link {
-              padding: 0px 40px;
-
-              span {
-                display: none;
-              }
-
-              i {
-                width: 30px;
-                height: 30px;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .video {
-      iframe {
-        width: 100%;
-        height: 330px;
-      }
-    }
-
-    .user-quest-block {
-      .one-user-quest {
-        font-size: $font-big;
-        line-height: 26px;
-      }
-    }
-
-    .user-reviews {
-      &.yes-rewiew {
-        .user-reviews-title {
-          width: 260px;
-
-          >.hidden-xs {
-            display: none;
-          }
-        }
-
-        .make-review-div {
-          width: 260px;
-        }
-      }
-
-      .make-review-div {
-        .make-review {
-          padding: 0px 25px;
-        }
-      }
-
-      &.yes-rewiew + .clearfix {
-        margin-bottom: 100px;
-      }
-    }
-
-    .one-rewiew {
-      width: 440px;
-      height: initial;
-      position: static;
-      float: right;
-      margin-right: 25px;
-      margin-top: -46px;
-
-      .rewiew-text {
-        p {
-          font-size: $font-medium;
-          line-height: 24px;
-          margin-left: 90px;
-          margin-right: 30px;
-        }
-
-        .bottom {
-          padding-left: 90px;
-          width: 100%;
-          flex-wrap: wrap;
-
-          .read-more {
-            line-height: 28px;
-            font-size: $font-small;
-            padding: 0px 20px;
-            display: block;
-            margin: 20px 0px 25px 0px;
-          }
-
-          .review-stars {
-            min-width: 95px;
-          }
-        }
-      }
-    }
-
-    .accepted-method-pay {
-      flex-wrap: wrap;
-
-      .one-accept {
-        margin-bottom: 20px;
-      }
-    }
-
-    .poker-room-contacts {
-      .one-contact>span:first-child {
-        width: 100%;
-        display: block;
-      }
-
-      margin-top: 10px;
-    }
-
-    .poker-room-additional-links {
-      .container {
-        width: 600px;
-        margin-left: 75px;
-        padding-left: 0px;
-      }
-
-      .block-links ul {
-        line-height: 24px;
-        font-size: $font-medium;
-      }
-
-      padding: 40px 0px;
-    }
-
+.hidden-xs {
+  display: block;
+  @include touch{
+    display: none;
   }
+}
 
-  @include touch {
-
-    .poker-room-header {
-      padding-top: 35px;
-
-      .name-room {
-        font-size: $font-small;
-      }
-    }
-
-    .visible-xs {
-      display: block;
-    }
-
-    .hidden-xs {
-      display: none;
-    }
-
-    .section-full {
-      max-width: 100%;
-      margin: auto;
-    }
-
-    .section-medium {
-      max-width: 100%;
-      margin: auto;
-    }
-
-    .poker-room-header {
-      .title-room {
-        font-size: $font-very-large;
-        line-height: 30px;
-        max-width: 100%;
-        padding: 0px 20px;
-      }
-    }
-
-    .room-advances {
-      .left {
-        width: 100%;
-        float: none;
-        padding-right: 0px;
-        margin-top: 30px;
-
-        ul {
-          li {
-            font-size: $font-medium;
-            line-height: 24px;
-            margin-bottom: 10px;
-          }
-        }
-      }
-
-      .right {
-        .room-manager {
-          .profile {
-            min-width: 220px;
-          }
-
-          width: 300px;
-          margin: -50px auto 0px auto;
-
-          .links {
-            min-width: 80px;
-
-            .one-link {
-              padding: 0px 25px;
-
-              span {
-                display: none;
-              }
-
-              i {
-                width: 30px;
-                height: 30px;
-                margin-right: 0px;
-              }
-            }
-          }
-        }
-
-        width: 100%;
-        float: none;
-      }
-    }
-
-    .video iframe {
-      width: 100%;
-      height: 200px;
-    }
-
-    .user-quest-block {
-      .one-user-quest {
-        font-size: $font-big;
-        line-height: 26px;
-      }
-    }
-
-    .user-reviews {
-      &.yes-rewiew {
-        .user-reviews-title {
-          width: 100%;
-
-          >.hidden-xs {
-            display: none;
-          }
-        }
-
-        .make-review-div {
-          width: 100%;
-        }
-      }
-
-      .make-review-div {
-        .make-review {
-          padding: 0px 25px;
-        }
-      }
-
-      &.yes-rewiew+.clearfix {
-        display: none;
-      }
-    }
-
-    .one-rewiew {
-      width: 100%;
-      height: initial;
-      position: static;
-      float: none;
-      margin-right: 0px;
-      margin-top: 30px;
-
-      .rewiew-text {
-        p {
-          font-size: $font-medium;
-          line-height: 24px;
-          margin-left: 20px;
-          margin-right: 20px;
-          padding-top: 0px;
-        }
-
-        .bottom {
-          padding-left: 20px;
-          padding-right: 0px;
-          width: 100%;
-          flex-wrap: wrap;
-
-          .read-more {
-            line-height: 28px;
-            font-size: $font-small;
-            padding: 0px 20px;
-            display: block;
-            margin: 20px 0px;
-            width: 150px;
-          }
-
-          .review-stars {
-            min-width: 95px;
-          }
-        }
-      }
-    }
-
-    .accepted-method-pay {
-      flex-wrap: wrap;
-
-      .one-accept {
-        margin-bottom: 20px;
-      }
-    }
-
-    .poker-room-contacts {
-      .one-contact>span:first-child {
-        width: 100%;
-        display: block;
-      }
-
-      margin-top: 10px;
-    }
-
-    .poker-room-additional-links {
-      padding: 40px 0px;
-      margin-top: 50px;
-      
-      .container {
-        width: 100%;
-        margin-left: 0px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      .left {
-        width: 100%;
-        float: none;
-        padding-right: 0px;
-      }
-
-      .right {
-        width: 100%;
-        float: none;
-        padding-left: 0px;
-      }
-
-      .block-links {
-        ul {
-          line-height: 22px;
-          font-size: $font-small;
-          margin-left: 25px;
-        }
-      }
-    }
-
-    .poker-room-title {
-      font-size: $font-large;
-      line-height: 28px;
-    }
-
-    .poker-room-text {
-      font-size: $font-small;
-      line-height: 20px;
-    }
-
-    .poker-room-platforms {
-      display: block;
-    }
-
-    .poker-room-contacts {
-      display: block;
-    }
-
-    .poker-room-platforms {
-      >div {
-        min-width: 100%;
-      }
-
-      .right {
-        margin-top: 25px;
-      }
-    }
-
-    .poker-room-contacts {
-      >div {
-        min-width: 100%;
-      }
-
-      .right {
-        margin-top: 25px;
-      }
-    }
-
-    .user-quest-block {
-      .one-user-quest {
-        font-size: $font-medium;
-        line-height: 22px;
-        padding: 25px 0px;
-      }
-    }
-
-    .user-quest {
-      padding: 30px 20px;
-      margin-left: -10px;
-      margin-right: -10px;
-    }
-
-    .user-reviews {
-      padding: 30px 20px;
-      margin-left: -10px;
-      margin-right: -10px;
-
-      &.no-rewiew {
-        margin-bottom: 50px;
-      }
-
-      &.yes-rewiew {
-        margin-bottom: 50px;
-        background: none;
-        padding-bottom: 0px;
-
-        &:before {
-          content: "";
-          position: absolute;
-          background: $body-grey-bg-color;
-          height: 215px;
-          width: 100%;
-          z-index: 0;
-          left: 0px;
-          top: 0px;
-        }
-
-        >* {
-          position: relative;
-          z-index: 10;
-        }
-      }
-    }
-
-    .one-rewiew {
-      background: $white-color;
-      padding-top: 20px;
-      top: initial;
-      left: initial;
-      bottom: initial;
-      right: initial;
-      margin-left: -10px;
-      margin-right: -10px;
-      width: initial;
-
-      .room-ico {
-        float: none;
-        margin-top: 0px;
-      }
-    }
-
-    .all-user-quest-block {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .faq-quest {
-      font-size: $font-small;
-      line-height: 20px;
-    }
-
-    .faq-answer {
-      font-size: $font-small;
-      line-height: 20px;
-    }
-
-    .poker-room-ul {
-      li {
-        font-size: $font-small;
-        line-height: 20px;
-      }
-    }
-
-  }
