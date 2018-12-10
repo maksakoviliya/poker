@@ -46,7 +46,7 @@
 .poker-room-header {
   background: radial-gradient(at bottom, $gray-color, $dark-gray);
   text-align: center;
-  padding: 50px 0px;
+  padding: 44px 0px 50px;
   @include touch{
     padding-top: 35px;
   }
@@ -93,7 +93,7 @@
     font-size: $title-font-extra-biggest;
     line-height: 60px;
     max-width: 960px;
-    margin: 20px auto 0px auto;
+    margin: 15px auto 0px auto;
     @include desktop-only{
       font-size: $title-font-extra-big;
       line-height: 50px;
@@ -111,10 +111,10 @@
     .go-ro-room {
       font-size: $font-medium;
       line-height: 47px;
-      padding: 0px 40px;
+      padding: 0px 37px;
       background: $second-color;
       color: $white-color;
-      margin-top: 30px;
+      margin-top: 24px;
       box-shadow: 0 5px 6px 0px rgba(0, 0, 0, 0.45);
 
       i {
@@ -125,7 +125,9 @@
         width: 17px;
         @include bg('arrow.svg');
         display: inline-block;
-        background: no-repeat center / contain;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
       }
     }
   }
@@ -133,7 +135,7 @@
 
 .room-advances {
   clear: both;
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 
   .left {
     width: 50%;
@@ -156,7 +158,7 @@
       li {
         font-size: $font-big;
         line-height: 24px;
-        margin-bottom: 12.5px;
+        margin-bottom: 11px;
         padding-left: 5px;
         @include desktop-only{
           font-size: $font-medium;
@@ -197,14 +199,14 @@
       .profile {
         background: $white-color;
         min-width: 250px;
-        padding: 25px 0px;
+        padding: 25px 0 0 0;
         border-right: 1px solid $light-color;
         @include touch{
           min-width: 220px;
         }
 
         .avatar {
-          margin: 0px 0px 25px 0px;
+          margin: 0px 0px 10px 0px;
           text-align: center;
 
           img {
@@ -224,7 +226,7 @@
           background: $light-color;
           height: 1px;
           width: 30px;
-          margin: 20px auto;
+          margin: 15px auto;
         }
 
         .about {
@@ -248,14 +250,14 @@
         .one-link {
           border-bottom: 1px solid $light-color;
           display: block;
-          height: 25%;
+          height: 69px;
           padding: 0px 30px;
           color: $text-default-color;
           font-size: $font-small;
           font-weight: bold;
           text-transform: uppercase;
           letter-spacing: 1px;
-          line-height: 75px;
+          line-height: 70px;
           @include desktop-only{
             padding: 0px 40px;
           }
@@ -288,7 +290,9 @@
             height: 24px;
             width: 24px;
             display: inline-block;
-            background: no-repeat center / contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
             @include desktop-only{
               width: 30px;
               height: 30px;
@@ -330,7 +334,7 @@
 }
 
 .enter-image {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 
   img {
     max-width: 100%;
@@ -342,7 +346,7 @@
   font-weight: 600;
   line-height: 36px;
   margin-top: 50px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
   @include touch{
     font-size: $font-large;
     line-height: 28px;
@@ -352,7 +356,7 @@
 .poker-room-text {
   font-size: $font-big;
   line-height: 24px;
-  margin-top: 15px;
+  margin-top: 10px;
   @include touch{
     font-size: $font-small;
     line-height: 20px;
@@ -362,12 +366,12 @@
 .poker-room-ul {
   list-style-type: square;
   margin-left: 35px;
-  margin-top: 15px;
+  margin-top: 10px;
 
   li {
     font-size: $font-big;
     line-height: 24px;
-    margin-bottom: 12.5px;
+    margin-bottom: 11px;
     @include touch{
       font-size: $font-small;
       line-height: 20px;
@@ -404,8 +408,8 @@
   font-size: $font-big;
   line-height: 24px;
   font-weight: 600;
-  margin-bottom: 15px;
-  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-top: 15px;
   @include touch{
     font-size: $font-small;
     line-height: 20px;
@@ -434,8 +438,11 @@
 
 .user-quest {
   background: $body-grey-bg-color;
-  padding: 30px 0px;
-  margin-top: 100px;
+  padding: 27px 0px;
+  margin-top: 115px;
+  @include bg('quest.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
   @include touch{
     padding: 30px 20px;
     margin-left: -10px;
@@ -464,12 +471,12 @@
 
   .make-quest-div {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
 
     .make-quest {
       font-size: $font-big;
       line-height: 44px;
-      padding: 0px 40px;
+      padding: 0px 28px;
       background: $second-color;
       color: $white-color;
       text-transform: none;
@@ -528,7 +535,7 @@
 
 .user-reviews {
   background: $body-grey-bg-color;
-  padding: 30px 0px;
+  padding: 26px 0px;
   margin-top: 100px;
   @include touch{
     padding: 30px 20px;
@@ -556,7 +563,7 @@
 
 
   &.yes-rewiew {
-    margin-bottom: 120px;
+    margin-bottom: 154px;
     position: relative;
     @include touch{
       margin-bottom: 50px;
@@ -577,8 +584,9 @@
       }
     }
     .user-reviews-title {
-      width: 380px;
+      width: 350px;
       color: $second-color;
+      letter-spacing: 2px;
       @include desktop-only{
         width: 260px;
       }
@@ -609,7 +617,7 @@
       }
     }
     .make-review-div {
-      width: 380px;
+      width: 350px;
       @include desktop-only{
         width: 260px;
       }
@@ -630,12 +638,12 @@
 
   .make-review-div {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 16px;
 
     .make-review {
       font-size: $font-big;
       line-height: 44px;
-      padding: 0px 40px;
+      padding: 0px 26px;
       background: $second-color;
       color: $white-color;
       text-transform: none;
@@ -653,8 +661,8 @@
 
 .one-rewiew {
   position: absolute;
-  right: 25px;
-  bottom: -20px;
+  right: 35px;
+  bottom: -50px;
   background: $white-color;
   width: 740px;
   height: 120px;
@@ -705,10 +713,10 @@
 
   .rewiew-text {
     p {
-      padding-top: 20px;
-      margin-right: 80px;
-      font-size: $font-medium;
-      line-height: 20px;
+      padding-top: 14px;
+      margin-right: 70px;
+      font-size: $font-big;
+      line-height: 24px;
       @include desktop-only{
         font-size: $font-medium;
         line-height: 24px;
@@ -802,7 +810,7 @@
   }
 
   >div {
-    min-width: 50%;
+    min-width: 45%;
     @include touch{
       min-width: 100%;
     }
@@ -838,7 +846,7 @@
 }
 
 .accepted-method-pay {
-  margin-top: 30px;
+  margin-top: 22px;
   display: flex;
   @include desktop-only{
     flex-wrap: wrap;
@@ -855,13 +863,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 25px;
-    @include desktop-only{
-      margin-bottom: 20px;
-    }
-    @include touch{
-      margin-bottom: 20px;
-    }
+    margin-right: 20px;
 
     img {
       max-width: 100%;
@@ -871,7 +873,7 @@
 }
 
 .poker-room-contacts {
-  margin-top: 30px;
+  margin-top: 26px;
   display: flex;
   @include desktop-only{
     margin-top: 10px;
@@ -882,7 +884,7 @@
   }
 
   >div {
-    min-width: 50%;
+    min-width: 45%;
     @include touch{
       min-width: 100%;
     }
@@ -910,7 +912,7 @@
 
     >span {
       &:first-child {
-        width: 120px;
+        width: 111px;
         font-weight: 300;
         display: inline-block;
         @include desktop-only{
@@ -952,7 +954,7 @@
   }
 
   .container {
-    padding-left: 100px;
+    padding-left: 140px;
     @include desktop-only{
       width: 600px;
       margin-left: 75px;
@@ -991,13 +993,13 @@
       }
 
       li {
-        margin-bottom: 12.5px;
+        margin-bottom: 10px;
       }
     }
   }
 
   .left {
-    width: 50%;
+    width: 42.5%;
     float: left;
     padding-right: 25px;
     @include touch{
@@ -1008,7 +1010,7 @@
   }
 
   .right {
-    width: 50%;
+    width: 45%;
     float: left;
     padding-left: 25px;
     @include touch{
@@ -1028,7 +1030,7 @@
 }
 
 .hidden-xs {
-  display: block;
+  display: inline-block;
   @include touch{
     display: none;
   }
