@@ -8,13 +8,16 @@
         height: 350px;
         position: absolute;
         right: 0;
-        bottom: 0;
-        padding: 8px 8px 0;
+        bottom: -9px;
+        padding: 8px;
         border: 1px solid $vip-chat-bg-color;
-        border-bottom: 0;
+        visibility: hidden;
+        opacity: 0;
 
         &.is-active {
             display: block;
+            visibility: visible;
+            opacity: 1;
         }
 
         .vip-chat-close {

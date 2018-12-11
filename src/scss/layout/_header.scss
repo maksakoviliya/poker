@@ -7,10 +7,6 @@
         background-position: 0 40px;
         position: relative;
 
-        &.full {
-            overflow: hidden;
-        }
-
         &:before {
             content: ' ';
             background-image: radial-gradient(ellipse at right bottom, $gray-color, transparent 70%);
@@ -41,11 +37,22 @@
                 color: $accent-color;
                 order: 3;
                 margin-right: 8px;
+                transform: translateY(-3px);
+                + span{
+                    transform: translateY(-3px);
+                }
             }
 
             span {
                 order: 3;
                 margin-right: 8px;
+                + .link{
+                    @include touch{
+                        display: block;
+                        width: 167px;
+                        transform: translateY(0);
+                    }
+                }
             }
 
             .logo {
@@ -286,10 +293,12 @@
         &.full {
 
             .vip-chat {
-                transform: translateY(105%);
+                transform: translateY(30px);
+                opacity: 0;
                 transition: transform $ui-animation-duration * 1.5;
 
                 &.is-active {
+                    opacity: 1;
                     transform: translateY(0);
                 }
             }

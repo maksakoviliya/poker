@@ -9,20 +9,24 @@
   }
 }
 
-.section-medium {
-  max-width: 840px;
-  margin-left: 100px;
-  @include desktop-only{
-    max-width: 540px;
-    margin-left: 55px;
-  }
-  @include touch{
-    max-width: 100%;
-    margin: auto;
-  }
+.poker-room-section{
+  &.section-medium {
+    max-width: 840px;
+    margin-left: 100px;
+    @include desktop-only{
+      max-width: 540px;
+      margin-left: 65px;
+      padding-right: 0;
+    }
+    @include touch{
+      max-width: 100%;
+      margin: auto;
+      padding-right: 0;
+    }
 
-  >*:first-child {
-    margin-top: 0px;
+    >*:first-child {
+      margin-top: 0px;
+    }
   }
 }
 
@@ -47,8 +51,12 @@
   background: radial-gradient(at bottom, $gray-color, $dark-gray);
   text-align: center;
   padding: 44px 0px 50px;
+  @include desktop-only{
+    padding: 33px 0px 40px;
+    letter-spacing: 3px;
+  }
   @include touch{
-    padding-top: 35px;
+    padding-top: 20px;
   }
 
   .name-room {
@@ -136,19 +144,25 @@
 .room-advances {
   clear: both;
   margin-bottom: 48px;
+  @include desktop-only{
+    margin-bottom: 40px;
+  }
+  @include touch{
+    margin-bottom: 44px;
+  }
 
   .left {
     width: 50%;
     float: left;
     padding-right: 80px;
     @include desktop-only{
-      padding-right: 30px;
+      padding-right: 29px;
     }
     @include touch{
       width: 100%;
       float: none;
       padding-right: 0px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
 
     ul {
@@ -163,12 +177,14 @@
         @include desktop-only{
           font-size: $font-medium;
           line-height: 24px;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
+          padding-left: 10px;
         }
         @include touch{
-          font-size: $font-medium;
-          line-height: 24px;
-          margin-bottom: 10px;
+          font-size: $font-small;
+          line-height: 20px;
+          margin-bottom: 9px;
+          padding-left: 9px;
         }
       }
     }
@@ -186,13 +202,13 @@
       width: 550px;
       border: 1px solid $light-color;
       box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-      margin-top: -50px;
+      margin-top: -37px;
       display: flex;
       @include desktop-only{
         width: 360px;
       }
       @include touch{
-        width: 300px;
+        width: 289px;
         margin: -50px auto 0px auto;
       }
 
@@ -202,7 +218,7 @@
         padding: 25px 0 0 0;
         border-right: 1px solid $light-color;
         @include touch{
-          min-width: 220px;
+          min-width: 203px;
         }
 
         .avatar {
@@ -244,7 +260,7 @@
           min-width: 110px;
         }
         @include touch{
-          min-width: 80px;
+          min-width: 85px;
         }
 
         .one-link {
@@ -263,6 +279,7 @@
           }
           @include touch{
             padding: 0px 25px;
+            text-align: center;
           }
 
           span{
@@ -335,9 +352,30 @@
 
 .enter-image {
   margin-bottom: 48px;
+  @include desktop-only{
+    margin-bottom: 39px;
+  }
+  @include touch{
+    height: 276px;
+    position: relative;
+    overflow: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 43px;
+  }
 
   img {
     max-width: 100%;
+    @include touch{
+      width: auto;
+      max-width: unset;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
   }
 }
 
@@ -347,6 +385,11 @@
   line-height: 36px;
   margin-top: 50px;
   margin-bottom: 17px;
+  @include desktop-only{
+    font-size: $font-extra-large;
+    line-height: 30px;
+    margin-top: 43px;
+  }
   @include touch{
     font-size: $font-large;
     line-height: 28px;
@@ -357,6 +400,9 @@
   font-size: $font-big;
   line-height: 24px;
   margin-top: 10px;
+  @include desktop-only{
+    font-size: $font-medium;
+  }
   @include touch{
     font-size: $font-small;
     line-height: 20px;
@@ -384,6 +430,18 @@
   display: block;
   margin-top: 25px;
   margin-bottom: 25px;
+  @include desktop-only{
+    max-width: 88%;
+  }
+  @include touch{
+    max-width: 83%;
+  }
+}
+
+.poker-room-body{
+  @include desktop-only{
+    padding-top: 27px;
+  }
 }
 
 .video {
@@ -410,6 +468,9 @@
   font-weight: 600;
   margin-bottom: 10px;
   margin-top: 15px;
+  @include desktop-only{
+    margin-top: 18px;
+  }
   @include touch{
     font-size: $font-small;
     line-height: 20px;
@@ -421,6 +482,9 @@
   line-height: 24px;
   margin-bottom: 15px;
   margin-left: 40px;
+  @include desktop-only{
+    font-size: $font-medium;
+  }
   @include touch{
     font-size: $font-small;
     line-height: 20px;
@@ -430,6 +494,9 @@
 .all-user-quest-block {
   text-align: center;
   margin-top: 60px;
+  @include desktop-only{
+    margin-top: 23px;
+  }
   @include touch{
     text-align: center;
     margin-top: 30px;
@@ -443,10 +510,15 @@
   @include bg('quest.png');
   background-position: right bottom;
   background-repeat: no-repeat;
+  @include desktop-only{
+    margin-top: 94px;
+  }
   @include touch{
-    padding: 30px 20px;
+    padding: 26px 20px;
     margin-left: -10px;
     margin-right: -10px;
+    margin-top: 96px;
+    letter-spacing: 0;
   }
 
   .user-quest-title {
@@ -455,6 +527,9 @@
     font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
+    @include desktop-only{
+      letter-spacing: 2px;
+    }
 
     &.no-quest {
       color: $second-color;
@@ -576,9 +651,9 @@
         content: "";
         position: absolute;
         background: $body-grey-bg-color;
-        height: 215px;
+        height: 207px;
         width: 100%;
-        z-index: 0;
+        z-index: -1;
         left: 0px;
         top: 0px;
       }
@@ -673,7 +748,7 @@
     height: initial;
     position: static;
     float: right;
-    margin-right: 25px;
+    margin-right: 13px;
     margin-top: -46px;
   }
   @include touch{
@@ -702,7 +777,10 @@
     box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
     @include touch{
       float: none;
-      margin-top: 0px;
+      clear: both;
+      margin-top: 0;
+      margin-left: 22px;
+      position: relative;
     }
 
     img {
@@ -788,14 +866,14 @@
           font-size: $font-small;
           padding: 0px 20px;
           display: block;
-          margin: 20px 0px 25px 0px;
+          margin: 14px 0px 25px 0px;
         }
         @include touch{
           line-height: 28px;
           font-size: $font-small;
           padding: 0px 20px;
           display: block;
-          margin: 20px 0px;
+          margin: 12px 0px 16px;
           width: 150px;
         }
       }
@@ -805,6 +883,9 @@
 
 .poker-room-platforms {
   display: flex;
+  @include desktop-only{
+    margin-top: 223px !important;
+  }
   @include touch{
     display: block;
   }
@@ -835,6 +916,9 @@
 
     .one-link {
       padding-right: 15px;
+      @include desktop-only{
+        padding-right: 10px;
+      }
 
       a {
         color:  $black-color;
@@ -864,6 +948,16 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+    @include desktop-only{
+      min-width: 110px;
+      margin-right: 12px;
+      margin-bottom: 14px;
+    }
+    @include touch{
+      min-width: 120px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
 
     img {
       max-width: 100%;
@@ -946,7 +1040,8 @@
   margin-top: 100px;
   background: $body-grey-bg-color;
   @include desktop-only{
-    padding: 40px 0px;
+    padding: 35px 11px;
+    margin-top: 85px;
   }
   @include touch{
     padding: 40px 0px;
@@ -994,6 +1089,13 @@
 
       li {
         margin-bottom: 10px;
+        @include desktop-only{
+          padding-left: 7px;
+        }
+        @include touch{
+          margin-bottom: 6px;
+          padding-left: 6px;
+        }
       }
     }
   }
@@ -1002,6 +1104,9 @@
     width: 42.5%;
     float: left;
     padding-right: 25px;
+    @include desktop-only{
+      width: 45%;
+    }
     @include touch{
       width: 100%;
       float: none;
@@ -1013,6 +1118,9 @@
     width: 45%;
     float: left;
     padding-left: 25px;
+    @include desktop-only{
+      padding-left: 18px;
+    }
     @include touch{
       width: 100%;
       float: none;
