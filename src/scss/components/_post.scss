@@ -3,6 +3,10 @@
 
     .post-title {
         letter-spacing: 0;
+        @include desktop-only{
+                font-size: $font-medium;
+                line-height: 20px;
+            }
     }
 
     .post-link {
@@ -12,9 +16,15 @@
     .post-cover {
         margin-bottom: 12px;
         width: 100%;
+        @include touch{
+            margin-bottom: 0;
+        }
     }
 
     .post-description {
         margin-top: 7px;
+        @include desktop-only{
+            display: none;
+        }
     }
 }

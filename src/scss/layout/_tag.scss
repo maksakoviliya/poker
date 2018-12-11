@@ -20,7 +20,10 @@ section {
         line-height: 30px;
         font-weight: 600;
         margin-top: 30px;
-
+        @include desktop-only{
+            margin-top: 26px;
+            line-height: 26px;
+        }
         @include touch {
             font-size: $font-medium;
             line-height: 26px;
@@ -40,11 +43,13 @@ section {
 
         @include desktop-only {
             padding-right: 40px;
+            margin-top: 24px;
+            line-height: 26px;
         }
 
         @include touch {
             font-size: $font-small;
-            line-height: 24px;
+            line-height: 20px;
             margin-top: 20px;
             padding-right: 0px;
         }
@@ -53,18 +58,25 @@ section {
     .tag-useful-links {
         list-style-type: square;
         margin-left: 35px;
-        margin-top: 30px;
+        margin-top: 25px;
         margin-right: 100px;
+        @include touch{
+            margin-top: 20px;
+            margin-right: 0;
+        }
 
         li {
             font-size: $font-big;
             line-height: 24px;
-            margin-bottom: 12.5px;
+            margin-bottom: 10px;
             padding-left: 5px;
-
-            @include touch {
+            @include desktop-only{
                 font-size: $font-medium;
                 line-height: 22px;
+            }
+            @include touch {
+                font-size: $font-small;
+                line-height: 20px;
                 margin-bottom: 10px;
             }
 
@@ -99,22 +111,25 @@ section {
         margin-bottom: 20px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        @include desktop-only{
+            margin-top: 54px;
+        }
 
         @include touch {
-            margin-top: 40px;
+            margin-top: 44px;
         }
     }
 
     .section-list-more {
-        margin: 10px 0px 150px 0px;
+        margin: 16px 0px 181px 0px;
         text-align: center;
 
         @include desktop-only {
-            margin: 10px 0px 120px 0px;
+            margin: 10px 0px 80px 0px;
         }
 
         @include touch {
-            margin: 0px 0px 80px 0px;
+            margin: 6px 0px 61px 0px;
         }
     }
 
