@@ -1,7 +1,14 @@
 section {
 
     .select-room-category {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+        @include desktop-only{
+            margin-bottom: 8px;
+        }
+        @include touch{
+            margin-top: -22px !important;
+            margin-bottom: 9px;
+        }
 
         div {
 
@@ -10,21 +17,30 @@ section {
                 line-height: 38px;
                 float: left;
                 margin-right: 15px;
+                @include desktop-only{
+                    font-size: $font-medium;
+                    margin-right: 9px;
+                }
+                @Include touch{
+                    font-size: $font-medium;
+                }
             }
 
         }
 
         select {
             border: 1px solid $accent-color;
-            padding: 5px;
+            padding: 5px 15px;
             color: $text-default-color;
             font-size: $font-big;
             line-height: 28px;
             height: 38px;
-            width: 300px;
+            width: 100%;
+            max-width: 320px;
             box-shadow: none;
             outline: none;
             cursor: pointer;
+
 
             &:focus {
                 box-shadow: none;
@@ -50,18 +66,26 @@ section {
     .catalogue-text {
         font-size: $font-big;
         line-height: 28px;
-        margin-top: 35px;
+        margin-top: 30px;
         padding-right: 100px;
+        @include desktop-only{
+            font-size: $font-medium;
+            margin-top: 23px;
+            line-height: 26px;
+        }
         @include touch{
             font-size: $font-small;
-            line-height: 24px;
+            line-height: 20px;
             margin-top: 20px;
             padding-right: 0px;
         }
     }
 
     .catalogue-footer {
-        margin-bottom: 100px;
+        margin-bottom: 90px !important;
+        @include desktop-only{
+            margin-bottom: 25px !important;
+        }
     }
 
     .link-underline {
@@ -74,8 +98,11 @@ section {
     }
 
     .games-list-more {
-        margin: 30px 0px 50px 0px;
+        margin: 30px 0px 40px 0px;
         text-align: center;
+        @include desktop-only{
+            margin: 25px 0 36px;
+        }
         @include touch {
             margin: 15px 0px 30px 0px;
         }

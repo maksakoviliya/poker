@@ -5,6 +5,9 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        @include desktop-only{
+            margin-top: 34px;
+        }
         @include touch {
             margin-top: 30px;
         }
@@ -24,12 +27,15 @@
                 flex-basis: 100%;
             }
             .game-header{
-                margin-top: 30px;
+                margin-top: 25px;
                 height: 55px;
                 @include desktop-only{
                     margin-top: 0px;
                     height: initial;
                     padding: 0px 30px;
+                }
+                @include touch{
+                    margin-top: 19px;
                 }
                 .ico{
                     float: left;
@@ -43,7 +49,7 @@
                         float: none;
                         margin-left: 0px;
                         margin-top: -1px;
-                        margin-bottom: 20px;
+                        margin-bottom: 14px;
                     }
                     img{
                         max-width: 100%;
@@ -58,12 +64,22 @@
                     color: $title-color;
                      @include font('header');
                     transition: $ui-animation-duration, color $ui-animation-duration;
+                    @include desktop-only{
+                        font-size: $font-big;
+                    }
+                    @include touch{
+                        font-size: $font-big;
+                    }
                 }
                 
                 .brand{
                     color: $brand-color;
                     font-style: italic;
                     transition: $ui-animation-duration, color $ui-animation-duration;
+                    @include desktop-only{
+                        font-size: $font-small;
+                        line-height: 18px;
+                    }
                 }
                 
                 .stars{
@@ -125,8 +141,12 @@
                 margin-bottom: 70px;
                 @include desktop-only{
                     padding: 0px 30px 0px 50px;
-                    margin-top: 25px;
+                    margin-top: 19px;
                     margin-bottom: 80px;
+                    line-height: 18px;
+                }
+                @include touch{
+                    padding-left: 70px;
                 }
                 ul{
                     list-style: square;
@@ -139,6 +159,7 @@
                         @include desktop-only{
                             font-size: $font-small;
                             line-height: 18px;
+                            margin-bottom: 10px;
                             padding-left: 0px;
                         }
                         @include touch{
