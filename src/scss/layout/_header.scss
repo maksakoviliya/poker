@@ -15,11 +15,17 @@
             right: 0;
             bottom: 20px;
             left: 0;
+            @include touch{
+                z-index: 5;
+            }
         }
 
         .container {
             color: $text-white-color;
             position: relative;
+            @include touch{
+                z-index: 9;
+            }
         }
 
         .auth {
