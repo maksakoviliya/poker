@@ -47,11 +47,11 @@
                 order: 3;
                 margin-right: 8px;
                 + .link{
-                    @include touch{
-                        display: block;
-                        width: 167px;
-                        transform: translateY(0);
-                    }
+                    // @include touch{
+                    //     display: block;
+                    //     width: 167px;
+                    //     transform: translateY(0);
+                    // }
                 }
             }
 

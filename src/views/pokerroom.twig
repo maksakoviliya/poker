@@ -66,7 +66,13 @@
             
             <div class="section-full">
                 
-                {% if data.pokerroomPage.contentBottom.has_quest %}
+                <!-- {% if data.pokerroomPage.contentBottom.has_quest %} -->
+                    <div class="user-quest">
+                        <div class="user-quest-title no-quest">У пользователей вопросов пока нет</div>
+                        <div class="make-quest-div">
+                            <a href="#" class="btn btn-blue make-quest">Задать вопрос</a>
+                        </div>
+                    </div>
                     <div class="user-quest">
                         <div class="user-quest-title yes-quest">Вопросы пользователей <span>| {{ data.pokerroomPage.contentBottom.has_quest }}</span></div>
                         <div class="make-quest-div">
@@ -88,16 +94,16 @@
                             <i></i>
                         </a>
                     </div>
-                {% else %}
-                    <div class="user-quest">
-                        <div class="user-quest-title no-quest">У пользователей вопросов пока нет</div>
-                        <div class="make-quest-div">
-                            <a href="#" class="btn btn-blue make-quest">Задать вопрос</a>
+                <!-- {% else %}
+                {% endif %} -->
+                        
+                <!-- {% if data.pokerroomPage.contentBottom.has_reviews %} -->
+                    <div class="user-reviews no-rewiew">
+                        <div class="user-reviews-title">Отзывов пользователей пока нет</div>
+                        <div class="make-review-div">
+                            <a href="#" class="btn btn-blue make-review">Оставить отзыв</a>
                         </div>
                     </div>
-                {% endif %}
-                        
-                {% if data.pokerroomPage.contentBottom.has_reviews %}
                     <div class="user-reviews yes-rewiew">
                         <div class="user-reviews-title">Отзывы <span class="hidden-xs">пользователей </span><span>| {{ data.pokerroomPage.contentBottom.has_reviews }}</span></div>
                         <div class="make-review-div">
@@ -112,13 +118,11 @@
                                 <div class="bottom">
                                     <a href="{{ data.pokerroomPage.contentBottom.review.authorLink }}" class="review-b-user"><img src="{{ assets(data.pokerroomPage.contentBottom.review.authorImg) }}"><span>{{ data.pokerroomPage.contentBottom.review.authorName }}</span></a>
                                     <div class="review-stars">
-                                        {% for i in 1..5 %}
-                                            {% if i <= room.stars %}
-                                                <span class="one-star star-yes"></span>
-                                            {% elseif i > room.stars %}
-                                                <span class="one-star star-no"></span>
-                                            {% endif %}
-                                        {% endfor %}
+                                        <span class="one-star star-yes"></span>
+                                        <span class="one-star star-yes"></span>
+                                        <span class="one-star star-yes"></span>
+                                        <span class="one-star star-yes"></span>
+                                        <span class="one-star star-no"></span>
                                     </div>
                                     <a class="btn btn-xs read-more read-more-right" href="javascript:void(0)">
                                         <span class="full">Все отзывы</span>
@@ -129,14 +133,8 @@
                             </div>
                         </div>
                     </div>
-                {% else %}
-                    <div class="user-reviews no-rewiew">
-                        <div class="user-reviews-title">Отзывов пользователей пока нет</div>
-                        <div class="make-review-div">
-                            <a href="#" class="btn btn-blue make-review">Оставить отзыв</a>
-                        </div>
-                    </div>
-                {% endif %}
+                <!-- {% else %}
+                {% endif %} -->
             
                 <div class="clearfix"></div>
             

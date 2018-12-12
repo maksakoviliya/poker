@@ -167,13 +167,27 @@
 
     ul {
       margin-left: 25px;
-      list-style-image: url($img-directory + '/my/check.svg');
+      // list-style-image: url($img-directory + '/check.svg');
 
       li {
         font-size: $font-big;
         line-height: 24px;
         margin-bottom: 11px;
         padding-left: 5px;
+        position: relative;
+        &:before{
+          content: '';
+          @include bg('check.svg');
+          background-size: cover;
+          background-position: center center;
+          background-repeat: no-repeat;
+          position: absolute;
+          left: -24px;
+          top: 0;
+          transform: translateY(50%);
+          width: 15px;
+          height: 15px;
+        }
         @include desktop-only{
           font-size: $font-medium;
           line-height: 24px;
@@ -202,7 +216,7 @@
       width: 550px;
       border: 1px solid $light-color;
       box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-      margin-top: -37px;
+      margin-top: -50px;
       display: flex;
       @include desktop-only{
         width: 360px;
@@ -231,7 +245,7 @@
         }
 
         .name {
-          color: $second-color;
+          color: $black-color;
            @include font('header');
           font-size: $font-large;
           line-height: 22px;
@@ -406,6 +420,11 @@
   @include touch{
     font-size: $font-small;
     line-height: 20px;
+    > a{
+      display: block;
+      border-bottom: 0;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -531,15 +550,18 @@
       letter-spacing: 2px;
     }
 
-    &.no-quest {
-      color: $second-color;
-    }
-
     &.yes-quest {
       color: $second-color;
 
       span:last-child {
         color: $accent-color;
+      }
+    }
+
+    &.no-quest {
+      color: $black-color;
+      @include touch{
+        line-height: 22px;
       }
     }
   }
@@ -628,11 +650,14 @@
 
   &.no-rewiew {
     margin-bottom: 100px;
+    @include bg('quote.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
     @include touch{
       margin-bottom: 50px;
     }
     .user-reviews-title {
-      color: $second-color;
+      color: $black-color;
     }
   }
 
@@ -738,11 +763,13 @@
   position: absolute;
   right: 35px;
   bottom: -50px;
-  background: $white-color;
   width: 740px;
   height: 120px;
   box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.05);
-  background: url(../images/my/quote.png) no-repeat right bottom, $white-color;
+  background-color: $white-color;
+  @include bg('quote.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
   @include desktop-only{
     width: 440px;
     height: initial;
@@ -758,7 +785,7 @@
     float: none;
     margin-right: 0px;
     margin-top: 30px;
-    background: $white-color;
+    background-image: none;
     padding-top: 20px;
     top: initial;
     left: initial;
@@ -840,6 +867,24 @@
       }
 
       .review-stars {
+        transition: $ui-animation-duration, color $ui-animation-duration;
+        margin-top: 2.5px;
+        
+        .one-star{
+            @extend %icon;
+            width: 15px;
+            height: 15px;
+            padding-right: 2.5px;
+        
+            &.star-yes{
+                @extend %i-star;
+            }
+            
+            &.star-no{
+                @extend %i-star-empty;
+            }
+            
+        }
         margin-right: 30px;
         margin-top: -3px;
         @include desktop-only{
@@ -948,6 +993,12 @@
     align-items: center;
     justify-content: center;
     margin-right: 20px;
+
+    @each $method in dinners, mastercard, neteller, paysafe, skrill, ukash, visa {
+      .i-#{$method} {
+        @include bg('#{$method}.png');
+      }
+    }
     @include desktop-only{
       min-width: 110px;
       margin-right: 12px;
@@ -958,10 +1009,12 @@
       margin-right: 10px;
       margin-bottom: 10px;
     }
-
-    img {
-      max-width: 100%;
-      max-height: 100%;
+    i{
+      // background-size: contain;
+      background-position: center center;
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
     }
   }
 }

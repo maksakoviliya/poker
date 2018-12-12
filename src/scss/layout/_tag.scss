@@ -107,16 +107,17 @@ section {
     .posts-list-title {
         font-size: $font-small;
         font-weight: bold;
-        margin-top: 70px;
+        margin-top: 20px;
         margin-bottom: 20px;
         letter-spacing: 1px;
         text-transform: uppercase;
         @include desktop-only{
-            margin-top: 54px;
+            margin-top: -24px;
         }
 
         @include touch {
-            margin-top: 44px;
+            margin-top: -24px;
+            margin-bottom: 16px;
         }
     }
 
@@ -150,6 +151,19 @@ section {
     .post-description {
         @include touch {
             display: none !important;
+        }
+    }
+}
+
+.section{
+    &.with-bg-tablet{
+        @include desktop-only{
+            margin-top: 42px;
+            background-color: $body-grey-bg-color;
+        }
+        @include touch{
+            margin-top: 30px;
+            background-color: $body-grey-bg-color;
         }
     }
 }

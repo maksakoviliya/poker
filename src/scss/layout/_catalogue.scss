@@ -40,6 +40,8 @@ section {
             box-shadow: none;
             outline: none;
             cursor: pointer;
+            background-color: $body-grey-bg-color;
+            border-radius: 4px;
 
 
             &:focus {
@@ -72,6 +74,7 @@ section {
             font-size: $font-medium;
             margin-top: 23px;
             line-height: 26px;
+            padding-right: 60px;
         }
         @include touch{
             font-size: $font-small;
