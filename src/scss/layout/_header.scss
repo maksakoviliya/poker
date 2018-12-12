@@ -17,6 +17,7 @@
             left: 0;
             @include touch{
                 z-index: 5;
+                background-image: radial-gradient(ellipse at right bottom, $gray-color, transparent 100%);
             }
         }
 
